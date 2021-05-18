@@ -11,46 +11,6 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "casebook_title",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O1Y0P766LLU1bGJndpQWVuILnCYRMYJVh",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Malicious",
-          "scope": "input",
-          "name": "Observable judgement to set",
-          "type": "datatype.string",
-          "description": "Suspicious or Malicious",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OFDVYD0YZS94ksuQKTuW1IDeAPgMYPHP2",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O1Y0P766QCM3UAfbPJ74YylySonaVKYin",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
           "name": "from",
           "type": "datatype.string",
           "is_required": false,
@@ -64,25 +24,25 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_subject",
+          "name": "cisco_mid",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O1Y0P766BQI0ruAyVwpWs7TQ5JST0yQfB",
+        "unique_name": "variable_workflow_01O1Y0P766GEW1zKpnlTKpyQUrxgB4Et7Z3",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "output",
-          "name": "observables",
+          "scope": "local",
+          "name": "to_json",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O1Y0P766MRA1fQzgeogsUIM75bq86uCAT",
+        "unique_name": "variable_workflow_01OITPKXJFUCW7OrZg0UMmkBT75PDIO9Ljx",
         "object_type": "variable_workflow"
       },
       {
@@ -103,12 +63,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_notes",
+          "name": "last_url",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O1Y0P766O5P0ndc4z4WF9RlqvKllrAjOO",
+        "unique_name": "variable_workflow_01OIRLGVM5B95173S3JKyJ0OELb8qRnV0HG",
         "object_type": "variable_workflow"
       },
       {
@@ -116,12 +76,90 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "to_json",
+          "name": "To",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01OITPKXJFUCW7OrZg0UMmkBT75PDIO9Ljx",
+        "unique_name": "variable_workflow_01O1Y0P766UOE3rxaUs5f08lZ9LIMnaSxGR",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Bcc",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OFDGNJHIKVZ6l100T8Dtm0TQb6A3nNkoz",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O1Y0P766QCM3UAfbPJ74YylySonaVKYin",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "observables",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O1Y0P766MRA1fQzgeogsUIM75bq86uCAT",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_sender",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OEHLFU89MBF2ngSLCuhd5ukwvsaOxnzlz",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Message-Id",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OFDU4V2BW5I1X135VwTz5OWq0bJNN7CsJ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O1Y0P766O5P0ndc4z4WF9RlqvKllrAjOO",
         "object_type": "variable_workflow"
       },
       {
@@ -136,32 +174,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01OFDVCOCY80I34xp7Zbn65cPKn0BywxmW5",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "last_url",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OIRLGVM5B95173S3JKyJ0OELb8qRnV0HG",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "Bcc",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OFDGNJHIKVZ6l100T8Dtm0TQb6A3nNkoz",
         "object_type": "variable_workflow"
       },
       {
@@ -195,12 +207,26 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "To",
+          "name": "casebook_title",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O1Y0P766UOE3rxaUs5f08lZ9LIMnaSxGR",
+        "unique_name": "variable_workflow_01O1Y0P766LLU1bGJndpQWVuILnCYRMYJVh",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Malicious",
+          "scope": "input",
+          "name": "Observable judgement to set",
+          "type": "datatype.string",
+          "description": "Suspicious or Malicious",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OFDVYD0YZS94ksuQKTuW1IDeAPgMYPHP2",
         "object_type": "variable_workflow"
       },
       {
@@ -208,38 +234,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "Message-Id",
+          "name": "email_subject",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01OFDU4V2BW5I1X135VwTz5OWq0bJNN7CsJ",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "cisco_mid",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O1Y0P766GEW1zKpnlTKpyQUrxgB4Et7Z3",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_sender",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OEHLFU89MBF2ngSLCuhd5ukwvsaOxnzlz",
+        "unique_name": "variable_workflow_01O1Y0P766BQI0ruAyVwpWs7TQ5JST0yQfB",
         "object_type": "variable_workflow"
       }
     ],
@@ -248,6 +248,7 @@
         "is_atomic": false
       },
       "delete_workflow_instance": false,
+      "description": "This workflow is trigger from a \"notification\" action from a \"Content Filter\" in Cisco Secure Email. \nFrom the Email in attachement to the notification:\n- Email Headers are parsed\n- URL in Body are parsed\n- Disposition for URL are check\nActions and Responses:\n- If URL dispositon is Suspicious, URL is send to TG\n- Judgement are created for observables\n- Sightins are created\n- Casebook is created\n \nIf you do not have a valid Threat Grid API key make sure to disable the \"TG v2 - Submit URL\" atomic action. ",
       "display_name": "Secure Email - URL Malicious Detected",
       "runtime_user": {
         "override_target_runtime_user": false,
@@ -1656,12 +1657,12 @@
       {
         "unique_name": "definition_activity_01OITNXYLUD0V2efzvIFoVAxLwVvXQmrFVv",
         "name": "Group",
-        "title": "Create Sigthings",
+        "title": "Create Sigtings",
         "type": "logic.group",
         "base_type": "activity",
         "properties": {
           "continue_on_failure": false,
-          "display_name": "Create Sigthings",
+          "display_name": "Create Sigtings",
           "skip_execution": false
         },
         "object_type": "definition_activity",
@@ -2065,9 +2066,9 @@
   },
   "atomic_workflows": [
     "definition_workflow_01KWJ2ISZTF2V6ibRYe7FZ7sOuycDOpnwss",
-    "definition_workflow_01LKD7G2VQ44P3jhvJ6wDFa1EXSJdJPmv1j",
     "definition_workflow_01KXGKZ0JA96P0p7omD4IdS6zKdw5ECiofU",
     "definition_workflow_01KXGQWLMIDXG563x6DBOvwjfxpH8JrkaRW",
+    "definition_workflow_01LKD7G2VQ44P3jhvJ6wDFa1EXSJdJPmv1j",
     "definition_workflow_01KWI6XE6K5YD5I6K2wZF5Vp0M9FyXUl34y",
     "definition_workflow_01KVOGF574Y291CRwQLNB1TtzEHDNwyUx7O"
   ]
