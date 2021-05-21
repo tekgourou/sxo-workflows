@@ -78,4 +78,3 @@ Refence for best practice and documentation https://ciscosecurity.github.io/sxo-
 - Quarantine Duo User.json
   This workflow give you access to quarantine user in Duo from the SecureX AO contextuel menu.
   
-- Azure AD - lockdown user (not documented yet)
