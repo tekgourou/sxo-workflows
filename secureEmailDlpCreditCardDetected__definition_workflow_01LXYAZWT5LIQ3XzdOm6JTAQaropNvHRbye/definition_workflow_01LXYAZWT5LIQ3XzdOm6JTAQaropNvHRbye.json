@@ -1,0 +1,2392 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye",
+    "name": "Secure Email DLP Credit Card detected",
+    "title": "Secure Email DLP Credit Card detected",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "file_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXZGFRWNJ276aWgNN6VXCLeRWOsvyDVXk",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "to",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "from",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "direction",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY66T9QAXLZ6NviGZLGsf4Ru84AWV7HXt",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_raw_message",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXYCJ7NGKR40wgsnmng8wNVAjqTLzB9rM",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "DLP_violation_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "bcc",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_dates",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Email Endpoint",
+          "scope": "local",
+          "name": "SMTP Target Name",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01MV9BRFS4EEU0lVILuuufKRB9yXzBK7FIm",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "observables",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "DLP_violation_count",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_subject",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "cc",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "internal_user",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "casebook_title",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "cisco_mid",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LYPYE65BDX32zfAjRx8idaptO77Su1cHb",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Message-Id",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "description": "This workflow monitors a mailbox for incoming email with DLP breach detected by Cisco Secure Email. When an email is received, the workflow increase the number of occurence for a single internal user from 1 to 3. At each occurence the internal user is informed of the detection. At the second occurence, is manager is also informed. At the third occurence, the internal user Azure account is disable. \n\nTarget Group: Default TargetGroup \nTarget Type : HTTP Endpoint, SMTP Endpoint\n\nTargets: CTR_For_Access_Token, Private_CTIA_Target, Azure_For_Access_Token,  Azure_Graph_API\n\nFor more information : aargeris@cisco.com",
+      "display_name": "Secure Email DLP Credit Card detected",
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": true,
+        "target_group": {
+          "target_group_id": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+          "run_on_all_targets": false,
+          "selected_target_types": [
+            "web-service.endpoint",
+            "email.smtp_endpoint"
+          ],
+          "use_criteria": {
+            "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+            "conditions": [
+              {
+                "operator": "eq",
+                "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                "right_operand": "Private_CTIA_Target"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01LY68RI395H84eANuFDHCXhrYZjYOW4rAd",
+        "name": "Condition Block",
+        "title": "Inbound or Outbound",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Inbound or Outbound",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01LY68T093Y3F6mF4xSJrGo6JMZjLRrozHo",
+            "name": "Condition Branch",
+            "title": "in",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$trigger.triggerevent_01LXYC6086ATI6aMLPBoWAOKcuGUwEG42gc.output.subject$",
+                "operator": "eq",
+                "right_operand": "CES DLP_Credit_Card_inbound"
+              },
+              "continue_on_failure": false,
+              "display_name": "in",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01LY69E96R2P33UCqf906OhBet7TiEj0qKf",
+                "name": "Set Variables",
+                "title": "Set Variables direction",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Set Variables direction",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66T9QAXLZ6NviGZLGsf4Ru84AWV7HXt$",
+                      "variable_value_new": "INBOUND"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01LY68T1E9Y1P2ltUEpQ25cOy55czWT1ZNY",
+            "name": "Condition Branch",
+            "title": "out",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$trigger.triggerevent_01LXYC6086ATI6aMLPBoWAOKcuGUwEG42gc.output.subject$",
+                "operator": "eq",
+                "right_operand": "CES DLP_Credit_Card_outbound"
+              },
+              "continue_on_failure": false,
+              "display_name": "out",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01LY6AGXZYDZZ3kvf8a7OeoksRFFrXllM6e",
+                "name": "Set Variables",
+                "title": "Set Variables direction",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Set Variables direction",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66T9QAXLZ6NviGZLGsf4Ru84AWV7HXt$",
+                      "variable_value_new": "OUTBOUND"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01OL7OTNFMRN75sANk9ApMU5FcTIkmPneHj",
+        "name": "Threat Response v2 - Generate Access Token",
+        "title": "Threat Response v2 - Generate Access Token",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Threat Response v2 - Generate Access Token",
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target_group_criteria": true,
+            "target_group": {
+              "run_on_all_targets": false,
+              "use_criteria": {
+                "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                "conditions": [
+                  {
+                    "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                    "operator": "eq",
+                    "right_operand": "CTR_For_Access_Token"
+                  }
+                ]
+              }
+            }
+          },
+          "workflow_id": "definition_workflow_01KWJ2ISZTF2V6ibRYe7FZ7sOuycDOpnwss"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01LXZQZMO1WZJ1MaupfkEK9rXncH0MjtdBN",
+        "name": "Set Variables",
+        "title": "Create notes",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Create notes",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4$",
+              "variable_value_new": "--------------------\n$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66T9QAXLZ6NviGZLGsf4Ru84AWV7HXt$ EMAIL"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01LXYTX39L2454kWaYs2QAipOfkqPUwLT0y",
+        "name": "For Each",
+        "title": "Read from each email in attachment from the event",
+        "type": "logic.for_each",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Read from each email in attachment from the event",
+          "skip_execution": false,
+          "source_array": "$trigger.triggerevent_01LXYC6086ATI6aMLPBoWAOKcuGUwEG42gc.output.attachments$"
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01LXZECB1JBDH7JHK3730Y2mIl91oxyNL8v",
+            "name": "Condition Block",
+            "title": "Condition Block",
+            "type": "logic.if_else",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Condition Block",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01LXZEDQIYK7J07xZ8suKde8zW07l9rA2lu",
+                "name": "Condition Branch",
+                "title": "email",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": "$activity.definition_activity_01LXYTX39L2454kWaYs2QAipOfkqPUwLT0y.input.source_array[@].attachment_headers$",
+                    "operator": "ne",
+                    "right_operand": ""
+                  },
+                  "continue_on_failure": false,
+                  "display_name": "email",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01LXYMSGJPGHL6KX1icoTCgaLifPBiWBQon",
+                    "name": "Read Table from JSON",
+                    "title": "headers",
+                    "type": "corejava.read_table_from_json",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": true,
+                      "display_name": "headers",
+                      "input_json": "$activity.definition_activity_01LXYTX39L2454kWaYs2QAipOfkqPUwLT0y.input.source_array[@].attachment_headers$",
+                      "jsonpath_query": "$.",
+                      "persist_output": false,
+                      "populate_columns": false,
+                      "skip_execution": false,
+                      "table_columns": [
+                        {
+                          "column_name": "header_name",
+                          "column_type": "string"
+                        },
+                        {
+                          "column_name": "header_value",
+                          "column_type": "string"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6",
+                    "name": "For Each",
+                    "title": "For Each",
+                    "type": "logic.for_each",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "For Each",
+                      "skip_execution": false,
+                      "source_array": "$activity.definition_activity_01LXYMSGJPGHL6KX1icoTCgaLifPBiWBQon.output.read_table_from_json$"
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01LXZKIRLFAKK3ffXyo7pa2U40F8O6J5ktl",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Condition Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01LXZKJJDDFNN1ROCJJFBB6RUClSiAaHH7U",
+                            "name": "Condition Branch",
+                            "title": "To",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_name$",
+                                "operator": "eq",
+                                "right_operand": "To"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "To",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01OL7PQY443X46dyjeoF9bz2q54Af5pcdHx",
+                                "name": "Threat Response v2 - Inspect for Observables",
+                                "title": "Threat Response v2 - Inspect for Observables",
+                                "type": "workflow.atomic_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Threat Response v2 - Inspect for Observables",
+                                  "input": {
+                                    "variable_workflow_01KXGKYZX7V1M2gr9pVGA5BZoTbgEQPSzF1": "$activity.definition_activity_01OL7OTNFMRN75sANk9ApMU5FcTIkmPneHj.output.variable_workflow_01KWJ2ISHZ9753Hoi7x9S5EPpucAbm53HHF$",
+                                    "variable_workflow_01KXGKYZX7ZLN1hoeZeh7hwWyjoEUkSJCbg": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "run_on_all_targets": false,
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "CTR_API"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "workflow_id": "definition_workflow_01KXGKZ0JA96P0p7omD4IdS6zKdw5ECiofU"
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01OL7PVNCTB4O5JILA784ZO2rU28ygIxKN9",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "input_string": "$activity.definition_activity_01OL7PQY443X46dyjeoF9bz2q54Af5pcdHx.output.variable_workflow_01KXGKYZX80T50ocjT0xlIvdikhoR0AGB5u$",
+                                  "replace_list": [
+                                    {
+                                      "replaced_string": "[",
+                                      "replacement_string": ""
+                                    },
+                                    {
+                                      "replaced_string": "]",
+                                      "replacement_string": ""
+                                    }
+                                  ],
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01LXZI3PUBFDV3yHInLzxGLdcmmdlqdQEBZ",
+                                "name": "Set Variables",
+                                "title": "Add to variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Add to variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$\n- To : $activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$\n$activity.definition_activity_01OL7PVNCTB4O5JILA784ZO2rU28ygIxKN9.output.result_string$,"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB$",
+                                      "variable_value_new": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01OL7THUWS2C67cpIRkfxagjqE8mWQ1Tz3V",
+                            "name": "Condition Branch",
+                            "title": "Bcc",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_name$",
+                                "operator": "eq",
+                                "right_operand": "Bcc"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "Bcc",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01OL7THVWBWMM6Z8JKWkyzh3WnKyo9gZeGa",
+                                "name": "Threat Response v2 - Inspect for Observables",
+                                "title": "Threat Response v2 - Inspect for Observables",
+                                "type": "workflow.atomic_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Threat Response v2 - Inspect for Observables",
+                                  "input": {
+                                    "variable_workflow_01KXGKYZX7V1M2gr9pVGA5BZoTbgEQPSzF1": "$activity.definition_activity_01OL7OTNFMRN75sANk9ApMU5FcTIkmPneHj.output.variable_workflow_01KWJ2ISHZ9753Hoi7x9S5EPpucAbm53HHF$",
+                                    "variable_workflow_01KXGKYZX7ZLN1hoeZeh7hwWyjoEUkSJCbg": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "run_on_all_targets": false,
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "CTR_API"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "workflow_id": "definition_workflow_01KXGKZ0JA96P0p7omD4IdS6zKdw5ECiofU"
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01OL7TIPE0USI2uGKBnUG4OE6we3MhGp8VO",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "input_string": "$activity.definition_activity_01OL7THVWBWMM6Z8JKWkyzh3WnKyo9gZeGa.output.variable_workflow_01KXGKYZX80T50ocjT0xlIvdikhoR0AGB5u$",
+                                  "replace_list": [
+                                    {
+                                      "replaced_string": "[",
+                                      "replacement_string": ""
+                                    },
+                                    {
+                                      "replaced_string": "]",
+                                      "replacement_string": ""
+                                    }
+                                  ],
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01OL7TJ43SJIH5WF2l56B1r4RFn0ztb1QVp",
+                                "name": "Set Variables",
+                                "title": "Add to variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Add to variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$\n- Bcc : $activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$\n$activity.definition_activity_01OL7TIPE0USI2uGKBnUG4OE6we3MhGp8VO.output.result_string$,"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9$",
+                                      "variable_value_new": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01OL7WROJ0IR24mZX1oPFEYPIK5AHMJ0ukt",
+                            "name": "Condition Branch",
+                            "title": "Cc",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_name$",
+                                "operator": "eq",
+                                "right_operand": "Cc"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "Cc",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01OL7WRPLJPCK6Cr7gAyX1CVmPgApk5uAeq",
+                                "name": "Threat Response v2 - Inspect for Observables",
+                                "title": "Threat Response v2 - Inspect for Observables",
+                                "type": "workflow.atomic_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Threat Response v2 - Inspect for Observables",
+                                  "input": {
+                                    "variable_workflow_01KXGKYZX7V1M2gr9pVGA5BZoTbgEQPSzF1": "$activity.definition_activity_01OL7OTNFMRN75sANk9ApMU5FcTIkmPneHj.output.variable_workflow_01KWJ2ISHZ9753Hoi7x9S5EPpucAbm53HHF$",
+                                    "variable_workflow_01KXGKYZX7ZLN1hoeZeh7hwWyjoEUkSJCbg": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "run_on_all_targets": false,
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "CTR_API"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "workflow_id": "definition_workflow_01KXGKZ0JA96P0p7omD4IdS6zKdw5ECiofU"
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01OL7WSIHOE8942iwd69jsVo0pcq7V2XcKi",
+                                "name": "Replace String",
+                                "title": "Replace String",
+                                "type": "core.replacestring",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Replace String",
+                                  "input_string": "$activity.definition_activity_01OL7WRPLJPCK6Cr7gAyX1CVmPgApk5uAeq.output.variable_workflow_01KXGKYZX80T50ocjT0xlIvdikhoR0AGB5u$",
+                                  "replace_list": [
+                                    {
+                                      "replaced_string": "[",
+                                      "replacement_string": ""
+                                    },
+                                    {
+                                      "replaced_string": "]",
+                                      "replacement_string": ""
+                                    }
+                                  ],
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01OL7WSXIKMT67cRrgH0Ge29Ag0Cf47Rfjd",
+                                "name": "Set Variables",
+                                "title": "Add to variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Add to variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$\n- Bcc : $activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$\n$activity.definition_activity_01OL7WSIHOE8942iwd69jsVo0pcq7V2XcKi.output.result_string$,"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR$",
+                                      "variable_value_new": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01LXZKJKD4Z9H0kOEV0PRSaBlLjp8nZA2Bf",
+                            "name": "Condition Branch",
+                            "title": "Date",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_name$",
+                                "operator": "eq",
+                                "right_operand": "Date"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "Date",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01LXZRQ61L3OP4iF4gAuZk1G9uteeOehHga",
+                                "name": "Set Variables",
+                                "title": "Add to variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Add to variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$\n- Date : $activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l$",
+                                      "variable_value_new": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01LXZOL1RGS6T0kPHSaQ6XJTfBij6aeHZ5T",
+                            "name": "Condition Branch",
+                            "title": "MessageID_Cisco",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_name$",
+                                "operator": "eq",
+                                "right_operand": "X-Mid"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "MessageID_Cisco",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01LXZSBK3Q7MQ46dt01IPJ6BTbvHPaF0E8H",
+                                "name": "Set Variables",
+                                "title": "Add to variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Add to variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$\n- Cisco Message ID : $activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$\n{\n\"type\":\"cisco_mid\",\n\"value\":\"$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$\"\n},"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPYE65BDX32zfAjRx8idaptO77Su1cHb$",
+                                      "variable_value_new": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01LXZP54H3SDG3jBdZprvg7GeO6xjA6d9q8",
+                            "name": "Condition Branch",
+                            "title": "From",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_name$",
+                                "operator": "eq",
+                                "right_operand": "From"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "From",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01LXZSQQ2Q3YD3cEG3iovmHIbHwOLKd5bEQ",
+                                "name": "Set Variables",
+                                "title": "Add to variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Add to variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$\n- From : $activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$\n{\n\"type\":\"email\",\n\"value\":\"$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$\"\n},"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$",
+                                      "variable_value_new": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01LXZPSSOIXCP7XT3Jr5ANV7zfHU5VdShhQ",
+                            "name": "Condition Branch",
+                            "title": "Subject",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_name$",
+                                "operator": "eq",
+                                "right_operand": "Subject"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "Subject",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01LXZT844E5GE7N483fewX2FQkAL1XkwMiT",
+                                "name": "Set Variables",
+                                "title": "Add to variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Add to variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$\n- Subject : $activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$\n"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq$",
+                                      "variable_value_new": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01OL7Z5YFFFB2214wwpEP7fAoI3MQrZ61B8",
+                            "name": "Condition Branch",
+                            "title": "Message-Id",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_name$",
+                                "operator": "eq",
+                                "right_operand": "Message-Id"
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "Message-Id",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01OL7Z5ZH07FR5ZYEfz0jwjicf9bqWW1mqI",
+                                "name": "Set Variables",
+                                "title": "Add to variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Add to variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko$\n- Message-Id : $activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$\n"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o$",
+                                      "variable_value_new": "$activity.definition_activity_01LXZK3RWTVC76wQ5nwrmGNhgjInCBFhRY6.input.source_array[@].header_value$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01LXZEDRJAAH16pigqjCIozkQ7ghUp6ojCm",
+                "name": "Condition Branch",
+                "title": "file",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": "$activity.definition_activity_01LXYTX39L2454kWaYs2QAipOfkqPUwLT0y.input.source_array[@].attachment_headers$",
+                    "operator": "eq",
+                    "right_operand": ""
+                  },
+                  "continue_on_failure": false,
+                  "display_name": "file",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01LXZG1H2D9DQ5BxEiAACj5c40zgzhlZh7U",
+                    "name": "Set Variables",
+                    "title": "Create notes and Observables",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Create notes and Observables",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGFRWNJ276aWgNN6VXCLeRWOsvyDVXk$",
+                          "variable_value_new": "- File Name : $activity.definition_activity_01LXYTX39L2454kWaYs2QAipOfkqPUwLT0y.input.source_array[@].file_name$\n- File Hash : $activity.definition_activity_01LXYTX39L2454kWaYs2QAipOfkqPUwLT0y.input.source_array[@].file_hash$"
+                        },
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                          "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$\n{\n\"type\":\"sha256\",\n\"value\":\"$activity.definition_activity_01LXYTX39L2454kWaYs2QAipOfkqPUwLT0y.input.source_array[@].file_hash$\"\n},\n{\n\"type\":\"file_name\",\n\"value\":\"$activity.definition_activity_01LXYTX39L2454kWaYs2QAipOfkqPUwLT0y.input.source_array[@].file_name$\"\n},"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01OLAILKFM5TX6pQEatdaBXIX10CqkfClvO",
+        "name": "Group",
+        "title": "Drop duplicate event ",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Drop duplicate event ",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01OLAE5AH3OJX1ufM5DqhlOjX19OGzFZa8b",
+            "name": "Select from Table",
+            "title": "Select from Table",
+            "type": "core.selectfromtable",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "columns": [
+                {
+                  "column_name": "User",
+                  "column_type": "string"
+                },
+                {
+                  "column_name": "Count",
+                  "column_type": "integer"
+                },
+                {
+                  "column_name": "Last-Message-Id",
+                  "column_type": "string"
+                }
+              ],
+              "continue_on_failure": false,
+              "display_name": "Select from Table",
+              "input_table": "$env.variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md.env.variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md$",
+              "number_of_rows": {
+                "all_rows": true,
+                "at_most": false
+              },
+              "persist_output": false,
+              "skip_execution": false,
+              "sorting": {
+                "no_sort": true,
+                "sort_by": false
+              },
+              "where_clause": "User == '$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$'"
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01OLAI6H508ZA2RJg2sXzIwQFJcL8CT0nag",
+            "name": "Condition Block",
+            "title": "Duplicate ?",
+            "type": "logic.if_else",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": true,
+              "display_name": "Duplicate ?",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01OLAI7OYDCAB1qe5Th5eoMDxR1JHixPDEC",
+                "name": "Condition Branch",
+                "title": "yes",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o$",
+                    "operator": "eq",
+                    "right_operand": "$activity.definition_activity_01OLAE5AH3OJX1ufM5DqhlOjX19OGzFZa8b.output.output_table[0].Last-Message-Id$"
+                  },
+                  "continue_on_failure": false,
+                  "display_name": "yes",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01OLAKBIHXPR80jiomaNO6zDCjqjRaLrxUQ",
+                    "name": "Completed",
+                    "title": "Completed",
+                    "type": "logic.completed",
+                    "base_type": "activity",
+                    "properties": {
+                      "completion_type": "succeeded",
+                      "continue_on_failure": false,
+                      "display_name": "Completed",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01LY0GTAQT8AB6hkpwPoJgDSCI09iPzfulM",
+        "name": "Parallel Block",
+        "title": "Output",
+        "type": "logic.parallel",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Output",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01LY0GUJS97AZ3mj57DvciVtfbpZX0q52Zd",
+            "name": "Parallel Branch",
+            "title": "observables",
+            "type": "logic.parallel_block",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "observables",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01LY0GA1SO4XP1sEnywp387EMV1t0FARTYU",
+                "name": "Group",
+                "title": "Fix observables JSON",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Fix observables JSON",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01LY0F92SGCQN1zdEUyppBar8My3XjhDKfO",
+                    "name": "Set Variables",
+                    "title": "Set Variables",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Set Variables",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                          "variable_value_new": "[$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$]"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01LY0FIYYDXSM7iBJG97c1JiokYUiqrkvUt",
+                    "name": "Replace String",
+                    "title": "Replace String",
+                    "type": "core.replacestring",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Replace String",
+                      "input_string": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                      "replace_list": [
+                        {
+                          "replaced_string": "},]",
+                          "replacement_string": "}]"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01LY0FZMZZV1K4GZCLVVsc3FYPqqQTYZASa",
+                    "name": "Set Variables",
+                    "title": "Set Variables",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Set Variables",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                          "variable_value_new": "$activity.definition_activity_01LY0FIYYDXSM7iBJG97c1JiokYUiqrkvUt.output.result_string$"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01LY6EIADGTHY6V4AN3dNMXJHBFFeKUJdVc",
+            "name": "Parallel Branch",
+            "title": "Response",
+            "type": "logic.parallel_block",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Response",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01LY6E9STG2ZP01c6svYMgLRO1nPsxhLIuD",
+                "name": "Condition Block",
+                "title": "Inbound or Outbound",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Inbound or Outbound",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01LY6EAKSRH8A1JFLxvYXxh6qEMyBQUaCl3",
+                    "name": "Condition Branch",
+                    "title": "in",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$trigger.triggerevent_01LXYC6086ATI6aMLPBoWAOKcuGUwEG42gc.output.subject$",
+                        "operator": "eq",
+                        "right_operand": "CES DLP_Credit_Card_inbound"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "in",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01LY6EALVY0XD6TfofKQZyJXgyQqgD2MlrV",
+                        "name": "Set Variables",
+                        "title": "Set Variables direction",
+                        "type": "core.set_multiple_variables",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Set Variables direction",
+                          "skip_execution": false,
+                          "variables_to_update": [
+                            {
+                              "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd$",
+                              "variable_value_new": "EMAIL - DLP Credit Card Found - INBOUND - TO : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB$"
+                            }
+                          ]
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01LY6EAWATQ62769IZM2vXbdpIcFIicAnsV",
+                    "name": "Condition Branch",
+                    "title": "out",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$trigger.triggerevent_01LXYC6086ATI6aMLPBoWAOKcuGUwEG42gc.output.subject$",
+                        "operator": "eq",
+                        "right_operand": "CES DLP_Credit_Card_outbound"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "out",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01LYPP5C6D33K7io95RwgCNlz3PItYkutAs",
+                        "name": "Parallel Block",
+                        "title": "Parallel Block",
+                        "type": "logic.parallel",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Parallel Block",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01LYPP6WT11WJ0mk1Xb131FUPLSUfGKkyH0",
+                            "name": "Parallel Branch",
+                            "title": "Get info from Azure AD",
+                            "type": "logic.parallel_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Get info from Azure AD",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01LY8NMM4GSJ34nkevYSRjzbh9Bsjw7Z08D",
+                                "name": "Match Regex",
+                                "title": "Match Regex email",
+                                "type": "core.matchregex",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Match Regex email",
+                                  "input_regex": "\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b",
+                                  "input_string": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01LY8ETTQ4A4J162nVFdx97m6pXc5liuz5R",
+                                "name": "Azure Graph - Get Access Token",
+                                "title": "Azure Graph - Get Access Token",
+                                "type": "workflow.atomic_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Azure Graph - Get Access Token",
+                                  "input": {
+                                    "variable_workflow_01HQN7N4UOTC65YnWUlkyv9piykyDJH4Mzv": "$global.variable_01JFV6LDS7L9U3EIQg0vjnhzRP7PmMEA0Pb.global.variable_01JFV6LDS7L9U3EIQg0vjnhzRP7PmMEA0Pb$",
+                                    "variable_workflow_01HQN7N4UOZF02zDbu04b5YjKRJg26v2t0h": "$global.variable_01JFVH0T4SXO63PxYdYV5WFVdikwsvuGtC1.global.variable_01JFVH0T4SXO63PxYdYV5WFVdikwsvuGtC1$",
+                                    "variable_workflow_01HQN7N4UP0LT0TAyszgX3beksLoKgFl92K": "$global.variable_01JFVGETYFSLP5AvbmxSSUh4cusqoXzk3KJ.global.variable_01JFVGETYFSLP5AvbmxSSUh4cusqoXzk3KJ$"
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "run_on_all_targets": false,
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "Azure_For_Access_Token"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "workflow_id": "definition_workflow_01HQN7N57GLKN780LTDUabTblE3OpMPQVfx"
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01LY8F2WX5UHI1qfEOJI88LksiWUrsQRiDh",
+                                "name": "HTTP Request",
+                                "title": "Get User Manager in Azure AD",
+                                "type": "web-service.http_request",
+                                "base_type": "activity",
+                                "properties": {
+                                  "action_timeout": 180,
+                                  "allow_auto_redirect": true,
+                                  "continue_on_error_status_code": false,
+                                  "continue_on_failure": false,
+                                  "custom_headers": [
+                                    {
+                                      "name": "Authorization",
+                                      "value": "Bearer $activity.definition_activity_01LY8ETTQ4A4J162nVFdx97m6pXc5liuz5R.output.variable_workflow_01HQN7N4UOY2Q02vRhF0zXjAJoPNBVNKV9Q$"
+                                    }
+                                  ],
+                                  "display_name": "Get User Manager in Azure AD",
+                                  "method": "GET",
+                                  "relative_url": "/users/$activity.definition_activity_01LY8NMM4GSJ34nkevYSRjzbh9Bsjw7Z08D.output.matching_strings[0]$/manager",
+                                  "runtime_user": {
+                                    "override_target_runtime_user": false,
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "Azure_Graph_API"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01LYP7AL43HB50J0R9SLiAEfcQcc7X3hmwc",
+                                "name": "JSONPath Query",
+                                "title": "Extract manager email",
+                                "type": "corejava.jsonpathquery",
+                                "base_type": "activity",
+                                "properties": {
+                                  "action_timeout": 180,
+                                  "continue_on_failure": false,
+                                  "display_name": "Extract manager email",
+                                  "input_json": "$activity.definition_activity_01LY8F2WX5UHI1qfEOJI88LksiWUrsQRiDh.output.response_body$",
+                                  "jsonpath_queries": [
+                                    {
+                                      "jsonpath_query": "$.mail",
+                                      "jsonpath_query_name": "mail",
+                                      "jsonpath_query_type": "string"
+                                    },
+                                    {
+                                      "jsonpath_query": "$.userPrincipalName",
+                                      "jsonpath_query_name": "userPrincipalName",
+                                      "jsonpath_query_type": "string"
+                                    },
+                                    {
+                                      "jsonpath_query": "$.id",
+                                      "jsonpath_query_name": "id",
+                                      "jsonpath_query_type": "string"
+                                    },
+                                    {
+                                      "jsonpath_query": "$.displayName",
+                                      "jsonpath_query_name": "displayName",
+                                      "jsonpath_query_type": "string"
+                                    },
+                                    {
+                                      "jsonpath_query": "$.jobTitle",
+                                      "jsonpath_query_name": "jobTitle",
+                                      "jsonpath_query_type": "string"
+                                    }
+                                  ],
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01LYPP6XV3TR91R1lGNqISUMIew4qM2zTIU",
+                            "name": "Parallel Branch",
+                            "title": "violation table",
+                            "type": "logic.parallel_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "violation table",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01LYSZ3Y6XZ932idHqNlGaY0O5cOcfQP0pB",
+                                "name": "Condition Block",
+                                "title": "entry in table",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "entry in table",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_01LYSZ4IFE5SV6FsCrpYEpiUlHePm0X3tKU",
+                                    "name": "Condition Branch",
+                                    "title": "yes",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$activity.definition_activity_01OLAE5AH3OJX1ufM5DqhlOjX19OGzFZa8b.output.row_count$",
+                                        "operator": "ne",
+                                        "right_operand": 0
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "yes",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01LY86P46SQ0Z0Yq6T4jTghzOVUyPZiSuMd",
+                                        "name": "Set Variables",
+                                        "title": "Set Variables DLP violation count",
+                                        "type": "core.set_multiple_variables",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Set Variables DLP violation count",
+                                          "skip_execution": false,
+                                          "variables_to_update": [
+                                            {
+                                              "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$",
+                                              "variable_value_new": "$activity.definition_activity_01OLAE5AH3OJX1ufM5DqhlOjX19OGzFZa8b.output.output_table[0].Count$+1"
+                                            }
+                                          ]
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "unique_name": "definition_activity_01LYSZ4JIBSSS54b7gSxw5a3EkSXnUvE0m2",
+                                    "name": "Condition Branch",
+                                    "title": "no",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$activity.definition_activity_01OLAE5AH3OJX1ufM5DqhlOjX19OGzFZa8b.output.row_count$",
+                                        "operator": "eq",
+                                        "right_operand": 0
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "no",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01LYU1JUZCBY235NfIGygbeb9eGsgbKFWiR",
+                                        "name": "Set Variables",
+                                        "title": "Set Variables DLP violation count",
+                                        "type": "core.set_multiple_variables",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Set Variables DLP violation count",
+                                          "skip_execution": false,
+                                          "variables_to_update": [
+                                            {
+                                              "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$",
+                                              "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$+1"
+                                            }
+                                          ]
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "unique_name": "definition_activity_01LYPHHHFHTZT4qsVrMvYAj8dHN0reVX4PE",
+                                "name": "Update Row in Table",
+                                "title": "Update Row in Table",
+                                "type": "core.updaterowintable",
+                                "base_type": "activity",
+                                "properties": {
+                                  "action_timeout": 180,
+                                  "columns": [
+                                    {
+                                      "column_name": "User",
+                                      "column_type": "string"
+                                    },
+                                    {
+                                      "column_name": "Count",
+                                      "column_type": "integer"
+                                    },
+                                    {
+                                      "column_name": "Last-Message-Id",
+                                      "column_type": "string"
+                                    }
+                                  ],
+                                  "continue_on_failure": false,
+                                  "display_name": "Update Row in Table",
+                                  "input_table": "$env.variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md.env.variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md$",
+                                  "row": [
+                                    {
+                                      "key": "User",
+                                      "type": "string",
+                                      "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$"
+                                    },
+                                    {
+                                      "key": "Count",
+                                      "type": "integer",
+                                      "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$"
+                                    },
+                                    {
+                                      "key": "Last-Message-Id",
+                                      "type": "string",
+                                      "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o$"
+                                    }
+                                  ],
+                                  "rows": {
+                                    "rows_matching_criteria": true,
+                                    "where_clause": "User == '$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$'"
+                                  },
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01LYPJME6TT1G30OanyEoH7SHRNbo7x7MKm",
+                        "name": "Condition Block",
+                        "title": "num of violation",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "num of violation",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_01LYPJN73KC7V36L46EyNRuRpiPHHFzd9wT",
+                            "name": "Condition Branch",
+                            "title": "1",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$",
+                                "operator": "eq",
+                                "right_operand": 1
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "1",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01LYPK4433A9K11rZBcrEBfGlQZBD1np1iX",
+                                "name": "Set Variables",
+                                "title": "Set Variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Set Variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd$",
+                                      "variable_value_new": "EMAIL - DLP Credit Card Found - OUTBOUND - FROM : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr$",
+                                      "variable_value_new": "--------------------\n- DLP violation count = $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$\n- Warning EMAIL has been send to user\n--------------------"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01LYPQHMZVC451dX9doUKA2vk5ZNjK13KfN",
+                                "name": "Send Email",
+                                "title": "Send Email",
+                                "type": "email.smtp_send_email",
+                                "base_type": "activity",
+                                "properties": {
+                                  "action_timeout": 180,
+                                  "body": "! Email Corporate Policy Violation detected !\n\nRaison : Credit Card number detected in email you sent:\n\nto : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB$\nwith subject : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq$\nat : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l$\n\nIn case of a second attempt a email will be send to your manager $activity.definition_activity_01LYP7AL43HB50J0R9SLiAEfcQcc7X3hmwc.output.jsonpath_queries.displayName$",
+                                  "continue_if_one_address_valid": false,
+                                  "continue_on_failure": false,
+                                  "display_name": "Send Email",
+                                  "runtime_user": {
+                                    "override_target_runtime_user": false,
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "subject": "Altert - Email Corporate Policy Violation detected",
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.email smtp_endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01MV9BRFS4EEU0lVILuuufKRB9yXzBK7FIm$"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "to": "$activity.definition_activity_01LY8NMM4GSJ34nkevYSRjzbh9Bsjw7Z08D.output.matching_strings[0]$"
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01LYPJN8555AK27dr983P16fC2HDetN6mYk",
+                            "name": "Condition Branch",
+                            "title": "2",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$",
+                                "operator": "eq",
+                                "right_operand": 2
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "2",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01LYQ5RMY43116QS9LXoQITHHjaWQXOvdTp",
+                                "name": "Set Variables",
+                                "title": "Set Variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Set Variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd$",
+                                      "variable_value_new": "EMAIL - DLP Credit Card Found - SECOND OCCURRENCE - OUTBOUND - FROM : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr$",
+                                      "variable_value_new": "--------------------\n- DLP violation count = $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$\n- Warning EMAIL has been send to user and manager\n- Manager : $activity.definition_activity_01LYP7AL43HB50J0R9SLiAEfcQcc7X3hmwc.output.jsonpath_queries.displayName$\n- Manager Email : $activity.definition_activity_01LYP7AL43HB50J0R9SLiAEfcQcc7X3hmwc.output.jsonpath_queries.mail$\n--------------------"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01LYQ7Q1135HM4q2IYDcH3SiezIwqVTDbQk",
+                                "name": "Send Email",
+                                "title": "Send Email",
+                                "type": "email.smtp_send_email",
+                                "base_type": "activity",
+                                "properties": {
+                                  "action_timeout": 180,
+                                  "body": "! SECOND OCCURRENCE of Email Corporate Policy Violation detected !\n\nRaison : Credit Card number detected in email:\n\nFrom : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$\nto : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB$\nwith subject : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq$\nat : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l$",
+                                  "cc": "$activity.definition_activity_01LY8NMM4GSJ34nkevYSRjzbh9Bsjw7Z08D.output.matching_strings[0]$",
+                                  "continue_if_one_address_valid": false,
+                                  "continue_on_failure": false,
+                                  "display_name": "Send Email",
+                                  "runtime_user": {
+                                    "override_target_runtime_user": false,
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "subject": "WARNING - Email Corporate Policy Violation detected",
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.email smtp_endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01MV9BRFS4EEU0lVILuuufKRB9yXzBK7FIm$"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "to": "$activity.definition_activity_01LYP7AL43HB50J0R9SLiAEfcQcc7X3hmwc.output.jsonpath_queries.mail$"
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01LYPNU3YUIJ521CanvGQgEmgljYL5GGvef",
+                            "name": "Condition Branch",
+                            "title": "3 and more",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$",
+                                "operator": "gt",
+                                "right_operand": 2
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "3 and more",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01LYTHD62WRDU3ei39gudJICzavlWUWpZQq",
+                                "name": "Set Variables",
+                                "title": "Set Variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Set Variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd$",
+                                      "variable_value_new": "EMAIL - DLP Credit Card Found - THIRD OCCURRENCE - OUTBOUND - FROM : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr$",
+                                      "variable_value_new": "--------------------\n- DLP violation count = $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$\n- AUTOMATE Action has been apply to send to Lockdown user in AzureAD\n- EMAIL has been send to manager with instruction to reenable AD account\n- Manager : $activity.definition_activity_01LYP7AL43HB50J0R9SLiAEfcQcc7X3hmwc.output.jsonpath_queries.displayName$\n- Manager Email : $activity.definition_activity_01LYP7AL43HB50J0R9SLiAEfcQcc7X3hmwc.output.jsonpath_queries.mail$\n--------------------"
+                                    },
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW$",
+                                      "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01LYTMY7QVKCR1gGXfZ5ukbypL9BYOS0kYo",
+                                "name": "Send Email",
+                                "title": "Send Email",
+                                "type": "email.smtp_send_email",
+                                "base_type": "activity",
+                                "properties": {
+                                  "action_timeout": 180,
+                                  "body": "! THIRD OCCURRENCE of Email Corporate Policy Violation detected !\n\nRaison : Credit Card number detected in email:\n\nFrom : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$\nto : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB$\nwith subject : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq$\nat : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l$\n\nControl and Remediation action applied:\nMicrosoft Azure AD User $activity.definition_activity_01LY8NMM4GSJ34nkevYSRjzbh9Bsjw7Z08D.output.matching_strings[0]$ has been lockdown\n\nAction from part:\nPlease contact the Security Team for next step.\n",
+                                  "cc": "$activity.definition_activity_01LY8NMM4GSJ34nkevYSRjzbh9Bsjw7Z08D.output.matching_strings[0]$",
+                                  "continue_if_one_address_valid": false,
+                                  "continue_on_failure": false,
+                                  "display_name": "Send Email",
+                                  "runtime_user": {
+                                    "override_target_runtime_user": false,
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "subject": "WARNING - Email Corporate Policy Violation detected",
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.email smtp_endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01MV9BRFS4EEU0lVILuuufKRB9yXzBK7FIm$"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "to": "$activity.definition_activity_01LYP7AL43HB50J0R9SLiAEfcQcc7X3hmwc.output.jsonpath_queries.mail$"
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_01LYTSVTPU2396esjWhe72i0KikHP286wzR",
+                                "name": "HTTP Request",
+                                "title": "Lock down Azure AD User",
+                                "type": "web-service.http_request",
+                                "base_type": "activity",
+                                "properties": {
+                                  "action_timeout": 180,
+                                  "allow_auto_redirect": true,
+                                  "body": "{\n  \"accountEnabled\": false\n}",
+                                  "content_type": "application/json",
+                                  "continue_on_error_status_code": false,
+                                  "continue_on_failure": false,
+                                  "custom_headers": [
+                                    {
+                                      "name": "Authorization",
+                                      "value": "Bearer $activity.definition_activity_01LY8ETTQ4A4J162nVFdx97m6pXc5liuz5R.output.variable_workflow_01HQN7N4UOY2Q02vRhF0zXjAJoPNBVNKV9Q$"
+                                    }
+                                  ],
+                                  "display_name": "Lock down Azure AD User",
+                                  "method": "PATCH",
+                                  "relative_url": "/users/$activity.definition_activity_01LY8NMM4GSJ34nkevYSRjzbh9Bsjw7Z08D.output.matching_strings[0]$",
+                                  "runtime_user": {
+                                    "override_target_runtime_user": false,
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "Azure_Graph_API"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01LZ1M6IXHJ5O76pLDWYG2AetieXcexvulF",
+        "name": "Group",
+        "title": "SecureX Casebook creation",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "SecureX Casebook creation",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01LXZVANMI1BC5jNT3plezhnY9SXw0822Bm",
+            "name": "Set Variables",
+            "title": "Create notes",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Create notes",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4$",
+                  "variable_value_new": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4$\n- Cisco Message ID : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPYE65BDX32zfAjRx8idaptO77Su1cHb$\n- From : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$\n- To :  $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB$\n- Bcc : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9$\n- Cc : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR$\n- Subject : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq$\n- Message-Id : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o$\n- Date : $workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l$\n$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LXZGFRWNJ276aWgNN6VXCLeRWOsvyDVXk$\n--------------------\n$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr$"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01LY0HY0PVVBA5vWkSunACGUgktxVN5c5fF",
+            "name": "Threat Response v2 - Create Casebook",
+            "title": "Threat Response v2 - Create Casebook",
+            "type": "workflow.atomic_workflow",
+            "base_type": "subworkflow",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Threat Response v2 - Create Casebook",
+              "input": {
+                "variable_workflow_01KVOGF4J481T6SCd7uh5fW7n47Q712nleJ": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                "variable_workflow_01KVOGF4J4FZC0jmaR42b1FbIzVZA19KbYL": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4$",
+                "variable_workflow_01KVOGF4J4IG81TQKFjqzLlnFJwiiNwXwSq": "$activity.definition_activity_01OL7OTNFMRN75sANk9ApMU5FcTIkmPneHj.output.variable_workflow_01KWJ2ISHZ9753Hoi7x9S5EPpucAbm53HHF$",
+                "variable_workflow_01KVOGF4J4JL52xC9ZXdjYwHt2SvRYkArli": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd$",
+                "variable_workflow_01KVOMXV9ERSV0M9j1WarflgSG8r5SpZ8b5": "",
+                "variable_workflow_01LFBYQJV9FZA2THdEQrMftLyGiiHP65nUq": "amber"
+              },
+              "runtime_user": {
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "use_workflow_target_group": true
+              },
+              "workflow_id": "definition_workflow_01KVOGF574Y291CRwQLNB1TtzEHDNwyUx7O"
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "triggers": {
+    "triggerevent_01LXYC6086ATI6aMLPBoWAOKcuGUwEG42gc": {
+      "workflow_id": "definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye",
+      "name": "events_securex - CES DLP Credit Card",
+      "title": "",
+      "lowercase_name": "event.events_securex_-_ces_dlp_credit_card",
+      "type": "event",
+      "base_type": "trigger",
+      "ref_id": "event_01LXVHA4OPNB93tU1KyoU4tsAHnOxOjo1eK",
+      "version": "1.0.0",
+      "disabled": false,
+      "unique_name": "triggerevent_01LXYC6086ATI6aMLPBoWAOKcuGUwEG42gc",
+      "object_type": "triggerevent"
+    }
+  },
+  "events": {
+    "event_01LXVHA4OPNB93tU1KyoU4tsAHnOxOjo1eK": {
+      "name": "events_securex - CES DLP_Credit_Card",
+      "title": "events_securex - CES DLP_Credit_Card",
+      "type": "email.event",
+      "base_type": "event",
+      "object_type": "event",
+      "target_id": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "action": "read",
+        "conditions": {
+          "left_operand": {
+            "left_operand": {
+              "left_operand": "$output.subject$",
+              "operator": "eq",
+              "right_operand": "CES DLP_Credit_Card"
+            },
+            "operator": "or",
+            "right_operand": {
+              "left_operand": "$output.subject$",
+              "operator": "eq",
+              "right_operand": "CES DLP_Credit_Card_inbound"
+            }
+          },
+          "operator": "or",
+          "right_operand": {
+            "left_operand": "$output.subject$",
+            "operator": "eq",
+            "right_operand": "CES DLP_Credit_Card_outbound"
+          }
+        },
+        "display_name": "events_securex - CES DPL_Credit_Card",
+        "download_attachments": true,
+        "folder": "INBOX",
+        "target_id": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
+        "title": "events_securex - CES DLP_Credit_Card"
+      },
+      "unique_name": "event_01LXVHA4OPNB93tU1KyoU4tsAHnOxOjo1eK"
+    }
+  },
+  "targets": {
+    "definition_target_01JFV61MPULRO2BFuRO8Q6JxxYAK7m8aHkC": {
+      "unique_name": "definition_target_01JFV61MPULRO2BFuRO8Q6JxxYAK7m8aHkC",
+      "name": "Email Endpoint - O365 - internetsinkhole.com",
+      "title": "Email Endpoint - O365 - internetsinkhole.com",
+      "type": "email.smtp_endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_01JFV5NCE88ML6m7Ns6bgOMxPyGKzTNaETv",
+        "display_name": "Email Endpoint - O365 - internetsinkhole.com",
+        "no_runtime_user": false,
+        "port": 587,
+        "protocol": "SMTP",
+        "server": "smtp.office365.com"
+      }
+    },
+    "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8": {
+      "unique_name": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
+      "name": "SecureX Trigger IMAP Mailbox",
+      "title": "SecureX Trigger IMAP Mailbox",
+      "type": "email.imap_endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez",
+        "display_name": "SecureX Trigger IMAP Mailbox",
+        "ignore_certificate_errors": true,
+        "polling_interval": 30,
+        "port": 993,
+        "protocol": "IMAP",
+        "server": "outlook.office365.com",
+        "tls_enabled": true
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_01JFV5NCE88ML6m7Ns6bgOMxPyGKzTNaETv": {
+      "unique_name": "definition_runtime_user_01JFV5NCE88ML6m7Ns6bgOMxPyGKzTNaETv",
+      "name": "securex-orchestration@internetsinkhole.com",
+      "title": "securex-orchestration@internetsinkhole.com",
+      "type": "runtime_user.email_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "display_name": "securex-orchestration@internetsinkhole.com",
+        "password": "*****",
+        "sender": "*****"
+      }
+    },
+    "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez": {
+      "unique_name": "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez",
+      "name": "events_securex@internetsinkhole.com",
+      "title": "events_securex@internetsinkhole.com",
+      "type": "runtime_user.email_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "display_name": "events_securex@internetsinkhole.com",
+        "password": "*****",
+        "sender": "*****"
+      }
+    }
+  },
+  "target_groups": {
+    "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH": {
+      "unique_name": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+      "name": "Default TargetGroup",
+      "title": "Default TargetGroup",
+      "type": "generic.target_group",
+      "base_type": "target_group",
+      "version": "1.0.0",
+      "targets": [
+        {
+          "data_target_type": "web-service.endpoint",
+          "view_target_type": "web-service.endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "email.smtp_endpoint",
+          "view_target_type": "email.smtp_endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "terminal.endpoint",
+          "view_target_type": "terminal.endpoint",
+          "include_all_targets": true
+        }
+      ],
+      "object_type": "target_group"
+    }
+  },
+  "variables": {
+    "variable_01JFV6LDS7L9U3EIQg0vjnhzRP7PmMEA0Pb": {
+      "unique_name": "variable_01JFV6LDS7L9U3EIQg0vjnhzRP7PmMEA0Pb",
+      "properties": {
+        "value": "dfdbdc50-0ec5-45ce-b9c7-c54c9351e474",
+        "scope": "global",
+        "name": "Azure Tenant ID",
+        "type": "datatype.string",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    },
+    "variable_01JFVGETYFSLP5AvbmxSSUh4cusqoXzk3KJ": {
+      "unique_name": "variable_01JFVGETYFSLP5AvbmxSSUh4cusqoXzk3KJ",
+      "properties": {
+        "value": "*****",
+        "scope": "global",
+        "name": "Azure client_secret",
+        "type": "datatype.secure_string",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    },
+    "variable_01JFVH0T4SXO63PxYdYV5WFVdikwsvuGtC1": {
+      "unique_name": "variable_01JFVH0T4SXO63PxYdYV5WFVdikwsvuGtC1",
+      "properties": {
+        "value": "00c1b811-4906-417f-b463-606f7e9056b3",
+        "scope": "global",
+        "name": "Azure AD clientid",
+        "type": "datatype.string",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    },
+    "variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md": {
+      "unique_name": "variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md",
+      "schema_id": "tabletype_01OL8I6OT0976398aTlLsDFlUj0jaI0fUoR",
+      "properties": {
+        "value": [
+          {
+            "column_data": {
+              "Count": 0,
+              "Last-Message-Id": "iuio",
+              "Message-Id": "",
+              "User": "flejkflk"
+            }
+          }
+        ],
+        "scope": "env",
+        "name": "Secure Email DLP violation",
+        "type": "datatype.table",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    }
+  },
+  "table_types": {
+    "tabletype_01OL8I6OT0976398aTlLsDFlUj0jaI0fUoR": {
+      "unique_name": "tabletype_01OL8I6OT0976398aTlLsDFlUj0jaI0fUoR",
+      "data_type": "datatype.tabletype",
+      "display_name": "Email DLP violation",
+      "columns": [
+        {
+          "is_required": true,
+          "name": "Count",
+          "title": "Count",
+          "type": "integer"
+        },
+        {
+          "is_required": true,
+          "name": "Last-Message-Id",
+          "title": "Last-Message-Id",
+          "type": "string"
+        },
+        {
+          "is_required": true,
+          "name": "User",
+          "title": "User",
+          "type": "string"
+        }
+      ],
+      "base_type": "datatype",
+      "object_type": "tabletype"
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_01KWJ2ISZTF2V6ibRYe7FZ7sOuycDOpnwss",
+    "definition_workflow_01KXGKZ0JA96P0p7omD4IdS6zKdw5ECiofU",
+    "definition_workflow_01HQN7N57GLKN780LTDUabTblE3OpMPQVfx",
+    "definition_workflow_01KVOGF574Y291CRwQLNB1TtzEHDNwyUx7O"
+  ]
+}
