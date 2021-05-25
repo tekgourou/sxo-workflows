@@ -7,19 +7,6 @@
     "base_type": "workflow",
     "variables": [
       {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 3720,
-          "scope": "local",
-          "name": "interval",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01JZJKVMAZYF24229wkg1zmzRqmTcXfmHRt",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
@@ -30,6 +17,19 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01M1FRV0UGSQC0afOGQfU0L2tmgJ2Df4jFW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 3720,
+          "scope": "local",
+          "name": "interval",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01JZJKVMAZYF24229wkg1zmzRqmTcXfmHRt",
         "object_type": "variable_workflow"
       }
     ],
@@ -100,11 +100,13 @@
           {
             "unique_name": "definition_activity_01M1FYF9N1IHO4cpDhu9vfZBM44FgmrwcYM",
             "name": "Parallel Branch",
-            "title": "Parallel Branch",
+            "title": "Duo API Request",
             "type": "logic.parallel_block",
             "base_type": "activity",
             "properties": {
-              "display_name": "Parallel Branch"
+              "continue_on_failure": false,
+              "display_name": "Duo API Request",
+              "skip_execution": false
             },
             "object_type": "definition_activity",
             "actions": [
@@ -232,11 +234,13 @@
           {
             "unique_name": "definition_activity_01M1FYFAPDQ434hywX0B2WesZJdLKO4FgSV",
             "name": "Parallel Branch",
-            "title": "Parallel Branch",
+            "title": "Threat Response - Token",
             "type": "logic.parallel_block",
             "base_type": "activity",
             "properties": {
-              "display_name": "Parallel Branch"
+              "continue_on_failure": false,
+              "display_name": "Threat Response - Token",
+              "skip_execution": false
             },
             "object_type": "definition_activity",
             "actions": [
@@ -270,6 +274,48 @@
                     }
                   },
                   "workflow_id": "definition_workflow_01KWJ2ISZTF2V6ibRYe7FZ7sOuycDOpnwss"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01OPG0XG9GIRU788WQcPH5foZRp5j0bXqw1",
+            "name": "Parallel Branch",
+            "title": "Timestamp",
+            "type": "logic.parallel_block",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Timestamp",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01OPG1401NEGQ2AhGhI6oKnjSHpfKHA6fXw",
+                "name": "Execute Python Script",
+                "title": "Timestamp",
+                "type": "python3.script",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Timestamp",
+                  "script": "import sys\nfrom datetime import datetime\nimport time\n\nlinux_time = int(time.time()) \n\nt =  int(linux_time)\ntimeISO = (datetime.fromtimestamp(t).isoformat())+'+00:00'\n\ndelta = 86400 * 14\nlinux_time = int(time.time()) + delta\n\nt =  int(linux_time)\nend_time = (datetime.fromtimestamp(t).isoformat())+'.000Z'",
+                  "script_queries": [
+                    {
+                      "script_query": "timeISO",
+                      "script_query_name": "timestamp",
+                      "script_query_type": "string"
+                    },
+                    {
+                      "script_query": "end_time",
+                      "script_query_name": "end_time",
+                      "script_query_type": "string"
+                    }
+                  ],
+                  "skip_execution": false
                 },
                 "object_type": "definition_activity"
               }
@@ -914,6 +960,51 @@
                               "to": "$activity.definition_activity_01JZA41BSALUR4RG2rAk3ys680xN9YFjvXh.input.source_array[@].email$"
                             },
                             "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01OPFWX5D73GO7WICmXuyqLOWbbqqbWGG3F",
+                            "name": "HTTP Request",
+                            "title": "Threat Response - Create Judgement",
+                            "type": "web-service.http_request",
+                            "base_type": "activity",
+                            "properties": {
+                              "action_timeout": 180,
+                              "allow_auto_redirect": true,
+                              "body": "{\n\"observable\": {\n\"type\": \"ip\",\n\"value\": \"$activity.definition_activity_01JZBK19U8D3V0sYgSUjkBITCejlhNQXPVs.output.jsonpath_queries.ip$\"\n},\n\"valid_time\": {\n\"end_time\": \"$activity.definition_activity_01OPG1401NEGQ2AhGhI6oKnjSHpfKHA6fXw.output.script_queries.end_time$\"\n},\n\"source\": \"Cisco Secure Access by Duo\",\n\"reason\": \"\",\n\"tlp\": \"amber\",\n\"disposition_name\": \"Suspicious\",\n\"severity\": \"Medium\",\n\"confidence\": \"High\",\n\"priority\": 100\n}",
+                              "content_type": "application/json",
+                              "continue_on_error_status_code": false,
+                              "continue_on_failure": false,
+                              "custom_headers": [
+                                {
+                                  "name": "Authorization",
+                                  "value": "Bearer $activity.definition_activity_01LW7XBX9TJE70eyZyhPZjz6QEGh8MzkYEv.output.variable_workflow_01KWJ2ISHZ9753Hoi7x9S5EPpucAbm53HHF$"
+                                }
+                              ],
+                              "display_name": "Threat Response - Create Judgement",
+                              "method": "POST",
+                              "relative_url": "/ctia/judgement",
+                              "runtime_user": {
+                                "override_target_runtime_user": false,
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target_group_criteria": true,
+                                "target_group": {
+                                  "use_criteria": {
+                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                    "conditions": [
+                                      {
+                                        "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                        "operator": "eq",
+                                        "right_operand": "Private_CTIA_Target"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            },
+                            "object_type": "definition_activity"
                           }
                         ]
                       }
@@ -1267,6 +1358,16 @@
       "unique_name": "variable_01ML0DB55YHLL2JOBn1pyeggcLHHgTtssM3",
       "schema_id": "tabletype_01ML0C4Q6DA116Sqz5qlLviuvMJG8foZP0y",
       "properties": {
+        "value": [
+          {
+            "column_data": {
+              "result": "fraud",
+              "timestamp": 1621953967,
+              "txid": "d2c73331-543b-450a-a28d-5ccf89b6f6e8",
+              "user": "{\"name\":\"alexandre\",\"groups\":[],\"key\":\"DUO3SI16XYCT4615RA9D\"}"
+            }
+          }
+        ],
         "scope": "env",
         "name": "Cisco Secure Access - Denied and Fraud",
         "type": "datatype.table",
@@ -1283,11 +1384,6 @@
       "display_name": "Cisco Secure Access - Denied and Fraud",
       "columns": [
         {
-          "name": "result",
-          "title": "result",
-          "type": "string"
-        },
-        {
           "name": "timestamp",
           "title": "timestamp",
           "type": "integer"
@@ -1301,6 +1397,11 @@
           "name": "user",
           "title": "user",
           "type": "string"
+        },
+        {
+          "name": "result",
+          "title": "result",
+          "type": "string"
         }
       ],
       "base_type": "datatype",
@@ -1308,8 +1409,8 @@
     }
   },
   "atomic_workflows": [
-    "definition_workflow_01KWJ2ISZTF2V6ibRYe7FZ7sOuycDOpnwss",
     "definition_workflow_01JYONCDVQVZ62K7SkNWdQCuAPUgfdRcFAF",
+    "definition_workflow_01KWJ2ISZTF2V6ibRYe7FZ7sOuycDOpnwss",
     "definition_workflow_01KVOGF574Y291CRwQLNB1TtzEHDNwyUx7O"
   ]
 }
