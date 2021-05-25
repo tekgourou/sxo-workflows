@@ -65,7 +65,7 @@ Refence for best practice and documentation https://ciscosecurity.github.io/sxo-
   
   This Atomic workflow actions will create Casebook.  
   
-- Duo Admin - Get DENIED or FRAUD Auth Logs.json from this repo
+- Duo Admin - Get DENIED or FRAUD Auth Logs.json from https://github.com/tekgourou/sxo-atomics/tree/main/duoAdminGetDeniedOrFraudAuthLogs__definition_workflow_01JYONCDVQVZ62K7SkNWdQCuAPUgfdRcFAF
   
   This Atomic workflow action will fetch Duo auth denied and fraud logs.
 
