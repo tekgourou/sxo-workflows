@@ -24,7 +24,7 @@ For any questions or comments/bugs please reach out to me at alexandre@argeris.n
 
 This workflow will fetch Duo FRAUD logs detail from a Duo Fraud Email alert and Deny logs every 1hour. Detail will be parse to create a casebook and sigthings in SecureX platform. 
   
-![image](./img/Screen_Shot_casebook_workflow_v2.png)
+![image](./img/workflow2.png)
 <br/>  
 
 # Prerequisites:
