@@ -69,6 +69,10 @@ Refence for best practice and documentation https://ciscosecurity.github.io/sxo-
   
   This Atomic workflow action will fetch Duo auth denied and fraud logs.
 
+# Responses
+
+- End user can be notify in case a fraudulent authentification request. 
+![image](./img/email.jpeg)
 
 # Remediation workflows
 
