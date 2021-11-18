@@ -24,25 +24,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "cisco_mid",
+          "name": "from",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01SRY4YGWYQG00C17zmzLDROGYp8OcadzXL",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "BitcoinAbuse_count",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A",
+        "unique_name": "variable_workflow_01SRY4YGX1FQM0Ad5Hw6q0X9bagVccaaSkI",
         "object_type": "variable_workflow"
       },
       {
@@ -50,25 +37,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "bitcoin_notes",
+          "name": "cisco_mid",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01STNFPQF1MEK7JOh3KTvlDsaDHGa8ao8HZ",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "\nCisco Secure Email",
-          "scope": "local",
-          "name": "Event_source",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01STP3QPPNYIK3JMZ8khoIsbIRxwagbQWEX",
+        "unique_name": "variable_workflow_01SRY4YGWYQG00C17zmzLDROGYp8OcadzXL",
         "object_type": "variable_workflow"
       },
       {
@@ -89,32 +63,6 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "file_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGWYZ0Q2C9DJYQRgH4LmscGobEZfx",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "Message-Id",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGX23XR4lk6AdzbnxB6vsvEeKYn3S",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
           "name": "DLP_violation_notes",
           "type": "datatype.string",
           "is_required": false,
@@ -128,103 +76,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "from",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGX1FQM0Ad5Hw6q0X9bagVccaaSkI",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
           "name": "to",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01SRY4YGWZINO0jNK2UEkrEdLyAs9p5t0ok",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.boolean",
-        "properties": {
-          "value": false,
-          "scope": "local",
-          "name": "Secure_Malware_Analytics",
-          "type": "datatype.boolean",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SUCHPVAI21Q4yfEpgruPICghCXEC0XNMW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_raw_message",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGWYFK55beRl6ITIQNSz8jTtzsCPI",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.secure_string",
-        "properties": {
-          "value": "*****",
-          "scope": "local",
-          "name": "bitcoinabuse_api_token",
-          "type": "datatype.secure_string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRYLYX1YG011Dmt8MsfsKbHt7E8CPJM8D",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "observables",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGX0Y8I63gumaMP8JQmOWhmGTISMD",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_subject",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGX008B5Lxnrml47c4lWmfl5VEOUA",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "casebook_title",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGX2SRI2g9cnmdb0qqlU4MbBeHOjd",
         "object_type": "variable_workflow"
       },
       {
@@ -256,14 +113,92 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": " ",
+          "value": "",
           "scope": "local",
-          "name": "threatgrid_notes",
+          "name": "email_raw_message",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01STNRKNUSVGE5dzpPybtVnk1MTHuLmU2Z8",
+        "unique_name": "variable_workflow_01SRY4YGWYFK55beRl6ITIQNSz8jTtzsCPI",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Message-Id",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGX23XR4lk6AdzbnxB6vsvEeKYn3S",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "observables",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGX0Y8I63gumaMP8JQmOWhmGTISMD",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "\nCisco Secure Email",
+          "scope": "local",
+          "name": "Event_source",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01STP3QPPNYIK3JMZ8khoIsbIRxwagbQWEX",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "bitcoin_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01STNFPQF1MEK7JOh3KTvlDsaDHGa8ao8HZ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "Secure_Malware_Analytics",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SUCHPVAI21Q4yfEpgruPICghCXEC0XNMW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_dates",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGX0Q9C655j3aVij5P22ve5g50HCH",
         "object_type": "variable_workflow"
       },
       {
@@ -280,16 +215,81 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "*****",
+          "scope": "local",
+          "name": "bitcoinabuse_api_token",
+          "type": "datatype.secure_string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRYLYX1YG011Dmt8MsfsKbHt7E8CPJM8D",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "BitcoinAbuse_count",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
+          "value": " ",
           "scope": "local",
-          "name": "email_dates",
+          "name": "threatgrid_notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01SRY4YGX0Q9C655j3aVij5P22ve5g50HCH",
+        "unique_name": "variable_workflow_01STNRKNUSVGE5dzpPybtVnk1MTHuLmU2Z8",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_subject",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGX008B5Lxnrml47c4lWmfl5VEOUA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "file_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGWYZ0Q2C9DJYQRgH4LmscGobEZfx",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "casebook_title",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGX2SRI2g9cnmdb0qqlU4MbBeHOjd",
         "object_type": "variable_workflow"
       }
     ],
@@ -1163,130 +1163,200 @@
                 "object_type": "definition_activity"
               },
               {
-                "unique_name": "definition_activity_01STJ9KC4U5GR6JNJNdbbeFOYcDy0Nlr6Nh",
-                "name": "For Each",
-                "title": "For Each",
-                "type": "logic.for_each",
+                "unique_name": "definition_activity_01SVZ5TEXJH9A5Jqsbytm9xEEFgn2QmHdHi",
+                "name": "Condition Block",
+                "title": "Bitcoin address found ?",
+                "type": "logic.if_else",
                 "base_type": "activity",
                 "properties": {
                   "continue_on_failure": false,
-                  "display_name": "For Each",
-                  "skip_execution": false,
-                  "source_array": "$activity.definition_activity_01SRYS13VQ2SA6kcPSZJbuUwmy91iRA5Kw6.output.matching_strings$"
+                  "display_name": "Bitcoin address found ?",
+                  "skip_execution": false
                 },
                 "object_type": "definition_activity",
-                "actions": [
+                "blocks": [
                   {
-                    "unique_name": "definition_activity_01SRYEAS2EB593zfdecV2yl8Nh6xfZaAnPt",
-                    "name": "HTTP Request",
-                    "title": "Get Bitcoinabuse report",
-                    "type": "web-service.http_request",
+                    "unique_name": "definition_activity_01SVZ5TF6GY7D6FuLHBnUK1Avbu5mZ5Y8Qw",
+                    "name": "Condition Branch",
+                    "title": "YES",
+                    "type": "logic.condition_block",
                     "base_type": "activity",
                     "properties": {
-                      "action_timeout": 180,
-                      "allow_auto_redirect": true,
-                      "content_type": "application/json",
-                      "continue_on_error_status_code": false,
-                      "continue_on_failure": false,
-                      "display_name": "Get Bitcoinabuse report",
-                      "method": "GET",
-                      "relative_url": "/reports/check?address=$activity.definition_activity_01STJ9KC4U5GR6JNJNdbbeFOYcDy0Nlr6Nh.input.source_array[@]$\u0026api_token=$workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01SRYLYX1YG011Dmt8MsfsKbHt7E8CPJM8D$",
-                      "runtime_user": {
-                        "target_default": true
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01SRYS13VQ2SA6kcPSZJbuUwmy91iRA5Kw6.output.has_match$",
+                        "operator": "eq",
+                        "right_operand": true
                       },
-                      "skip_execution": false,
-                      "target": {
-                        "override_workflow_target_group_criteria": true,
-                        "target_group": {
-                          "use_criteria": {
-                            "choose_target_using_algorithm": "choose_first_with_matching_criteria",
-                            "conditions": [
-                              {
-                                "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
-                                "operator": "eq",
-                                "right_operand": "Bitcoinabuse_Target"
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    },
-                    "object_type": "definition_activity"
-                  },
-                  {
-                    "unique_name": "definition_activity_01STLTP1GH0FG5WMPNkqiRcrD58Z3IKvqKt",
-                    "name": "JSONPath Query",
-                    "title": "Parse Output",
-                    "type": "corejava.jsonpathquery",
-                    "base_type": "activity",
-                    "properties": {
-                      "action_timeout": 180,
                       "continue_on_failure": false,
-                      "display_name": "Parse Output",
-                      "input_json": "$activity.definition_activity_01SRYEAS2EB593zfdecV2yl8Nh6xfZaAnPt.output.response_body$",
-                      "jsonpath_queries": [
-                        {
-                          "jsonpath_query": "$.count",
-                          "jsonpath_query_name": "count",
-                          "jsonpath_query_type": "integer"
-                        },
-                        {
-                          "jsonpath_query": "$.first_seen",
-                          "jsonpath_query_name": "first_seen",
-                          "jsonpath_query_type": "string"
-                        },
-                        {
-                          "jsonpath_query": "$.last_seen",
-                          "jsonpath_query_name": "last_seen",
-                          "jsonpath_query_type": "string"
-                        },
-                        {
-                          "jsonpath_query": "$.recent",
-                          "jsonpath_query_name": "recent",
-                          "jsonpath_query_type": "string"
-                        }
-                      ],
+                      "display_name": "YES",
                       "skip_execution": false
                     },
-                    "object_type": "definition_activity"
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01STJ9KC4U5GR6JNJNdbbeFOYcDy0Nlr6Nh",
+                        "name": "For Each",
+                        "title": "For Each",
+                        "type": "logic.for_each",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "For Each",
+                          "skip_execution": false,
+                          "source_array": "$activity.definition_activity_01SRYS13VQ2SA6kcPSZJbuUwmy91iRA5Kw6.output.matching_strings$"
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01SRYEAS2EB593zfdecV2yl8Nh6xfZaAnPt",
+                            "name": "HTTP Request",
+                            "title": "Get Bitcoinabuse report",
+                            "type": "web-service.http_request",
+                            "base_type": "activity",
+                            "properties": {
+                              "action_timeout": 180,
+                              "allow_auto_redirect": true,
+                              "content_type": "application/json",
+                              "continue_on_error_status_code": false,
+                              "continue_on_failure": false,
+                              "display_name": "Get Bitcoinabuse report",
+                              "method": "GET",
+                              "relative_url": "/reports/check?address=$activity.definition_activity_01STJ9KC4U5GR6JNJNdbbeFOYcDy0Nlr6Nh.input.source_array[@]$\u0026api_token=$workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01SRYLYX1YG011Dmt8MsfsKbHt7E8CPJM8D$",
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target_group_criteria": true,
+                                "target_group": {
+                                  "use_criteria": {
+                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                    "conditions": [
+                                      {
+                                        "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                        "operator": "eq",
+                                        "right_operand": "Bitcoinabuse_Target"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01STLTP1GH0FG5WMPNkqiRcrD58Z3IKvqKt",
+                            "name": "JSONPath Query",
+                            "title": "Parse Output",
+                            "type": "corejava.jsonpathquery",
+                            "base_type": "activity",
+                            "properties": {
+                              "action_timeout": 180,
+                              "continue_on_failure": false,
+                              "display_name": "Parse Output",
+                              "input_json": "$activity.definition_activity_01SRYEAS2EB593zfdecV2yl8Nh6xfZaAnPt.output.response_body$",
+                              "jsonpath_queries": [
+                                {
+                                  "jsonpath_query": "$.count",
+                                  "jsonpath_query_name": "count",
+                                  "jsonpath_query_type": "integer"
+                                },
+                                {
+                                  "jsonpath_query": "$.first_seen",
+                                  "jsonpath_query_name": "first_seen",
+                                  "jsonpath_query_type": "string"
+                                },
+                                {
+                                  "jsonpath_query": "$.last_seen",
+                                  "jsonpath_query_name": "last_seen",
+                                  "jsonpath_query_type": "string"
+                                },
+                                {
+                                  "jsonpath_query": "$.recent",
+                                  "jsonpath_query_name": "recent",
+                                  "jsonpath_query_type": "string"
+                                }
+                              ],
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01STM2Y24GHWS24PMFDiF3s1IBNBNyQvZrR",
+                            "name": "Set Variables",
+                            "title": "Set Variables - Count",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Variables - Count",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A$",
+                                  "variable_value_new": "$workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A$+$activity.definition_activity_01STLTP1GH0FG5WMPNkqiRcrD58Z3IKvqKt.output.jsonpath_queries.count$"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01STNHCR2D39L78btnalLj0mYS7CxUYddF9",
+                            "name": "Set Variables",
+                            "title": "Building notes",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Building notes",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01STNFPQF1MEK7JOh3KTvlDsaDHGa8ao8HZ$",
+                                  "variable_value_new": "- Bitcoin Abuse report count : $workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A$\n- Bitcoin Abuse link : https://www.bitcoinabuse.com/reports/$activity.definition_activity_01STJ9KC4U5GR6JNJNdbbeFOYcDy0Nlr6Nh.input.source_array[@]$\n- Blockchain link : https://www.blockchain.com/btc/address/$activity.definition_activity_01STJ9KC4U5GR6JNJNdbbeFOYcDy0Nlr6Nh.input.source_array[@]$"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
-                    "unique_name": "definition_activity_01STM2Y24GHWS24PMFDiF3s1IBNBNyQvZrR",
-                    "name": "Set Variables",
-                    "title": "Set Variables - Count",
-                    "type": "core.set_multiple_variables",
+                    "unique_name": "definition_activity_01SVZ5TFFZKFY6PTuo44F3GMUuFpD8lIeXM",
+                    "name": "Condition Branch",
+                    "title": "NO",
+                    "type": "logic.condition_block",
                     "base_type": "activity",
                     "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01SRYS13VQ2SA6kcPSZJbuUwmy91iRA5Kw6.output.has_match$",
+                        "operator": "eq",
+                        "right_operand": false
+                      },
                       "continue_on_failure": false,
-                      "display_name": "Set Variables - Count",
-                      "skip_execution": false,
-                      "variables_to_update": [
-                        {
-                          "variable_to_update": "$workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A$",
-                          "variable_value_new": "$workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A$+$activity.definition_activity_01STLTP1GH0FG5WMPNkqiRcrD58Z3IKvqKt.output.jsonpath_queries.count$"
-                        }
-                      ]
+                      "display_name": "NO",
+                      "skip_execution": false
                     },
-                    "object_type": "definition_activity"
-                  },
-                  {
-                    "unique_name": "definition_activity_01STNHCR2D39L78btnalLj0mYS7CxUYddF9",
-                    "name": "Set Variables",
-                    "title": "Building notes",
-                    "type": "core.set_multiple_variables",
-                    "base_type": "activity",
-                    "properties": {
-                      "continue_on_failure": false,
-                      "display_name": "Building notes",
-                      "skip_execution": false,
-                      "variables_to_update": [
-                        {
-                          "variable_to_update": "$workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01STNFPQF1MEK7JOh3KTvlDsaDHGa8ao8HZ$",
-                          "variable_value_new": "- Bitcoin Abuse report count : $workflow.definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM.local.variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A$\n- Bitcoin Abuse link : https://www.bitcoinabuse.com/reports/$activity.definition_activity_01STJ9KC4U5GR6JNJNdbbeFOYcDy0Nlr6Nh.input.source_array[@]$\n- Blockchain link : https://www.blockchain.com/btc/address/$activity.definition_activity_01STJ9KC4U5GR6JNJNdbbeFOYcDy0Nlr6Nh.input.source_array[@]$"
-                        }
-                      ]
-                    },
-                    "object_type": "definition_activity"
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01SVZ6WK4AKLC0a4SPQqY8GU2jIPRI6Mlzi",
+                        "name": "Completed",
+                        "title": "Completed",
+                        "type": "logic.completed",
+                        "base_type": "activity",
+                        "properties": {
+                          "completion_type": "succeeded",
+                          "continue_on_failure": false,
+                          "display_name": "Completed",
+                          "result_message": "No bitcoin address found",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
                   }
                 ]
               }
@@ -2029,8 +2099,8 @@
   },
   "atomic_workflows": [
     "definition_workflow_01PP78YVWMXKI3jcrOGYocGMM3VaophGkkJ",
-    "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML",
     "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+    "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML",
     "definition_workflow_01PP7586MYQ913P0nWshTHMU7mQNNFG58Bv"
   ]
 }
