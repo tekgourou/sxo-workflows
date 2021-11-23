@@ -1,0 +1,200 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01SV8UWNQ9ZEY5iRgHkuoPPO10MTCN4xE7t",
+    "name": "Secure Endpoint - Move device to Group based on Username",
+    "title": "Secure Endpoint - Move device to Group based on Username",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "username",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SVCOE9BAWZ645Fu6og2g9Kly06lxzsDYX",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Secure Endpoint - Move device to Group based on Username",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "definition_target_01JFR9FZAKAKI7bGkrwxni4PPca6HAsVG5h",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01SVCKIOAF2IN7mTrS8oPqXj8xMUet5LFAh",
+        "name": "Secure Endpoint - Get Group by Name",
+        "title": "Secure Endpoint - Get Group by Name",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Secure Endpoint - Get Group by Name",
+          "input": {
+            "variable_workflow_01PP76KUS7HRK6uGjTOtsVj6VpvVkD72kCF": "Monitor"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01PP76KUZHVDE1gUGxreX9ZVwWysIR5STCI"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01SVCN92JGQFZ1fT2T3ImpTEZmqXQmk3DBk",
+        "name": "HTTP Request",
+        "title": "Get AMP device by username",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "continue_on_error_status_code": false,
+          "continue_on_failure": false,
+          "display_name": "Get AMP device by username",
+          "method": "GET",
+          "relative_url": "computers/user_activity?q=$workflow.definition_workflow_01SV8UWNQ9ZEY5iRgHkuoPPO10MTCN4xE7t.input.variable_workflow_01SVCOE9BAWZ645Fu6og2g9Kly06lxzsDYX$\u0026limit=5\u0026offset=0",
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "use_workflow_target": true
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01T0GGBSDGP4L4zpfGYPxvsTBUVvh0DHN00",
+        "name": "Read Table from JSON",
+        "title": "Read Table from JSON",
+        "type": "corejava.read_table_from_json",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "Read Table from JSON",
+          "input_json": "$activity.definition_activity_01SVCN92JGQFZ1fT2T3ImpTEZmqXQmk3DBk.output.response_body$",
+          "jsonpath_query": "$.data",
+          "persist_output": false,
+          "populate_columns": false,
+          "skip_execution": false,
+          "table_columns": [
+            {
+              "column_name": "connector_guid",
+              "column_type": "string"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01T0GHUC5Y19C3gT64WkcD6RUagM60rtzFH",
+        "name": "For Each",
+        "title": "For Each AMP device",
+        "type": "logic.for_each",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "For Each AMP device",
+          "skip_execution": false,
+          "source_array": "$activity.definition_activity_01T0GGBSDGP4L4zpfGYPxvsTBUVvh0DHN00.output.read_table_from_json$"
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01SVCKDSERSM46C7RG2V9U9Ol6NBCSL2IG4",
+            "name": "Secure Endpoint - Move Computer to Group",
+            "title": "Secure Endpoint - Move Computer to Group",
+            "type": "workflow.atomic_workflow",
+            "base_type": "subworkflow",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Secure Endpoint - Move Computer to Group",
+              "input": {
+                "variable_workflow_01PP7772YYJGT12sl8b0lNmoKUbftaYK0On": "$activity.definition_activity_01T0GHUC5Y19C3gT64WkcD6RUagM60rtzFH.input.source_array[@].connector_guid$",
+                "variable_workflow_01PP7772YYNI25bmT3CMEF7wTcSBy5GxKH2": "$activity.definition_activity_01SVCKIOAF2IN7mTrS8oPqXj8xMUet5LFAh.output.variable_workflow_01PP76KUS7CN72dJKlPIQk18WhifhREqD15$"
+              },
+              "runtime_user": {
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "target_type": "web-service.endpoint",
+                "use_workflow_target": true
+              },
+              "workflow_id": "definition_workflow_01PP77736E3Z84p2rYcNQJTutcGMh9QaXet"
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_01JFR9FZAKAKI7bGkrwxni4PPca6HAsVG5h": {
+      "unique_name": "definition_target_01JFR9FZAKAKI7bGkrwxni4PPca6HAsVG5h",
+      "name": "AMP_Target",
+      "title": "AMP_Target",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_01JFR9F703YX84Wy8BMihKuZYxLCUSGPyo1",
+        "description": "AMP_Target",
+        "disable_certificate_validation": false,
+        "display_name": "AMP_Target",
+        "host": "api.amp.cisco.com",
+        "no_runtime_user": false,
+        "path": "/v1",
+        "port": 443,
+        "protocol": "https"
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_01JFR9F703YX84Wy8BMihKuZYxLCUSGPyo1": {
+      "unique_name": "definition_runtime_user_01JFR9F703YX84Wy8BMihKuZYxLCUSGPyo1",
+      "name": "AMP_Credentials",
+      "title": "AMP_Credentials",
+      "description": "Account Key for AMP",
+      "type": "runtime_user.web-service_basic_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "auth_option": "*****",
+        "basic_password": "*****",
+        "basic_username": "*****",
+        "display_name": "AMP_Credentials"
+      }
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_01PP76KUZHVDE1gUGxreX9ZVwWysIR5STCI",
+    "definition_workflow_01PP77736E3Z84p2rYcNQJTutcGMh9QaXet"
+  ]
+}
