@@ -23,7 +23,7 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "# enter your client_id here #",
+          "value": "# PUT YOUR CLIENT ID HERE #",
           "scope": "local",
           "name": "client_id",
           "type": "datatype.string",
@@ -40,7 +40,7 @@
         "is_atomic": false
       },
       "delete_workflow_instance": false,
-      "description": "This workflow fetches CRITICAL IMPACT Advisories from the last week from Cisco PSIRT API every hour.  If any new or updated advisory, Table is updated and SecureX Casebook is created.\n\nCisco PSIRT API documentation : https://developer.cisco.com/psirt/ \nCisco API Console (for client_id and secret_id) : https://apiconsole.cisco.com/\n\nTarget Group: Default TargetGroup\n\nTargets: CTR_For_Access_Token, Private_CTIA_Target, Cisco API Console, Cisco Cloud SSO\n\nSteps:\n[] Get a token for the Umbrella API\n[] Request statistics for DNS categories\n[] Check if the request was successful:\n[]\u003e If it wasn't, output an error and end the workflow\n[]\u003e If it was:\n[]\u003e\u003e Convert the statistics to a table\n[]\u003e\u003e Loop through the table checking if any of the categories are in scope. If it is, add it to the ticket text\n[] Check if any categories exceeded the threshold (overall)\n[]\u003e If none of them did, end the workflow\n[] Generate an access token for SecureX and create an incident\n\nMore information: ",
+      "description": "This workflow fetches CRITICAL IMPACT Advisories from the last week from Cisco PSIRT API every hour.  If any new or updated advisory, Table is updated and SecureX Casebook is created.\n\nCisco PSIRT API documentation : https://developer.cisco.com/psirt/ \nCisco API Console (for client_id and secret_id) : https://apiconsole.cisco.com/\n\nTarget Group: Default TargetGroup\n\nTargets: CTR_For_Access_Token, Private_CTIA_Target, Cisco API Console, Cisco Cloud SSO\n\nSteps:\n[] \n\nMore information: ",
       "display_name": "Cisco Security Advisory - Critical Impact",
       "runtime_user": {
         "target_default": true
@@ -148,7 +148,7 @@
       {
         "unique_name": "definition_activity_01THBW7AQHO5I4yCLxD2vqBug4UeG4Un6lP",
         "name": "HTTP Request",
-        "title": "Get Critical IMPACT for today",
+        "title": "Get Critical IMPACT for the last week",
         "type": "web-service.http_request",
         "base_type": "activity",
         "properties": {
@@ -164,7 +164,7 @@
               "value": "Bearer $activity.definition_activity_01THBS4SX7Q3T5cyXxXuE41FWFi3UZRkuMA.output.jsonpath_queries.access_token$"
             }
           ],
-          "display_name": "Get Critical IMPACT for today",
+          "display_name": "Get Critical IMPACT for the last week",
           "method": "GET",
           "relative_url": "/security/advisories/severity/critical/firstpublished?startDate=$activity.definition_activity_01THFVIBDPFRM0coC7HU6YgVuajdClH2w1Z.output.result$\u0026endDate=$activity.definition_activity_01THCFD10NIN63noBNlvRDDDPLxpVAXGkGQ.output.result$",
           "runtime_user": {
@@ -649,7 +649,7 @@
                         "variable_workflow_01PP75X6NM2V27Or3EssfIABNZiE45Ddziu": "amber",
                         "variable_workflow_01PP75X6NM4123PBwUedJ5QqeBr8G1sefjQ": "NEW - $activity.definition_activity_01THEP0ZSUHUY76gflJgrlOXIhRrq9bOHiR.input.source_array[@].advisoryTitle$",
                         "variable_workflow_01PP75X6NM54W5qTbpCb1h6bTTrp7eFQjaq": "",
-                        "variable_workflow_01PP75X6NM7FE4BmQ3AKIykyWFDSV9umy02": "$activity.definition_activity_01THEP0ZSUHUY76gflJgrlOXIhRrq9bOHiR.input.source_array[@].summary$"
+                        "variable_workflow_01PP75X6NM7FE4BmQ3AKIykyWFDSV9umy02": "$activity.definition_activity_01THFP3K0JJ952iNH4G4X1zyxqowrQnxhLT.output.result_string$"
                       },
                       "runtime_user": {
                         "target_default": true
@@ -758,10 +758,10 @@
           {
             "column_data": {
               "advisoryId": "cisco-sa-apache-log4j-qRuKNEbd",
-              "firstPublished": "2021-12-11T02:45:00",
-              "lastUpdated": "2021-12-14T07:43:56",
+              "firstPublished": "2021-12-10T18:45:00",
+              "lastUpdated": "2021-12-14T15:42:33",
               "sir": "Critical",
-              "version": "1.9"
+              "version": "1.11"
             }
           }
         ],
@@ -781,11 +781,6 @@
       "display_name": "Cisco Security Advisory",
       "columns": [
         {
-          "name": "version",
-          "title": "version",
-          "type": "string"
-        },
-        {
           "name": "sir",
           "title": "sir",
           "type": "string"
@@ -803,6 +798,11 @@
         {
           "name": "lastUpdated",
           "title": "lastUpdated",
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "title": "version",
           "type": "string"
         }
       ],
