@@ -3,6 +3,7 @@
 This workflow fetches Critical Impact Security Advisories from the last week from Cisco PSIRT API every hour.  If there are any new advisories, or if an existing advisory is updated, the table is updated, a SecureX Casebook is created and optionally a Webex notification is sent. It is very important to stay up to date with these advisory updates, to minimize the chance of a cyber attack to your organization.
  
 > **Note:** This workflowMore info on "Cisco PSIRT openVuln API": https://developer.cisco.com/docs/psirt/#!overview/overview
+
 > **Note:** This workflow is work in progress and will be enhanced. Please see this as `v0`.
 
 ## Creating Cisco PSIRT openVuln API credentials
