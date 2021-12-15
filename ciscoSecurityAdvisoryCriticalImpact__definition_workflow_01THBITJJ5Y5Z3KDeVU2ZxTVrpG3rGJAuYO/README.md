@@ -8,7 +8,7 @@ This workflow fetches Critical Impact Security Advisories from the last week fro
 1. Browse to https://apiconsole.cisco.com/apps/register and log in with Cisco ID.
 2. Enter a name for the app (e.g. Cisco PSIRT openVuln API SecureX orchestration):
 
-[!](screenshots/register_app.png)
+[](screenshots/register_app.png)
 
 3. Select "Cisco PSIRT openVuln API", agree to the terms and click register.
 
