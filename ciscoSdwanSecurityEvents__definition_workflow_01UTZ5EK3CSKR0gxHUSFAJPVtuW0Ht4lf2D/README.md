@@ -26,4 +26,8 @@ This workflow will be trigger via webhook recieved by vManage.
 
 ![](img/copy-paste.png)
 
+## vManage configuration
+
+![](img/vmanage.png)
+
 ## Enjoy and stay safe!
