@@ -26,10 +26,4 @@ This workflow will be trigger via webhook recieved by vManage.
 
 ![](img/copy-paste.png)
 
-3. You will now get prompted to enter missing information. Click **UPDATE**:
-
-![](imgs/missing-info.png)
-
-4. Copy paste this values into the SecureX orchestration update window, and click **IMPORT**.
-
 ## Enjoy and stay safe!
