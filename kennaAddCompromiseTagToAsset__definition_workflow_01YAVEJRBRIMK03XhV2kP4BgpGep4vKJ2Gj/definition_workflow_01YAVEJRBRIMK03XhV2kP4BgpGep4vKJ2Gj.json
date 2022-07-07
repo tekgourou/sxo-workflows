@@ -1,0 +1,550 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj",
+    "name": "Kenna - Add Compromise TAG to Asset",
+    "title": "Kenna - Add Compromise TAG to Asset",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "asset_id",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YCTATE4I70C4srO2zwYRmITCD9ygjRYVJ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_value",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YCT3YBI7FGW1fsY85JQNp5LIx681opHzk",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_type",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YCT3D73ZRAU2lNwZ2T7dalr9WtxE5kNbf",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "API Token",
+          "type": "datatype.secure_string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YCT68DYGCGV71dEEiF0218pIeesgKLdCd",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Kenna Instance URL",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YCT738KRNJK2LN7210oQxk0SVH5ozEmdb",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Kenna - Add Compromise TAG to Asset",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": true,
+        "target_group": {
+          "target_group_id": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+          "run_on_all_targets": false,
+          "selected_target_types": [
+            "web-service.endpoint"
+          ],
+          "use_criteria": {
+            "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+            "conditions": [
+              {
+                "operator": "eq",
+                "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                "right_operand": "Kenna_Target"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01YCT7FZUHX315n7C5tei4Guz7vgpl6Jy7m",
+        "name": "Set Variables",
+        "title": "Set Global Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set Global Variables",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.local.variable_workflow_01YCT68DYGCGV71dEEiF0218pIeesgKLdCd$",
+              "variable_value_new": ""
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01YCT4I3UZE784qiXQ0RYIlfaNWRwhWDCNk",
+        "name": "Condition Block",
+        "title": "Condition Block",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Condition Block",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01YCT4I4I2RQ44d3rCqg8Ww8Td0JFlG6AId",
+            "name": "Condition Branch",
+            "title": "ip",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.input.variable_workflow_01YCT3D73ZRAU2lNwZ2T7dalr9WtxE5kNbf$",
+                "operator": "eq",
+                "right_operand": "ip"
+              },
+              "continue_on_failure": false,
+              "display_name": "ip",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01YCT4DHMNRV41M6636cfLlaFpDyQiSX6Da",
+                "name": "Kenna - Search Assets",
+                "title": "Kenna - Search Assets",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Kenna - Search Assets",
+                  "input": {
+                    "variable_workflow_01S7JOAIS05SC5pegVdnxdq91ysEt4Nn2s1": "q=ip:$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.input.variable_workflow_01YCT3YBI7FGW1fsY85JQNp5LIx681opHzk$",
+                    "variable_workflow_01S7JOAIS0EDY3NIGywOswFTEtoeqPiIw2Q": "$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.local.variable_workflow_01YCT68DYGCGV71dEEiF0218pIeesgKLdCd$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "use_workflow_target_group": true
+                  },
+                  "workflow_id": "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+                  "workflow_name": "Kenna - Search Assets"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YCTBNLTM2OO76DTOW9iJIecqcN95atCUH",
+                "name": "Read Table from JSON",
+                "title": "Read Table from JSON",
+                "type": "corejava.read_table_from_json",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Read Table from JSON",
+                  "input_json": "$activity.definition_activity_01YCT4DHMNRV41M6636cfLlaFpDyQiSX6Da.output.variable_workflow_01S7JOAIRZUF61qoCQMtmq903gZnLk2E1si$",
+                  "jsonpath_query": "$.assets",
+                  "persist_output": false,
+                  "populate_columns": false,
+                  "skip_execution": false,
+                  "table_columns": [
+                    {
+                      "column_name": "id",
+                      "column_type": "integer"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YCTDJE5NH5X5QdR5KElaOtfruGzni2f08",
+                "name": "For Each",
+                "title": "For Each Assets",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "For Each Assets",
+                  "skip_execution": false,
+                  "source_array": "$activity.definition_activity_01YCTBNLTM2OO76DTOW9iJIecqcN95atCUH.output.read_table_from_json$"
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01YAVF4NTNO130fNkekd2TIEVR3oFEzNzbz",
+                    "name": "Kenna - Tag a Asset",
+                    "title": "Kenna - Tag a Asset",
+                    "type": "workflow.atomic_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Kenna - Tag a Asset",
+                      "input": {
+                        "variable_workflow_01Y4VNIRK7OLJ6rT8gZC5E8a2K8GmARDpig": "$global.variable_01XCYIM3AMHLL1BwArNRzo6hr1cXtXm6HYd.global.variable_01XCYIM3AMHLL1BwArNRzo6hr1cXtXm6HYd$",
+                        "variable_workflow_01Y4VNIRK8A6M52EpJaqRFXr2JzdNtwb2at": "$activity.definition_activity_01YCTDJE5NH5X5QdR5KElaOtfruGzni2f08.input.source_array[@].id$",
+                        "variable_workflow_01Y4VSVKC1PQD3iJ9skje6aeoggc9jaebRo": "compromise"
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "use_workflow_target_group": true
+                      },
+                      "workflow_id": "definition_workflow_01Y4VNIRBIRGD44fI0GjzLgBjG83rp8s4hL",
+                      "workflow_name": "Kenna - Tag a Asset"
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01YCT4I50F1PA0jrD54xyXggPnS1E1pbI5m",
+            "name": "Condition Branch",
+            "title": "hostname",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.input.variable_workflow_01YCT3D73ZRAU2lNwZ2T7dalr9WtxE5kNbf$",
+                "operator": "eq",
+                "right_operand": "hostname"
+              },
+              "continue_on_failure": false,
+              "display_name": "hostname",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01YCT8I8LF8PD3rIZTCa1lcqz7jctkNQYP6",
+                "name": "Kenna - Search Assets",
+                "title": "Kenna - Search Assets",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Kenna - Search Assets",
+                  "input": {
+                    "variable_workflow_01S7JOAIS05SC5pegVdnxdq91ysEt4Nn2s1": "q=hostname:\"$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.input.variable_workflow_01YCT3YBI7FGW1fsY85JQNp5LIx681opHzk$\"",
+                    "variable_workflow_01S7JOAIS0EDY3NIGywOswFTEtoeqPiIw2Q": "$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.local.variable_workflow_01YCT68DYGCGV71dEEiF0218pIeesgKLdCd$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "use_workflow_target_group": true
+                  },
+                  "workflow_id": "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+                  "workflow_name": "Kenna - Search Assets"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YCTEBZNZ9QB3WHf83tKvJVE0KMzdXhpOt",
+                "name": "Read Table from JSON",
+                "title": "Read Table from JSON",
+                "type": "corejava.read_table_from_json",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Read Table from JSON",
+                  "input_json": "$activity.definition_activity_01YCT8I8LF8PD3rIZTCa1lcqz7jctkNQYP6.output.variable_workflow_01S7JOAIRZUF61qoCQMtmq903gZnLk2E1si$",
+                  "jsonpath_query": "$.assets",
+                  "persist_output": false,
+                  "populate_columns": false,
+                  "skip_execution": false,
+                  "table_columns": [
+                    {
+                      "column_name": "id",
+                      "column_type": "integer"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YCTEDTCOC112eRsfsD5YkVzgNVsiPSBnA",
+                "name": "For Each",
+                "title": "For Each Assets",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "For Each Assets",
+                  "skip_execution": false,
+                  "source_array": "$activity.definition_activity_01YCTEBZNZ9QB3WHf83tKvJVE0KMzdXhpOt.output.read_table_from_json$"
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01YCTEDTCQJZK4HA8mnptQy2e5gngl53bPb",
+                    "name": "Kenna - Tag a Asset",
+                    "title": "Kenna - Tag a Asset",
+                    "type": "workflow.atomic_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Kenna - Tag a Asset",
+                      "input": {
+                        "variable_workflow_01Y4VNIRK7OLJ6rT8gZC5E8a2K8GmARDpig": "$global.variable_01XCYIM3AMHLL1BwArNRzo6hr1cXtXm6HYd.global.variable_01XCYIM3AMHLL1BwArNRzo6hr1cXtXm6HYd$",
+                        "variable_workflow_01Y4VNIRK8A6M52EpJaqRFXr2JzdNtwb2at": "$activity.definition_activity_01YCTEDTCOC112eRsfsD5YkVzgNVsiPSBnA.input.source_array[@].id$",
+                        "variable_workflow_01Y4VSVKC1PQD3iJ9skje6aeoggc9jaebRo": "compromise"
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "use_workflow_target_group": true
+                      },
+                      "workflow_id": "definition_workflow_01Y4VNIRBIRGD44fI0GjzLgBjG83rp8s4hL",
+                      "workflow_name": "Kenna - Tag a Asset"
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01YCT96Z9OVS44qalXue8SVGgpdmJ17WqbY",
+            "name": "Condition Branch",
+            "title": "mac address",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.input.variable_workflow_01YCT3D73ZRAU2lNwZ2T7dalr9WtxE5kNbf$",
+                "operator": "eq",
+                "right_operand": "mac_address"
+              },
+              "continue_on_failure": false,
+              "display_name": "mac address",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01YCT96Z9PHB01CUbZ2okHuU3dab6KoSfkd",
+                "name": "Kenna - Search Assets",
+                "title": "Kenna - Search Assets",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Kenna - Search Assets",
+                  "input": {
+                    "variable_workflow_01S7JOAIS05SC5pegVdnxdq91ysEt4Nn2s1": "q=mac_address:\"$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.input.variable_workflow_01YCT3YBI7FGW1fsY85JQNp5LIx681opHzk$\"",
+                    "variable_workflow_01S7JOAIS0EDY3NIGywOswFTEtoeqPiIw2Q": "$workflow.definition_workflow_01YAVEJRBRIMK03XhV2kP4BgpGep4vKJ2Gj.local.variable_workflow_01YCT68DYGCGV71dEEiF0218pIeesgKLdCd$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "use_workflow_target_group": true
+                  },
+                  "workflow_id": "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+                  "workflow_name": "Kenna - Search Assets"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YCTF1IO43G72423sMbfoaSaLjYMzgtYLq",
+                "name": "Read Table from JSON",
+                "title": "Read Table from JSON",
+                "type": "corejava.read_table_from_json",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Read Table from JSON",
+                  "input_json": "$activity.definition_activity_01YCT96Z9PHB01CUbZ2okHuU3dab6KoSfkd.output.variable_workflow_01S7JOAIRZUF61qoCQMtmq903gZnLk2E1si$",
+                  "jsonpath_query": "$.assets",
+                  "persist_output": false,
+                  "populate_columns": false,
+                  "skip_execution": false,
+                  "table_columns": [
+                    {
+                      "column_name": "id",
+                      "column_type": "integer"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YCTF4CYS7I126tRV2ZgGBgddUisahuaYf",
+                "name": "For Each",
+                "title": "For Each Assets",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "For Each Assets",
+                  "skip_execution": false,
+                  "source_array": "$activity.definition_activity_01YCTF1IO43G72423sMbfoaSaLjYMzgtYLq.output.read_table_from_json$"
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01YCTF4CYW39L70GMTAVa6QHEEMDvTo3mlM",
+                    "name": "Kenna - Tag a Asset",
+                    "title": "Kenna - Tag a Asset",
+                    "type": "workflow.atomic_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Kenna - Tag a Asset",
+                      "input": {
+                        "variable_workflow_01Y4VNIRK7OLJ6rT8gZC5E8a2K8GmARDpig": "$global.variable_01XCYIM3AMHLL1BwArNRzo6hr1cXtXm6HYd.global.variable_01XCYIM3AMHLL1BwArNRzo6hr1cXtXm6HYd$",
+                        "variable_workflow_01Y4VNIRK8A6M52EpJaqRFXr2JzdNtwb2at": "$activity.definition_activity_01YCTF4CYS7I126tRV2ZgGBgddUisahuaYf.input.source_array[@].id$",
+                        "variable_workflow_01Y4VSVKC1PQD3iJ9skje6aeoggc9jaebRo": "compromise"
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "use_workflow_target_group": true
+                      },
+                      "workflow_id": "definition_workflow_01Y4VNIRBIRGD44fI0GjzLgBjG83rp8s4hL",
+                      "workflow_name": "Kenna - Tag a Asset"
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_01EI33LMFFL7N5eTQLsOOJIrxdlSOHb7r3r",
+      "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m"
+    ]
+  },
+  "categories": {
+    "category_01EI33LMFFL7N5eTQLsOOJIrxdlSOHb7r3r": {
+      "unique_name": "category_01EI33LMFFL7N5eTQLsOOJIrxdlSOHb7r3r",
+      "name": "SecureX",
+      "title": "SecureX",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    },
+    "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m": {
+      "unique_name": "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m",
+      "name": "response",
+      "title": "response",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    }
+  },
+  "target_groups": {
+    "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH": {
+      "unique_name": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+      "name": "Default TargetGroup",
+      "title": "Default TargetGroup",
+      "type": "generic.target_group",
+      "base_type": "target_group",
+      "version": "1.0.0",
+      "targets": [
+        {
+          "data_target_type": "web-service.endpoint",
+          "view_target_type": "web-service.endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "email.smtp_endpoint",
+          "view_target_type": "email.smtp_endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "terminal.endpoint",
+          "view_target_type": "terminal.endpoint",
+          "include_all_targets": true
+        }
+      ],
+      "object_type": "target_group"
+    }
+  },
+  "variables": {
+    "variable_01XCYIM3AMHLL1BwArNRzo6hr1cXtXm6HYd": {
+      "unique_name": "variable_01XCYIM3AMHLL1BwArNRzo6hr1cXtXm6HYd",
+      "properties": {
+        "value": "*****",
+        "scope": "global",
+        "name": "Cisco Kenna API Key",
+        "type": "datatype.secure_string",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+    "definition_workflow_01Y4VNIRBIRGD44fI0GjzLgBjG83rp8s4hL"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+    "definition_workflow_01Y4VNIRBIRGD44fI0GjzLgBjG83rp8s4hL"
+  ]
+}
