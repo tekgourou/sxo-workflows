@@ -1,0 +1,1080 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS",
+    "name": "Kenna - Remove Compromise TAG from Asset",
+    "title": "Kenna - Remove Compromise TAG from Asset",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "compromise",
+          "scope": "local",
+          "name": "compromise TAG name",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_type",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_value",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YDEBGBILMJW4fmSux6sckmUbFy0v5Xwk0",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "asset details",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YDEBGBIL5381C15eieLVpu2QPMqzYK0tc",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": true,
+          "scope": "local",
+          "name": "Create Casebook",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YDEBGBIKYA46WWOFkOTvUjnL7eoTSfs2s",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "API Token",
+          "type": "datatype.secure_string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YDEBGBIK8032DcriDRjNzSiFvisk4YoqW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Kenna Instance URL",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YDEBGBILBTE4FibOuwlrvGW6RB2W54WTB",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "description": "Support Obersvable type IP, Hostname and MacAddress",
+      "display_name": "Kenna - Remove Compromise TAG from Asset",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": true,
+        "target_group": {
+          "target_group_id": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+          "run_on_all_targets": false,
+          "selected_target_types": [
+            "web-service.endpoint"
+          ],
+          "use_criteria": {
+            "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+            "conditions": [
+              {
+                "operator": "eq",
+                "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                "right_operand": "Kenna_Target"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01YDEBGFBVZNX0kyOTZObc3SYHjBzrEU2yH",
+        "name": "Set Variables",
+        "title": "Set Global Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set Global Variables",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIK8032DcriDRjNzSiFvisk4YoqW$",
+              "variable_value_new": ""
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01YDEBGGBSLFF78iFeKTctlumBGBBk3oV30",
+        "name": "Condition Block",
+        "title": "Condition Block",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Condition Block",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01YDEBGH226524nvJrAmh0zEyr0KTRb7oDk",
+            "name": "Condition Branch",
+            "title": "ip",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn$",
+                "operator": "eq",
+                "right_operand": "ip"
+              },
+              "continue_on_failure": false,
+              "display_name": "ip",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01YDEBGIJS5W33BSHaZUyStvFl7fB7yTzs2",
+                "name": "Kenna - Search Assets",
+                "title": "Kenna - Search Assets",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Kenna - Search Assets",
+                  "input": {
+                    "variable_workflow_01S7JOAIS05SC5pegVdnxdq91ysEt4Nn2s1": "q=ip:$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBILMJW4fmSux6sckmUbFy0v5Xwk0$",
+                    "variable_workflow_01S7JOAIS0EDY3NIGywOswFTEtoeqPiIw2Q": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIK8032DcriDRjNzSiFvisk4YoqW$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "use_workflow_target_group": true
+                  },
+                  "workflow_id": "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+                  "workflow_name": "Kenna - Search Assets"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YDEBGJQ5LYL7cV06RB90fcSLOSx8WqkUT",
+                "name": "Read Table from JSON",
+                "title": "Read Table from JSON",
+                "type": "corejava.read_table_from_json",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Read Table from JSON",
+                  "input_json": "$activity.definition_activity_01YDEBGIJS5W33BSHaZUyStvFl7fB7yTzs2.output.variable_workflow_01S7JOAIRZUF61qoCQMtmq903gZnLk2E1si$",
+                  "jsonpath_query": "$.assets",
+                  "persist_output": false,
+                  "populate_columns": false,
+                  "skip_execution": false,
+                  "table_columns": [
+                    {
+                      "column_name": "id",
+                      "column_type": "integer"
+                    },
+                    {
+                      "column_name": "locator",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "vulnerabilities_count",
+                      "column_type": "integer"
+                    },
+                    {
+                      "column_name": "tags",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "risk_meter_score",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "created_at",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "last_seen_time",
+                      "column_type": "string"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YDEBGKYY4P92EaAW9133CPyboN2WuhmAH",
+                "name": "For Each",
+                "title": "For Each Assets",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "For Each Assets",
+                  "skip_execution": false,
+                  "source_array": "$activity.definition_activity_01YDEBGJQ5LYL7cV06RB90fcSLOSx8WqkUT.output.read_table_from_json$"
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01YDEMNQGDQEL2cCInO2uQydhuun6UmvmXu",
+                    "name": "Kenna - UnTag a Asset",
+                    "title": "Kenna - UnTag a Asset",
+                    "type": "workflow.atomic_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Kenna - UnTag a Asset",
+                      "input": {
+                        "variable_workflow_01Y4VW4DXB0ET4g8y2RJ8WraeiRMuehf3Wx": "$activity.definition_activity_01YDEBGKYY4P92EaAW9133CPyboN2WuhmAH.input.source_array[@].id$",
+                        "variable_workflow_01Y4VW4DXBG6Q4hYnplKVrlcRXvjzKeeI6d": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq$",
+                        "variable_workflow_01Y4VW4DXBSW03KxcPGS7Xgs9IjOs9rDNmr": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIK8032DcriDRjNzSiFvisk4YoqW$"
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "use_workflow_target_group": true
+                      },
+                      "workflow_id": "definition_workflow_01Y4VW4DP60ML75j0l5gNxbOfVpXOGBjRwy",
+                      "workflow_name": "Kenna - UnTag a Asset"
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01YDEBGO3QTIS67v7uYt0moBTeU3N9TceTF",
+                    "name": "Condition Block",
+                    "title": "Create casebook ?",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Create casebook ?",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01YDEBGOTHIK33hv4ag1rbHzo22kWx4W66M",
+                        "name": "Condition Branch",
+                        "title": "YES",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKYA46WWOFkOTvUjnL7eoTSfs2s$",
+                            "operator": "eq",
+                            "right_operand": true
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "YES",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01YDEBGPU1CMY7hZEqtBbPxSJBhNh4NbgT5",
+                            "name": "Set Variables",
+                            "title": "Set Asset details notes",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Asset details notes",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIL5381C15eieLVpu2QPMqzYK0tc$",
+                                  "variable_value_new": "https://$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBILBTE4FibOuwlrvGW6RB2W54WTB$/assets/$activity.definition_activity_01YDEBGKYY4P92EaAW9133CPyboN2WuhmAH.input.source_array[@].id$\n\nAsset Risk Score : $activity.definition_activity_01YDEBGKYY4P92EaAW9133CPyboN2WuhmAH.input.source_array[@].risk_meter_score$\n\nAsset Vulnerability Count : $activity.definition_activity_01YDEBGKYY4P92EaAW9133CPyboN2WuhmAH.input.source_array[@].vulnerabilities_count$"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01YDEBGS1BX2D6B2k89FN8xINKw9jwJsloK",
+                            "name": "Threat Response - Generate Access Token",
+                            "title": "Threat Response - Generate Access Token",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Threat Response - Generate Access Token",
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target_group_criteria": true,
+                                "target_group": {
+                                  "run_on_all_targets": false,
+                                  "use_criteria": {
+                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                    "conditions": [
+                                      {
+                                        "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                        "operator": "eq",
+                                        "right_operand": "CTR_For_Access_Token"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "workflow_id": "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+                              "workflow_name": "Threat Response - Generate Access Token"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01YDEBGU9TTAG4s2Nv3dRJMhFu6LTFCopyq",
+                            "name": "Threat Response - Create Casebook",
+                            "title": "Threat Response - Create Casebook",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Threat Response - Create Casebook",
+                              "input": {
+                                "variable_workflow_01PP75X6NM0AY6YDlJckkMg6hCbMEMGO72O": "[\n{\"type\":\"$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn$\",\"value\":\"$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBILMJW4fmSux6sckmUbFy0v5Xwk0$\"}\n]",
+                                "variable_workflow_01PP75X6NM1M46Jjob8LUKg8R3yRRVOvu9q": "$activity.definition_activity_01YDEBGS1BX2D6B2k89FN8xINKw9jwJsloK.output.variable_workflow_01PP75S3G7CJY6WAQr2IJC7qga2SIoE09gQ$",
+                                "variable_workflow_01PP75X6NM2V27Or3EssfIABNZiE45Ddziu": "amber",
+                                "variable_workflow_01PP75X6NM4123PBwUedJ5QqeBr8G1sefjQ": "Kenna - TAG $workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq$ was removed from Asset $activity.definition_activity_01YDEBGKYY4P92EaAW9133CPyboN2WuhmAH.input.source_array[@].locator$",
+                                "variable_workflow_01PP75X6NM54W5qTbpCb1h6bTTrp7eFQjaq": "TAG $workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq$ removed from Cisco Kenna asset $activity.definition_activity_01YDEBGKYY4P92EaAW9133CPyboN2WuhmAH.input.source_array[@].locator$ by $workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.output.started_by$",
+                                "variable_workflow_01PP75X6NM7FE4BmQ3AKIykyWFDSV9umy02": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIL5381C15eieLVpu2QPMqzYK0tc$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target_group_criteria": true,
+                                "target_group": {
+                                  "run_on_all_targets": false,
+                                  "use_criteria": {
+                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                    "conditions": [
+                                      {
+                                        "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                        "operator": "eq",
+                                        "right_operand": "Private_CTIA_Target"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "workflow_id": "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML",
+                              "workflow_name": "Threat Response - Create Casebook"
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01YDEBGVM4V802SYBqx4cG8Y2zNfx6WZ6C1",
+            "name": "Condition Branch",
+            "title": "hostname",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn$",
+                "operator": "eq",
+                "right_operand": "hostname"
+              },
+              "continue_on_failure": false,
+              "display_name": "hostname",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01YDEBGX0AVRZ7WfnQi2ETw04DdeiBsE9G5",
+                "name": "Kenna - Search Assets",
+                "title": "Kenna - Search Assets",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Kenna - Search Assets",
+                  "input": {
+                    "variable_workflow_01S7JOAIS05SC5pegVdnxdq91ysEt4Nn2s1": "q=hostname:\"$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBILMJW4fmSux6sckmUbFy0v5Xwk0$\"",
+                    "variable_workflow_01S7JOAIS0EDY3NIGywOswFTEtoeqPiIw2Q": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIK8032DcriDRjNzSiFvisk4YoqW$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "use_workflow_target_group": true
+                  },
+                  "workflow_id": "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+                  "workflow_name": "Kenna - Search Assets"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YDEBGY1KPOS20JvC7ouhsyQZJ8FerzsQf",
+                "name": "Read Table from JSON",
+                "title": "Read Table from JSON",
+                "type": "corejava.read_table_from_json",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Read Table from JSON",
+                  "input_json": "$activity.definition_activity_01YDEBGX0AVRZ7WfnQi2ETw04DdeiBsE9G5.output.variable_workflow_01S7JOAIRZUF61qoCQMtmq903gZnLk2E1si$",
+                  "jsonpath_query": "$.assets",
+                  "persist_output": false,
+                  "populate_columns": false,
+                  "skip_execution": false,
+                  "table_columns": [
+                    {
+                      "column_name": "id",
+                      "column_type": "integer"
+                    },
+                    {
+                      "column_name": "locator",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "vulnerabilities_count",
+                      "column_type": "integer"
+                    },
+                    {
+                      "column_name": "tags",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "risk_meter_score",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "created_at",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "last_seen_time",
+                      "column_type": "string"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YDEBGZ6GW183gjmAYxi7Z1N9z58Guk71y",
+                "name": "For Each",
+                "title": "For Each Assets",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "For Each Assets",
+                  "skip_execution": false,
+                  "source_array": "$activity.definition_activity_01YDEBGY1KPOS20JvC7ouhsyQZJ8FerzsQf.output.read_table_from_json$"
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01YDENJRQ4MXF1bx7vr0AYWWyQLOJVxWuiK",
+                    "name": "Kenna - UnTag a Asset",
+                    "title": "Kenna - UnTag a Asset",
+                    "type": "workflow.atomic_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Kenna - UnTag a Asset",
+                      "input": {
+                        "variable_workflow_01Y4VW4DXB0ET4g8y2RJ8WraeiRMuehf3Wx": "$activity.definition_activity_01YDEBGZ6GW183gjmAYxi7Z1N9z58Guk71y.input.source_array[@].id$",
+                        "variable_workflow_01Y4VW4DXBG6Q4hYnplKVrlcRXvjzKeeI6d": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq$",
+                        "variable_workflow_01Y4VW4DXBSW03KxcPGS7Xgs9IjOs9rDNmr": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIK8032DcriDRjNzSiFvisk4YoqW$"
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "use_workflow_target_group": true
+                      },
+                      "workflow_id": "definition_workflow_01Y4VW4DP60ML75j0l5gNxbOfVpXOGBjRwy",
+                      "workflow_name": "Kenna - UnTag a Asset"
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01YDEBH2B430S1B1OCw7NcsiQ0sPFeenqiX",
+                    "name": "Condition Block",
+                    "title": "Create casebook ?",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Create casebook ?",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01YDEBH31R8EL48Cv855dR8Jz35SyS3YWww",
+                        "name": "Condition Branch",
+                        "title": "YES",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKYA46WWOFkOTvUjnL7eoTSfs2s$",
+                            "operator": "eq",
+                            "right_operand": true
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "YES",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01YDEBH43XUMY6mI83FEEK0TxyFSuFS85QY",
+                            "name": "Set Variables",
+                            "title": "Set Asset details notes",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Asset details notes",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIL5381C15eieLVpu2QPMqzYK0tc$",
+                                  "variable_value_new": "https://$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBILBTE4FibOuwlrvGW6RB2W54WTB$/assets/$activity.definition_activity_01YDEBGZ6GW183gjmAYxi7Z1N9z58Guk71y.input.source_array[@].id$\n\nAsset Risk Score : $activity.definition_activity_01YDEBGZ6GW183gjmAYxi7Z1N9z58Guk71y.input.source_array[@].risk_meter_score$\n\nAsset Vulnerability Count : $activity.definition_activity_01YDEBGZ6GW183gjmAYxi7Z1N9z58Guk71y.input.source_array[@].vulnerabilities_count$"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01YDEBH5GO9YK7jBxWMQdScijEKAtiGtNqB",
+                            "name": "Threat Response - Generate Access Token",
+                            "title": "Threat Response - Generate Access Token",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Threat Response - Generate Access Token",
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target_group_criteria": true,
+                                "target_group": {
+                                  "run_on_all_targets": false,
+                                  "use_criteria": {
+                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                    "conditions": [
+                                      {
+                                        "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                        "operator": "eq",
+                                        "right_operand": "CTR_For_Access_Token"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "workflow_id": "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+                              "workflow_name": "Threat Response - Generate Access Token"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01YDEBH6OWG941K9fcaQYt1X1NCZiqbTTbq",
+                            "name": "Threat Response - Create Casebook",
+                            "title": "Threat Response - Create Casebook",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Threat Response - Create Casebook",
+                              "input": {
+                                "variable_workflow_01PP75X6NM0AY6YDlJckkMg6hCbMEMGO72O": "[\n{\"type\":\"$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn$\",\"value\":\"$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBILMJW4fmSux6sckmUbFy0v5Xwk0$\"}\n]",
+                                "variable_workflow_01PP75X6NM1M46Jjob8LUKg8R3yRRVOvu9q": "$activity.definition_activity_01YDEBH5GO9YK7jBxWMQdScijEKAtiGtNqB.output.variable_workflow_01PP75S3G7CJY6WAQr2IJC7qga2SIoE09gQ$",
+                                "variable_workflow_01PP75X6NM2V27Or3EssfIABNZiE45Ddziu": "amber",
+                                "variable_workflow_01PP75X6NM4123PBwUedJ5QqeBr8G1sefjQ": "Kenna - TAG $workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq$ was removed from Asset $activity.definition_activity_01YDEBGZ6GW183gjmAYxi7Z1N9z58Guk71y.input.source_array[@].locator$",
+                                "variable_workflow_01PP75X6NM54W5qTbpCb1h6bTTrp7eFQjaq": "TAG $workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq$ removed from Cisco Kenna asset $activity.definition_activity_01YDEBGZ6GW183gjmAYxi7Z1N9z58Guk71y.input.source_array[@].locator$ by $workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.output.started_by$",
+                                "variable_workflow_01PP75X6NM7FE4BmQ3AKIykyWFDSV9umy02": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIL5381C15eieLVpu2QPMqzYK0tc$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target_group_criteria": true,
+                                "target_group": {
+                                  "run_on_all_targets": false,
+                                  "use_criteria": {
+                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                    "conditions": [
+                                      {
+                                        "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                        "operator": "eq",
+                                        "right_operand": "Private_CTIA_Target"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "workflow_id": "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML",
+                              "workflow_name": "Threat Response - Create Casebook"
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01YDEBH7YWQD40ta6ju87TgS1S1L8PI3x0e",
+            "name": "Condition Branch",
+            "title": "mac address",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn$",
+                "operator": "eq",
+                "right_operand": "mac_address"
+              },
+              "continue_on_failure": false,
+              "display_name": "mac address",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01YDEBH9BQUP61H1L42O6jfzVhAASYJcWlG",
+                "name": "Kenna - Search Assets",
+                "title": "Kenna - Search Assets",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Kenna - Search Assets",
+                  "input": {
+                    "variable_workflow_01S7JOAIS05SC5pegVdnxdq91ysEt4Nn2s1": "q=mac_address:\"$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBILMJW4fmSux6sckmUbFy0v5Xwk0$\"",
+                    "variable_workflow_01S7JOAIS0EDY3NIGywOswFTEtoeqPiIw2Q": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIK8032DcriDRjNzSiFvisk4YoqW$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "use_workflow_target_group": true
+                  },
+                  "workflow_id": "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+                  "workflow_name": "Kenna - Search Assets"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YDEBHAF9D9X0Nl2rC6eRJt7TBIze1KVMX",
+                "name": "Read Table from JSON",
+                "title": "Read Table from JSON",
+                "type": "corejava.read_table_from_json",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Read Table from JSON",
+                  "input_json": "$activity.definition_activity_01YDEBH9BQUP61H1L42O6jfzVhAASYJcWlG.output.variable_workflow_01S7JOAIRZUF61qoCQMtmq903gZnLk2E1si$",
+                  "jsonpath_query": "$.assets",
+                  "persist_output": false,
+                  "populate_columns": false,
+                  "skip_execution": false,
+                  "table_columns": [
+                    {
+                      "column_name": "id",
+                      "column_type": "integer"
+                    },
+                    {
+                      "column_name": "locator",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "vulnerabilities_count",
+                      "column_type": "integer"
+                    },
+                    {
+                      "column_name": "tags",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "risk_meter_score",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "created_at",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "last_seen_time",
+                      "column_type": "string"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01YDEBHBLACW34C8b5PJ6uJeNEvP0F8rMQ3",
+                "name": "For Each",
+                "title": "For Each Assets",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "For Each Assets",
+                  "skip_execution": false,
+                  "source_array": "$activity.definition_activity_01YDEBHAF9D9X0Nl2rC6eRJt7TBIze1KVMX.output.read_table_from_json$"
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01YDENT6LAPNJ583OnqgNyHLuSb8zVSTVPB",
+                    "name": "Kenna - UnTag a Asset",
+                    "title": "Kenna - UnTag a Asset",
+                    "type": "workflow.atomic_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Kenna - UnTag a Asset",
+                      "input": {
+                        "variable_workflow_01Y4VW4DXB0ET4g8y2RJ8WraeiRMuehf3Wx": "$activity.definition_activity_01YDEBHBLACW34C8b5PJ6uJeNEvP0F8rMQ3.input.source_array[@].id$",
+                        "variable_workflow_01Y4VW4DXBG6Q4hYnplKVrlcRXvjzKeeI6d": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq$",
+                        "variable_workflow_01Y4VW4DXBSW03KxcPGS7Xgs9IjOs9rDNmr": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIK8032DcriDRjNzSiFvisk4YoqW$"
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "use_workflow_target_group": true
+                      },
+                      "workflow_id": "definition_workflow_01Y4VW4DP60ML75j0l5gNxbOfVpXOGBjRwy",
+                      "workflow_name": "Kenna - UnTag a Asset"
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01YDEBHEO3ZPB5WmnCunqKKp6eMumcDrswl",
+                    "name": "Condition Block",
+                    "title": "Create casebook ?",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Create casebook ?",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01YDEBHFGBIRW3opiBYVRsQQ2JfnlwIpLHw",
+                        "name": "Condition Branch",
+                        "title": "YES",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKYA46WWOFkOTvUjnL7eoTSfs2s$",
+                            "operator": "eq",
+                            "right_operand": true
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "YES",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01YDEBHGKXI4V5bfM9rceSmKBsohfZ5Cprb",
+                            "name": "Set Variables",
+                            "title": "Set Asset details notes",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Asset details notes",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIL5381C15eieLVpu2QPMqzYK0tc$",
+                                  "variable_value_new": "https://$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBILBTE4FibOuwlrvGW6RB2W54WTB$/assets/$activity.definition_activity_01YDEBHBLACW34C8b5PJ6uJeNEvP0F8rMQ3.input.source_array[@].id$\n\nAsset Risk Score : $activity.definition_activity_01YDEBHBLACW34C8b5PJ6uJeNEvP0F8rMQ3.input.source_array[@].risk_meter_score$\n\nAsset Vulnerability Count : $activity.definition_activity_01YDEBHBLACW34C8b5PJ6uJeNEvP0F8rMQ3.input.source_array[@].vulnerabilities_count$"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01YDEBHI1XE400QdggjDYFzIQ39YiVrfDHd",
+                            "name": "Threat Response - Generate Access Token",
+                            "title": "Threat Response - Generate Access Token",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Threat Response - Generate Access Token",
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target_group_criteria": true,
+                                "target_group": {
+                                  "run_on_all_targets": false,
+                                  "use_criteria": {
+                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                    "conditions": [
+                                      {
+                                        "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                        "operator": "eq",
+                                        "right_operand": "CTR_For_Access_Token"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "workflow_id": "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+                              "workflow_name": "Threat Response - Generate Access Token"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01YDEBHJGSU964B8bKHC3x2u4uVxSixoms1",
+                            "name": "Threat Response - Create Casebook",
+                            "title": "Threat Response - Create Casebook",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Threat Response - Create Casebook",
+                              "input": {
+                                "variable_workflow_01PP75X6NM0AY6YDlJckkMg6hCbMEMGO72O": "[\n{\"type\":\"$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn$\",\"value\":\"$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBILMJW4fmSux6sckmUbFy0v5Xwk0$\"}\n]",
+                                "variable_workflow_01PP75X6NM1M46Jjob8LUKg8R3yRRVOvu9q": "$activity.definition_activity_01YDEBHI1XE400QdggjDYFzIQ39YiVrfDHd.output.variable_workflow_01PP75S3G7CJY6WAQr2IJC7qga2SIoE09gQ$",
+                                "variable_workflow_01PP75X6NM2V27Or3EssfIABNZiE45Ddziu": "amber",
+                                "variable_workflow_01PP75X6NM4123PBwUedJ5QqeBr8G1sefjQ": "Kenna - TAG $workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq$ was removed from Asset $activity.definition_activity_01YDEBHBLACW34C8b5PJ6uJeNEvP0F8rMQ3.input.source_array[@].locator$",
+                                "variable_workflow_01PP75X6NM54W5qTbpCb1h6bTTrp7eFQjaq": "TAG $workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIKRB02xlMjT8PilnKtcugEctllq$ removed from Cisco Kenna asset $activity.definition_activity_01YDEBHBLACW34C8b5PJ6uJeNEvP0F8rMQ3.input.source_array[@].locator$ by $workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.output.started_by$",
+                                "variable_workflow_01PP75X6NM7FE4BmQ3AKIykyWFDSV9umy02": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.local.variable_workflow_01YDEBGBIL5381C15eieLVpu2QPMqzYK0tc$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target_group_criteria": true,
+                                "target_group": {
+                                  "run_on_all_targets": false,
+                                  "use_criteria": {
+                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                    "conditions": [
+                                      {
+                                        "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                        "operator": "eq",
+                                        "right_operand": "Private_CTIA_Target"
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "workflow_id": "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML",
+                              "workflow_name": "Threat Response - Create Casebook"
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01YDEBHM37WAU343Ktlve9sZuQwfuGfWZpZ",
+            "name": "Condition Branch",
+            "title": "Observable not supported",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": {
+                    "left_operand": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn$",
+                    "operator": "ne",
+                    "right_operand": "ip"
+                  },
+                  "operator": "or",
+                  "right_operand": {
+                    "left_operand": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn$",
+                    "operator": "ne",
+                    "right_operand": "hostname"
+                  }
+                },
+                "operator": "or",
+                "right_operand": {
+                  "left_operand": "$workflow.definition_workflow_01YDEBGB63HPY0JUud2yxbCgbq3EzsPn5jS.input.variable_workflow_01YDEBGBIKI4042bJveRBstjqnkZo09dVRn$",
+                  "operator": "ne",
+                  "right_operand": "mac_address"
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "Observable not supported",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01YDEBHNGRWUY62cKuQYPRKqWp8sEwpPInR",
+                "name": "Completed",
+                "title": "Observable not supported",
+                "type": "logic.completed",
+                "base_type": "activity",
+                "properties": {
+                  "completion_type": "succeeded",
+                  "continue_on_failure": false,
+                  "display_name": "Observable not supported",
+                  "result_message": "Observable not supported",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_01EI33LMFFL7N5eTQLsOOJIrxdlSOHb7r3r",
+      "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m"
+    ]
+  },
+  "categories": {
+    "category_01EI33LMFFL7N5eTQLsOOJIrxdlSOHb7r3r": {
+      "unique_name": "category_01EI33LMFFL7N5eTQLsOOJIrxdlSOHb7r3r",
+      "name": "SecureX",
+      "title": "SecureX",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    },
+    "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m": {
+      "unique_name": "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m",
+      "name": "response",
+      "title": "response",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    }
+  },
+  "target_groups": {
+    "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH": {
+      "unique_name": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+      "name": "Default TargetGroup",
+      "title": "Default TargetGroup",
+      "type": "generic.target_group",
+      "base_type": "target_group",
+      "version": "1.0.0",
+      "targets": [
+        {
+          "data_target_type": "web-service.endpoint",
+          "view_target_type": "web-service.endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "email.smtp_endpoint",
+          "view_target_type": "email.smtp_endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "terminal.endpoint",
+          "view_target_type": "terminal.endpoint",
+          "include_all_targets": true
+        }
+      ],
+      "object_type": "target_group"
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+    "definition_workflow_01Y4VW4DP60ML75j0l5gNxbOfVpXOGBjRwy",
+    "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+    "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_01S7JOAIGZ7KW0aSfFz3oERsFZkCcUbE7TZ",
+    "definition_workflow_01Y4VW4DP60ML75j0l5gNxbOfVpXOGBjRwy",
+    "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+    "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML"
+  ]
+}
