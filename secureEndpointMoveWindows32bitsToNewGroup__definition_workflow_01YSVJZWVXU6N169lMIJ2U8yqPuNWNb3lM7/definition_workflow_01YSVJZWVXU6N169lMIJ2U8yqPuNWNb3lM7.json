@@ -9,42 +9,14 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "\u003c!DOCTYPE html\u003e\n\u003chtml lang=\"en\"\u003e\n\u003chead\u003e\n    \u003cmeta charset=\"UTF-8\"\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e\n    \u003ctitle\u003eDocument\u003c/title\u003e\n    \u003cstyle\u003e\n        html {\n            width: 100%;\n            height: 100%;\n            padding: 0px;\n            margin: 0px;\n        }\n        \n        body {\n            width: 100%;\n            height: 100%;\n            margin: 0;\n            display: grid;\n            grid-template-rows: min-content auto min-content;\n            grid-template-areas: \"header\"\n                                 \"main\"\n                                 \"footer\";\n        }\n\n        header, main, footer, div {\n            padding: 8px;\n        }\n\n        header {\n            grid-area: header;\n            background-color: #0d274d;\n            color: white;\n        }\n\n        main {\n            grid-area: main\n        }\n\n        footer {\n            grid-area: footer;\n            background-color: #f2f2f2;\n        }\n\n        .container {\n            margin:0 auto;\n            max-width: 1200px;\n        }\n        \n        th, td {\n            padding: 16px;\n            text-align: left;\n            vertical-align: middle;\n            line-height: 24px;\n        }\n\n        .bleu {\n            color: #00bceb;\n        }\n\n        .yellow {\n            color: #fbab18;\n        }\n\n        .red {\n            color: #e2231a;\n        }\n\n        small {\n            color: rgba(0,0,0,0.4)\n        }\n    \u003c/style\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n    \u003cheader style=\"padding: 4px; \"\u003e\n        \u003cdiv class=\"container\"\u003e\n            \u003ch2\u003eCisco SecureX Orchestration Report\u003c/h2\u003e\n        \u003c/div\u003e\n    \u003c/header\u003e",
+          "value": "    \u003cfooter\u003e\n        \u003cdiv class=\"container\" style=\"text-align: center;\"\u003e\n            \u003csmall\u003eCisco SecureX Orchestrator\u003c/small\u003e\n        \u003c/div\u003e\n    \u003c/footer\u003e\n\u003c/body\u003e\n\u003c/html\u003e",
           "scope": "local",
-          "name": "email report HTML header",
+          "name": "email report HMTL footer",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01YTM8U6VI9T947lcIjLjmA07Fkg6VSAqrs",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "tekgourou_32bits",
-          "scope": "local",
-          "name": "Secure Endpoint new group name",
-          "type": "datatype.string",
-          "description": "Enter the original Secure Endpoint NEW Group Name",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01YSWJKTLMHYD5ngdLygPKzUtGwGDsm3VyB",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "connector_count",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01YTJBWTTFZXJ2jD1riSTzT5VKjTeA6Fi58",
+        "unique_name": "variable_workflow_01YTM9P81X7ZD3TyboutaViFSwikARguqMz",
         "object_type": "variable_workflow"
       },
       {
@@ -64,27 +36,27 @@
       {
         "schema_id": "datatype.boolean",
         "properties": {
-          "value": false,
+          "value": true,
           "scope": "local",
-          "name": "move connector to new group",
+          "name": "Send Email report",
           "type": "datatype.boolean",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01YTKJ4RU3SJT2fkLaAZSLr99WYQ5wdIvQM",
+        "unique_name": "variable_workflow_01YTKYDP6OO7S7ZN0HFFlFZSukOI0W7O6Cw",
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
+        "schema_id": "datatype.string",
         "properties": {
-          "value": 0,
+          "value": "",
           "scope": "local",
-          "name": "connector moved count",
-          "type": "datatype.integer",
+          "name": "email address",
+          "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01YTKFBS3N0IH6Ep8wnVcjWi0H2Awh2MJ9G",
+        "unique_name": "variable_workflow_01YTKYYTV2TZY5ItwmzG6fNntKRN8JZKnwh",
         "object_type": "variable_workflow"
       },
       {
@@ -116,6 +88,60 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "move connector to new group",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YTKJ4RU3SJT2fkLaAZSLr99WYQ5wdIvQM",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Secure Endpoint group name",
+          "type": "datatype.string",
+          "description": "Enter the original Secure Endpoint Group Name",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YSWK1V3LXXB66tQsqPgHh16lcQWJmb7L3",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Secure Endpoint new group name",
+          "type": "datatype.string",
+          "description": "Enter the original Secure Endpoint NEW Group Name",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YSWJKTLMHYD5ngdLygPKzUtGwGDsm3VyB",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "connector moved count",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YTKFBS3N0IH6Ep8wnVcjWi0H2Awh2MJ9G",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
@@ -130,30 +156,17 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.integer",
         "properties": {
-          "value": "",
+          "value": 0,
           "scope": "local",
-          "name": "connector_link",
-          "type": "datatype.string",
+          "name": "connector_count",
+          "type": "datatype.integer",
           "description": "DO NOT MODIFY",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01YTP65ZLLMHX2YZBTYwjx6qD8C9jxImbxj",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "aargeris@cisco.com",
-          "scope": "local",
-          "name": "email address",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01YTKYYTV2TZY5ItwmzG6fNntKRN8JZKnwh",
+        "unique_name": "variable_workflow_01YTJBWTTFZXJ2jD1riSTzT5VKjTeA6Fi58",
         "object_type": "variable_workflow"
       },
       {
@@ -171,43 +184,30 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.boolean",
+        "schema_id": "datatype.string",
         "properties": {
-          "value": true,
+          "value": "\u003c!DOCTYPE html\u003e\n\u003chtml lang=\"en\"\u003e\n\u003chead\u003e\n    \u003cmeta charset=\"UTF-8\"\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e\n    \u003ctitle\u003eDocument\u003c/title\u003e\n    \u003cstyle\u003e\n        html {\n            width: 100%;\n            height: 100%;\n            padding: 0px;\n            margin: 0px;\n        }\n        \n        body {\n            width: 100%;\n            height: 100%;\n            margin: 0;\n            display: grid;\n            grid-template-rows: min-content auto min-content;\n            grid-template-areas: \"header\"\n                                 \"main\"\n                                 \"footer\";\n        }\n\n        header, main, footer, div {\n            padding: 8px;\n        }\n\n        header {\n            grid-area: header;\n            background-color: #0d274d;\n            color: white;\n        }\n\n        main {\n            grid-area: main\n        }\n\n        footer {\n            grid-area: footer;\n            background-color: #f2f2f2;\n        }\n\n        .container {\n            margin:0 auto;\n            max-width: 1200px;\n        }\n        \n        th, td {\n            padding: 16px;\n            text-align: left;\n            vertical-align: middle;\n            line-height: 24px;\n        }\n\n        .bleu {\n            color: #00bceb;\n        }\n\n        .yellow {\n            color: #fbab18;\n        }\n\n        .red {\n            color: #e2231a;\n        }\n\n        small {\n            color: rgba(0,0,0,0.4)\n        }\n    \u003c/style\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n    \u003cheader style=\"padding: 4px; \"\u003e\n        \u003cdiv class=\"container\"\u003e\n            \u003ch2\u003eCisco SecureX Orchestration Report\u003c/h2\u003e\n        \u003c/div\u003e\n    \u003c/header\u003e",
           "scope": "local",
-          "name": "Send Email report",
-          "type": "datatype.boolean",
+          "name": "email report HTML header",
+          "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01YTKYDP6OO7S7ZN0HFFlFZSukOI0W7O6Cw",
+        "unique_name": "variable_workflow_01YTM8U6VI9T947lcIjLjmA07Fkg6VSAqrs",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "    \u003cfooter\u003e\n        \u003cdiv class=\"container\" style=\"text-align: center;\"\u003e\n            \u003csmall\u003eCisco SecureX Orchestrator\u003c/small\u003e\n        \u003c/div\u003e\n    \u003c/footer\u003e\n\u003c/body\u003e\n\u003c/html\u003e",
+          "value": "",
           "scope": "local",
-          "name": "email report HMTL footer",
+          "name": "connector_link",
           "type": "datatype.string",
+          "description": "DO NOT MODIFY",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01YTM9P81X7ZD3TyboutaViFSwikARguqMz",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "tekgourou",
-          "scope": "local",
-          "name": "Secure Endpoint group name",
-          "type": "datatype.string",
-          "description": "Enter the original Secure Endpoint Group Name",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01YSWK1V3LXXB66tQsqPgHh16lcQWJmb7L3",
+        "unique_name": "variable_workflow_01YTP65ZLLMHX2YZBTYwjx6qD8C9jxImbxj",
         "object_type": "variable_workflow"
       }
     ],
