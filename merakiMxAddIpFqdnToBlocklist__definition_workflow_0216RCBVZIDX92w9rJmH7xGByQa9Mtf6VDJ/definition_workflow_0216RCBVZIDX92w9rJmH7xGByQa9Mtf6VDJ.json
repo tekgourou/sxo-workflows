@@ -9,29 +9,15 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "SecureX-IP-Blocklist",
-          "scope": "local",
-          "name": "PolicyObjectGroup IP Name",
-          "type": "datatype.string",
-          "description": "The name of the Policy Object Group to add (Default : SecureX-IP-Blocklist)",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0216RRU3AOBBZ0BUzDKAAjFqPRO6bHSOQ3M",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.secure_string",
-        "properties": {
           "value": "",
-          "scope": "local",
-          "name": "Meraki API Key",
-          "type": "datatype.secure_string",
-          "description": "Your Meraki API key. This can be generated in your Meraki dashboard",
-          "is_required": false,
+          "scope": "input",
+          "name": "observable_value",
+          "type": "datatype.string",
+          "description": "The value of the observable pivoted on",
+          "is_required": true,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr",
+        "unique_name": "variable_workflow_0216RCBWDBCHC3riUqN2dvTUEpeOVqCw4Ct",
         "object_type": "variable_workflow"
       },
       {
@@ -51,20 +37,6 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "SecureX-FQDN-Blocklist",
-          "scope": "local",
-          "name": "PolicyObjectGroup FQDN Name",
-          "type": "datatype.string",
-          "description": "The name of the Policy Object Group to add (Default : SecureX-FQDN-Blocklist)",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0216RRE5W4XOP1wN2IERADkuZfSz1z72iLH",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
           "value": "",
           "scope": "input",
           "name": "observable_type",
@@ -79,15 +51,43 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "observable_value",
+          "value": "SecureX-FQDN-Blocklist",
+          "scope": "local",
+          "name": "PolicyObjectGroup FQDN Name",
           "type": "datatype.string",
-          "description": "The value of the observable pivoted on",
-          "is_required": true,
+          "description": "The name of the Policy Object Group to add (Default : SecureX-FQDN-Blocklist)",
+          "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0216RCBWDBCHC3riUqN2dvTUEpeOVqCw4Ct",
+        "unique_name": "variable_workflow_0216RRE5W4XOP1wN2IERADkuZfSz1z72iLH",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "*****",
+          "scope": "local",
+          "name": "Meraki API Key",
+          "type": "datatype.secure_string",
+          "description": "Your Meraki API key. This can be generated in your Meraki dashboard",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "SecureX-IP-Blocklist",
+          "scope": "local",
+          "name": "PolicyObjectGroup IP Name",
+          "type": "datatype.string",
+          "description": "The name of the Policy Object Group to add (Default : SecureX-IP-Blocklist)",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0216RRU3AOBBZ0BUzDKAAjFqPRO6bHSOQ3M",
         "object_type": "variable_workflow"
       }
     ],
