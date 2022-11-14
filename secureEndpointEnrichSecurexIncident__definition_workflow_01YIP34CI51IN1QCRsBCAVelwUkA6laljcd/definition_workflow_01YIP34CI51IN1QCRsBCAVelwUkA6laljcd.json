@@ -7,6 +7,34 @@
     "base_type": "workflow",
     "variables": [
       {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": -125,
+          "scope": "local",
+          "name": "Polling Interval in negative seconds",
+          "type": "datatype.integer",
+          "description": "Need to be negatif\nex: -120\n\n= -120 secondes",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YIP34CUJF8G4ZCvTL3SJI4J5b7f4geMXm",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "Secure Endpoint found",
+          "type": "datatype.boolean",
+          "description": "Do not modify",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YIP34CUINKQ01uHzl3U42AgM8bx4BjbEB",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "https://console.amp.cisco.com",
@@ -33,34 +61,6 @@
         },
         "unique_name": "variable_workflow_01YIP34CUJVJA6Pn2wPrAs42OZivld3eXD4",
         "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.boolean",
-        "properties": {
-          "value": false,
-          "scope": "local",
-          "name": "Secure Endpoint found",
-          "type": "datatype.boolean",
-          "description": "Do not modify",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01YIP34CUINKQ01uHzl3U42AgM8bx4BjbEB",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": -125,
-          "scope": "local",
-          "name": "Polling Interval in negative seconds",
-          "type": "datatype.integer",
-          "description": "Need to be negatif\nex: -120\n\n= -120 secondes",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01YIP34CUJF8G4ZCvTL3SJI4J5b7f4geMXm",
-        "object_type": "variable_workflow"
       }
     ],
     "properties": {
@@ -68,6 +68,7 @@
         "is_atomic": false
       },
       "delete_workflow_instance": false,
+      "description": "This workflow will enrich any incident with internal observable with Cisco Secure Endpoint context.",
       "display_name": "Cisco Secure Endpoint - Enrich SecureX Incident",
       "runtime_user": {
         "target_default": true
