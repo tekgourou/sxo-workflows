@@ -42,7 +42,6 @@ This workflow create Meraki IP and FQDN Policy Object Group and FW rules for a g
 * Provide the workflow your Meraki API key by either:
 Storing your token in a global variable and using the Fetch Global Variables group at the beginning of the workflow to update the Meraki API Key local variable; or
 Disable the Fetch Global Variables group and add your token directly to the Meraki API Key local variable
-* If you want to change the name of this workflow in the pivot menu, change its display name
 
 ## Targets
 Target Group: `Default TargetGroup`
