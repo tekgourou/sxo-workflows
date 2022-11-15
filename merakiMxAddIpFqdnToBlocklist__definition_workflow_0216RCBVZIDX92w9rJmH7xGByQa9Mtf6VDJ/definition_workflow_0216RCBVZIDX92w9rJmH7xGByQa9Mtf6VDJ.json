@@ -9,6 +9,20 @@
       {
         "schema_id": "datatype.string",
         "properties": {
+          "value": "SecureX-IP-Blocklist",
+          "scope": "local",
+          "name": "PolicyObjectGroup IP Name",
+          "type": "datatype.string",
+          "description": "The name of the Policy Object Group to add (Default : SecureX-IP-Blocklist)",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0216RRU3AOBBZ0BUzDKAAjFqPRO6bHSOQ3M",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
           "value": "",
           "scope": "input",
           "name": "observable_value",
@@ -18,48 +32,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_0216RCBWDBCHC3riUqN2dvTUEpeOVqCw4Ct",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "Meraki Organization Name",
-          "type": "datatype.string",
-          "description": "The name of the Meraki Organization to manage firewall rules for. * IF EMPTY WILL APPLY to ALL ORG *",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0216RCBWDAQ8L0FdO2pDxO2Uu7ngwtegssU",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "observable_type",
-          "type": "datatype.string",
-          "description": "The type of observable pivoted on",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0216RCBWDAXN94ASxIJeffA0CXlWK9jyBCh",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "SecureX-FQDN-Blocklist",
-          "scope": "local",
-          "name": "PolicyObjectGroup FQDN Name",
-          "type": "datatype.string",
-          "description": "The name of the Policy Object Group to add (Default : SecureX-FQDN-Blocklist)",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0216RRE5W4XOP1wN2IERADkuZfSz1z72iLH",
         "object_type": "variable_workflow"
       },
       {
@@ -79,15 +51,43 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "SecureX-IP-Blocklist",
+          "value": "",
           "scope": "local",
-          "name": "PolicyObjectGroup IP Name",
+          "name": "Meraki Organization Name",
           "type": "datatype.string",
-          "description": "The name of the Policy Object Group to add (Default : SecureX-IP-Blocklist)",
+          "description": "The name of the Meraki Organization to manage firewall rules for. * IF EMPTY WILL APPLY to ALL ORG *",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0216RRU3AOBBZ0BUzDKAAjFqPRO6bHSOQ3M",
+        "unique_name": "variable_workflow_0216RCBWDAQ8L0FdO2pDxO2Uu7ngwtegssU",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "SecureX-FQDN-Blocklist",
+          "scope": "local",
+          "name": "PolicyObjectGroup FQDN Name",
+          "type": "datatype.string",
+          "description": "The name of the Policy Object Group to add (Default : SecureX-FQDN-Blocklist)",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0216RRE5W4XOP1wN2IERADkuZfSz1z72iLH",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_type",
+          "type": "datatype.string",
+          "description": "The type of observable pivoted on",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0216RCBWDAXN94ASxIJeffA0CXlWK9jyBCh",
         "object_type": "variable_workflow"
       }
     ],
@@ -96,7 +96,7 @@
         "is_atomic": false
       },
       "delete_workflow_instance": false,
-      "description": "This workflow add the given IP address or domain (FQDN) to a Meraki Organization. Supported observable: ip and domain\n\nTarget Group: Default TargetGroup\n\nTargets: Cisco Meraki\n\nSteps:\n[] Make sure the observable type provided is supported\n[] Get the Meraki API key from a global variable (optional)\n[] Add observable to Meraki Policy Object Group\n\nMore information: ",
+      "description": "This workflow add the given IP address or domain (FQDN) to a Meraki Organization. Supported observable: ip and domain\n\nTarget Group: Default TargetGroup\n\nTargets: Cisco Meraki\n\nSteps:\n[] Validate supported observable type (IP or DOMAIN)\n[] Fetch local variable (optional)\n[] Get Organizations\n[] Loop through each organization\n[] Check the organization name is in scope (all if not specify)\n[] Get a list of Policy Objects Groups\n[] Create Policy Objects and add it to the IP or FQDN block list group\n\nMore information: ",
       "display_name": "Meraki - MX - add IP / FQDN to blocklist",
       "runtime_user": {
         "override_target_runtime_user": false,
@@ -241,7 +241,7 @@
               "continue_on_failure": false,
               "display_name": "Meraki - Get Organizations",
               "input": {
-                "01RMCDATIPAVP0LDxyEmJJ9zK8u8V76EDul": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.local.variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr$"
+                "variable_workflow_01PP75VKCNBIR74HoD8U7ycWq28NINXEGi5": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.local.variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr$"
               },
               "runtime_user": {
                 "target_default": true
@@ -265,7 +265,7 @@
               "action_timeout": 180,
               "continue_on_failure": false,
               "display_name": "Read Table from JSON",
-              "input_json": "$activity.definition_activity_0216RCCB0H5Q11SxxK2zPaugxWtTfkyeRDz.output.01RMCDATIO5AA0oiGEvXkNpubSswmFcUVeQ$",
+              "input_json": "$activity.definition_activity_0216RCCB0H5Q11SxxK2zPaugxWtTfkyeRDz.output.variable_workflow_01PP75VKCNFWC0Y3NckXoox5CRNcfdLVBNT$",
               "jsonpath_query": "$",
               "persist_output": false,
               "populate_columns": false,
@@ -346,8 +346,8 @@
                           "continue_on_failure": true,
                           "display_name": "Meraki - Get Policy Objects Groups list",
                           "input": {
-                            "0213DMXBJYJME6YnL7K9MUlqaInRkUHSS5B": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.local.variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr$",
-                            "0213DRMICZ57L4n5xFaL5DLiOwAI4zbTETH": "$activity.definition_activity_0216RCCEB495B15dArKCParf5LXxONSLn4N.input.source_array[@].id$"
+                            "variable_workflow_0213DMXC1MO3N4K0wUwDZoOf71f7HBKXcxm": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.local.variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr$",
+                            "variable_workflow_0213DRMIJ9L1L1VZIYFFkWTpXKSUtKrVVIX": "$activity.definition_activity_0216RCCEB495B15dArKCParf5LXxONSLn4N.input.source_array[@].id$"
                           },
                           "runtime_user": {
                             "target_default": true
@@ -402,7 +402,7 @@
                                   "action_timeout": 180,
                                   "continue_on_failure": false,
                                   "display_name": "Read Table from JSON",
-                                  "input_json": "$activity.definition_activity_0216RNQDYYW1145rdv4L87mo1yPvAR1Ks4H.output.0213DMXBJWZ9N7doNx4ThvDZMyduupFUs7w$",
+                                  "input_json": "$activity.definition_activity_0216RNQDYYW1145rdv4L87mo1yPvAR1Ks4H.output.variable_workflow_0213DMXC1LVLR4hsU4Mh1lI3UO8ApGXgrfO$",
                                   "jsonpath_query": "$.",
                                   "persist_output": false,
                                   "populate_columns": false,
@@ -503,12 +503,12 @@
                                               "continue_on_failure": false,
                                               "display_name": "Meraki - Create Policy Object",
                                               "input": {
-                                                "0213E762F6OBK58Kv1U9DS6gaOZ2KB7fcdh": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.local.variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr$",
-                                                "0213E762F6YA23OAJSlUXIPOj9XnFlttQWq": "$activity.definition_activity_0216RCCEB495B15dArKCParf5LXxONSLn4N.input.source_array[@].id$",
-                                                "0213E762F7QP00VeM4sf0uK9HqwM3vJyRCH": "$activity.definition_activity_0216RQGE9UFI34swP86KTLQ3DmMVkGd08Zw.input.source_array[@].id$",
-                                                "0213E96GENNLO5hU3orF2adf70COEoe94FP": "$activity.definition_activity_0216RVNX2LWNM0sAHIzmUxqeOgOYbqQdLLJ.output.result_string$_SecureX",
-                                                "0213EFBXQ4NIY0nh2s9IFZnFb0Wo06mvH6o": "cidr",
-                                                "0213EGP4QDYGW130Crwld2lzqGfPdssrxMy": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.input.variable_workflow_0216RCBWDBCHC3riUqN2dvTUEpeOVqCw4Ct$/32"
+                                                "variable_workflow_0213E762SN28K6DkTwpDOSbxHsqCsqq9xBO": "$activity.definition_activity_0216RCCEB495B15dArKCParf5LXxONSLn4N.input.source_array[@].id$",
+                                                "variable_workflow_0213E762SNBD84EMvIC1OLr0MQeyKeGTVJD": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.local.variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr$",
+                                                "variable_workflow_0213E762SNJJP5ZmyTlV5W2oyEKBasx3Iuf": "$activity.definition_activity_0216RQGE9UFI34swP86KTLQ3DmMVkGd08Zw.input.source_array[@].id$",
+                                                "variable_workflow_0213E96GOK1BI3BjUUFBcnZlnR0F2sPwMYj": "$activity.definition_activity_0216RVNX2LWNM0sAHIzmUxqeOgOYbqQdLLJ.output.result_string$_SecureX",
+                                                "variable_workflow_0213EFBY11XK65bV0Eer17xmbgIYsbpduFB": "cidr",
+                                                "variable_workflow_0213EGP50Y4RA5pYZGpGkrssnmjORKT2l7F": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.input.variable_workflow_0216RCBWDBCHC3riUqN2dvTUEpeOVqCw4Ct$/32"
                                               },
                                               "runtime_user": {
                                                 "target_default": true
@@ -580,12 +580,12 @@
                                               "continue_on_failure": false,
                                               "display_name": "Meraki - Create Policy Object",
                                               "input": {
-                                                "0213E762F6OBK58Kv1U9DS6gaOZ2KB7fcdh": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.local.variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr$",
-                                                "0213E762F6YA23OAJSlUXIPOj9XnFlttQWq": "$activity.definition_activity_0216RCCEB495B15dArKCParf5LXxONSLn4N.input.source_array[@].id$",
-                                                "0213E762F7QP00VeM4sf0uK9HqwM3vJyRCH": "$activity.definition_activity_0216RQGE9UFI34swP86KTLQ3DmMVkGd08Zw.input.source_array[@].id$",
-                                                "0213E96GENNLO5hU3orF2adf70COEoe94FP": "$activity.definition_activity_0216RWO9L36FR7bevg4Ce0tf6NYFJxF3ZKu.output.result_string$_SecureX",
-                                                "0213EFBXQ4NIY0nh2s9IFZnFb0Wo06mvH6o": "fqdn",
-                                                "0213EGP4QDYGW130Crwld2lzqGfPdssrxMy": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.input.variable_workflow_0216RCBWDBCHC3riUqN2dvTUEpeOVqCw4Ct$"
+                                                "variable_workflow_0213E762SN28K6DkTwpDOSbxHsqCsqq9xBO": "$activity.definition_activity_0216RCCEB495B15dArKCParf5LXxONSLn4N.input.source_array[@].id$",
+                                                "variable_workflow_0213E762SNBD84EMvIC1OLr0MQeyKeGTVJD": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.local.variable_workflow_0216RCBWDAH8L5ICRmq5DWVK8rHmBKUpwfr$",
+                                                "variable_workflow_0213E762SNJJP5ZmyTlV5W2oyEKBasx3Iuf": "$activity.definition_activity_0216RQGE9UFI34swP86KTLQ3DmMVkGd08Zw.input.source_array[@].id$",
+                                                "variable_workflow_0213E96GOK1BI3BjUUFBcnZlnR0F2sPwMYj": "$activity.definition_activity_0216RWO9L36FR7bevg4Ce0tf6NYFJxF3ZKu.output.result_string$_SecureX",
+                                                "variable_workflow_0213EFBY11XK65bV0Eer17xmbgIYsbpduFB": "fqdn",
+                                                "variable_workflow_0213EGP50Y4RA5pYZGpGkrssnmjORKT2l7F": "$workflow.definition_workflow_0216RCBVZIDX92w9rJmH7xGByQa9Mtf6VDJ.input.variable_workflow_0216RCBWDBCHC3riUqN2dvTUEpeOVqCw4Ct$"
                                               },
                                               "runtime_user": {
                                                 "target_default": true
