@@ -2,6 +2,10 @@
 
 This workflow create Meraki IP and FQDN Policy Object Group and FW rules for a given Organization. This is the initial setup for the workflow “Meraki - MX - add IP / FQDN to blocklist”
 
+![](screenshots/merakPolicyObjectGroups.png)
+
+![](screenshots/merakiMxFwRules.png)
+
 ## Requirements
 
 *     The following system atomics are used by this workflow:
