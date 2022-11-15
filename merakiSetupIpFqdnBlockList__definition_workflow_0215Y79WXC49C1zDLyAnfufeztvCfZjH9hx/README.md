@@ -32,3 +32,9 @@ This workflow create Meraki IP and FQDN Policy Object Group and FW rules for a g
 12. Set local variable SyslogEnable if Syslog server are defined
 13. Get L3 Outbound Firewall Rules
 14. Add new fw rules for IP and FQDN block list If they do not already exist.
+
+## Configuration
+* Set the Organization Names local variable
+* Provide the workflow your Meraki API key by either:
+Storing your token in a global variable and using the Fetch Global Variables group at the beginning of the workflow to update the Meraki API Key local variable; or
+Disable the Fetch Global Variables group and add your token directly to the Meraki API Key local variable
