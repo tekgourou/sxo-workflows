@@ -25,4 +25,10 @@ This workflow create Meraki IP and FQDN Policy Object Group and FW rules for a g
 5. Get a list of Policy Objects Groups
 6. If Policy Objects Groups for IP or FQDN exist update local variables with ID
 7. If Policy Objects Groups for IP or FQDN does not exist Create the Policy Object Groups
-8. Create dummy Policy Objects to enable Policy Objects Groups
+8. Create dummy Policy Objects to enable Policy Objects Groups (Policy Object Groups cannot add to a FW rule if empty)
+9. Get Networks list for the organization
+10. loop through each network
+11. Get the list of Syslog servers
+12. Set local variable SyslogEnable if Syslog server are defined
+13. Get L3 Outbound Firewall Rules
+14. Add new fw rules for IP and FQDN block list If they do not already exist.
