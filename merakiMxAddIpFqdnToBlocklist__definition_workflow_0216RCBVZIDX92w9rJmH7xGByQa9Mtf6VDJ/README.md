@@ -3,7 +3,7 @@
 
 This workflow add the given IP address or domain (FQDN) to Meraki Organization(s). 
 
-![](screenshots/addIP.png)
+![](screenshots/addipv2.png)
 
 ## Requirements
 *     Setup Workflow : 
