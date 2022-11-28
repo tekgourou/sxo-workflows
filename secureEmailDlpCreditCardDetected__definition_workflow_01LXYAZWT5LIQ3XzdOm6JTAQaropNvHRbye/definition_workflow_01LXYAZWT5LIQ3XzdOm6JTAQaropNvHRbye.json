@@ -9,27 +9,79 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
+          "value": "Email Endpoint",
           "scope": "local",
-          "name": "cc",
+          "name": "SMTP Target Name",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR",
+        "unique_name": "variable_workflow_01MV9BRFS4EEU0lVILuuufKRB9yXzBK7FIm",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "output",
-          "name": "observables",
+          "scope": "local",
+          "name": "from",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6",
+        "unique_name": "variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "DLP_violation_count",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "internal_user",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "to",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "cisco_mid",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LYPYE65BDX32zfAjRx8idaptO77Su1cHb",
         "object_type": "variable_workflow"
       },
       {
@@ -63,12 +115,51 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_subject",
+          "name": "file_notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq",
+        "unique_name": "variable_workflow_01LXZGFRWNJ276aWgNN6VXCLeRWOsvyDVXk",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "casebook_title",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "DLP_violation_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "observables",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6",
         "object_type": "variable_workflow"
       },
       {
@@ -89,12 +180,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "cisco_mid",
+          "name": "cc",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LYPYE65BDX32zfAjRx8idaptO77Su1cHb",
+        "unique_name": "variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR",
         "object_type": "variable_workflow"
       },
       {
@@ -102,25 +193,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "casebook_title",
+          "name": "email_subject",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "DLP_violation_count",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG",
+        "unique_name": "variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq",
         "object_type": "variable_workflow"
       },
       {
@@ -128,51 +206,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "to",
+          "name": "email_raw_message",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Email Endpoint",
-          "scope": "local",
-          "name": "SMTP Target Name",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01MV9BRFS4EEU0lVILuuufKRB9yXzBK7FIm",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "bcc",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "from",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC",
+        "unique_name": "variable_workflow_01LXYCJ7NGKR40wgsnmng8wNVAjqTLzB9rM",
         "object_type": "variable_workflow"
       },
       {
@@ -193,19 +232,6 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "internal_user",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
           "name": "direction",
           "type": "datatype.string",
           "is_required": false,
@@ -219,38 +245,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "file_notes",
+          "name": "bcc",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LXZGFRWNJ276aWgNN6VXCLeRWOsvyDVXk",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "DLP_violation_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_raw_message",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LXYCJ7NGKR40wgsnmng8wNVAjqTLzB9rM",
+        "unique_name": "variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9",
         "object_type": "variable_workflow"
       }
     ],
@@ -1398,12 +1398,12 @@
                       {
                         "unique_name": "definition_activity_01LY6EALVY0XD6TfofKQZyJXgyQqgD2MlrV",
                         "name": "Set Variables",
-                        "title": "Set Variables direction",
+                        "title": "Set Variables casebook title",
                         "type": "core.set_multiple_variables",
                         "base_type": "activity",
                         "properties": {
                           "continue_on_failure": false,
-                          "display_name": "Set Variables direction",
+                          "display_name": "Set Variables casebook title",
                           "skip_execution": false,
                           "variables_to_update": [
                             {
@@ -1523,6 +1523,7 @@
                                 "properties": {
                                   "action_timeout": 180,
                                   "allow_auto_redirect": true,
+                                  "allow_headers_redirect": false,
                                   "continue_on_error_status_code": false,
                                   "continue_on_failure": false,
                                   "custom_headers": [
@@ -1542,6 +1543,7 @@
                                   "target": {
                                     "override_workflow_target_group_criteria": true,
                                     "target_group": {
+                                      "run_on_all_targets": false,
                                       "use_criteria": {
                                         "choose_target_using_algorithm": "choose_first_with_matching_criteria",
                                         "conditions": [
@@ -2035,6 +2037,7 @@
                                 "properties": {
                                   "action_timeout": 180,
                                   "allow_auto_redirect": true,
+                                  "allow_headers_redirect": false,
                                   "body": "{\n  \"accountEnabled\": false\n}",
                                   "content_type": "application/json",
                                   "continue_on_error_status_code": false,
@@ -2056,6 +2059,7 @@
                                   "target": {
                                     "override_workflow_target_group_criteria": true,
                                     "target_group": {
+                                      "run_on_all_targets": false,
                                       "use_criteria": {
                                         "choose_target_using_algorithm": "choose_first_with_matching_criteria",
                                         "conditions": [
@@ -2368,12 +2372,6 @@
       "columns": [
         {
           "is_required": true,
-          "name": "User",
-          "title": "User",
-          "type": "string"
-        },
-        {
-          "is_required": true,
           "name": "Count",
           "title": "Count",
           "type": "integer"
@@ -2382,6 +2380,12 @@
           "is_required": true,
           "name": "Last-Message-Id",
           "title": "Last-Message-Id",
+          "type": "string"
+        },
+        {
+          "is_required": true,
+          "name": "User",
+          "title": "User",
           "type": "string"
         }
       ],
