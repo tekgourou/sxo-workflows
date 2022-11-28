@@ -34,7 +34,7 @@ This workflow is designed to be triggered by an email arriving in a SecureX CES 
 ## Configuration
 
 Account Keys/Targets
-* 		You must create an account key with your mailbox’s credentials and then update the SecureX CEs notification Mailbox target with that account key. While you’re editing the target, be sure to add your email server’s information
+* 		You must create an account key with your mailbox’s credentials and then update the SecureX CES notification Mailbox target with that account key. While you’re editing the target, be sure to add your email server’s information
 
 
 ## Targets
@@ -44,14 +44,12 @@ By default, the `Default TargetGroup` may not include `SMTP Endpoint` targets. I
 
 | Target Name | Type | Details | Account Keys | Notes |
 |:------------|:-----|:--------|:-------------|:------|
-| [CTR_API] | HTTP Endpoint | _Protocol:_ `HTTPS`<br />_Host:_ `visibility.amp.cisco.com`<br />_Path:_ `/iroh` | CTR_Credentials | Created by default |
-| Phishing Investigation Mailbox | IMAP Endpoint | Configured for your IMAP server | Phishing Investigation Mailbox Credentials | |
-| Phishing Investigation Outgoing | SMTP Endpoint | Configured for your SMTP server | Phishing Investigation Mailbox Credentials | |
-| [Private_CTIA_Target]| HTTP Endpoint | _Protocol:_ `HTTPS`<br />_Host:_ `private.intel.amp.cisco.com`<br />_Path:_ None | CTR_Credentials | Created by default |
+| CTR_API | HTTP Endpoint | _Protocol:_ `HTTPS`<br />_Host:_ `visibility.amp.cisco.com`<br />_Path:_ `/iroh` | CTR_Credentials | Created by default |
+| SecureX Trigger IMAP Mailbox | IMAP Endpoint | Configured for your IMAP server |SecureX Trigger IMAP Mailbox Credentials | |
+| Private_CTIA_Target | HTTP Endpoint | _Protocol:_ `HTTPS`<br />_Host:_ `private.intel.amp.cisco.com`<br />_Path:_ None | CTR_Credentials | Created by default |
 
 ## Account Keys
 
 | Account Key Name | Type | Details | Notes |
 |:-----------------|:-----|:--------|:------|
-| [CTR_Credentials]({{ site.baseurl }}/account-keys/default#ctr_credentials) | SecureX Token | | See [this page]({{ site.baseurl }}/account-keys/securex-token) |
-| Phishing Investigation Mailbox Credentials | Email Credentials | _Username:_ Mailbox Username<br />_Password:_ Mailbox Password | |
+| SecureX Trigger IMAP Mailbox Credentials | Email Credentials | _Username:_ Mailbox Username<br />_Password:_ Mailbox Password | |
