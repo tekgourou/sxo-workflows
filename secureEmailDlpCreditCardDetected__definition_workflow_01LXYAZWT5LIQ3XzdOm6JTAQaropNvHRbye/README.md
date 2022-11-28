@@ -4,6 +4,9 @@ This workflow monitors a mailbox for incoming email with DLP breach detected by 
 
 ![](img/final.png)
 
+## Extra information
+	Cisco Live DevNet-2107 https://www.ciscolive.com/on-demand/on-demand-library.html?search=2107#/session/1655424246651001Q9zx
+	
 ## Requirements
 *     The following system atomics are used by this workflow:
     * Threat Response - Generated Access Token
