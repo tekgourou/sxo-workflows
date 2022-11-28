@@ -11,25 +11,25 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "from",
+          "name": "cc",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC",
+        "unique_name": "variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "local",
-          "name": "DLP_violation_notes",
+          "scope": "output",
+          "name": "observables",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr",
+        "unique_name": "variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6",
         "object_type": "variable_workflow"
       },
       {
@@ -63,12 +63,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "casebook_title",
+          "name": "email_subject",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd",
+        "unique_name": "variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq",
         "object_type": "variable_workflow"
       },
       {
@@ -89,12 +89,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "bcc",
+          "name": "cisco_mid",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9",
+        "unique_name": "variable_workflow_01LYPYE65BDX32zfAjRx8idaptO77Su1cHb",
         "object_type": "variable_workflow"
       },
       {
@@ -102,90 +102,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "to",
+          "name": "casebook_title",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "cc",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Email Endpoint",
-          "scope": "local",
-          "name": "SMTP Target Name",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01MV9BRFS4EEU0lVILuuufKRB9yXzBK7FIm",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "file_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LXZGFRWNJ276aWgNN6VXCLeRWOsvyDVXk",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "observables",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "internal_user",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW",
+        "unique_name": "variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd",
         "object_type": "variable_workflow"
       },
       {
@@ -206,12 +128,77 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "cisco_mid",
+          "name": "to",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LYPYE65BDX32zfAjRx8idaptO77Su1cHb",
+        "unique_name": "variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Email Endpoint",
+          "scope": "local",
+          "name": "SMTP Target Name",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01MV9BRFS4EEU0lVILuuufKRB9yXzBK7FIm",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "bcc",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "from",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "internal_user",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW",
         "object_type": "variable_workflow"
       },
       {
@@ -232,12 +219,25 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_subject",
+          "name": "file_notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq",
+        "unique_name": "variable_workflow_01LXZGFRWNJ276aWgNN6VXCLeRWOsvyDVXk",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "DLP_violation_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr",
         "object_type": "variable_workflow"
       },
       {
@@ -412,7 +412,8 @@
               }
             }
           },
-          "workflow_id": "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH"
+          "workflow_id": "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+          "workflow_name": "Threat Response - Generate Access Token"
         },
         "object_type": "definition_activity"
       },
@@ -586,7 +587,8 @@
                                       }
                                     }
                                   },
-                                  "workflow_id": "definition_workflow_01PP7586MYQ913P0nWshTHMU7mQNNFG58Bv"
+                                  "workflow_id": "definition_workflow_01PP7586MYQ913P0nWshTHMU7mQNNFG58Bv",
+                                  "workflow_name": "Threat Response - Inspect for Observables"
                                 },
                                 "object_type": "definition_activity"
                               },
@@ -694,7 +696,8 @@
                                       }
                                     }
                                   },
-                                  "workflow_id": "definition_workflow_01PP7586MYQ913P0nWshTHMU7mQNNFG58Bv"
+                                  "workflow_id": "definition_workflow_01PP7586MYQ913P0nWshTHMU7mQNNFG58Bv",
+                                  "workflow_name": "Threat Response - Inspect for Observables"
                                 },
                                 "object_type": "definition_activity"
                               },
@@ -802,7 +805,8 @@
                                       }
                                     }
                                   },
-                                  "workflow_id": "definition_workflow_01PP7586MYQ913P0nWshTHMU7mQNNFG58Bv"
+                                  "workflow_id": "definition_workflow_01PP7586MYQ913P0nWshTHMU7mQNNFG58Bv",
+                                  "workflow_name": "Threat Response - Inspect for Observables"
                                 },
                                 "object_type": "definition_activity"
                               },
@@ -1505,7 +1509,8 @@
                                       }
                                     }
                                   },
-                                  "workflow_id": "definition_workflow_01HQN7N57GLKN780LTDUabTblE3OpMPQVfx"
+                                  "workflow_id": "definition_workflow_01HQN7N57GLKN780LTDUabTblE3OpMPQVfx",
+                                  "workflow_name": "Azure Graph - Get Access Token"
                                 },
                                 "object_type": "definition_activity"
                               },
@@ -2111,21 +2116,21 @@
             "object_type": "definition_activity"
           },
           {
-            "unique_name": "definition_activity_01LY0HY0PVVBA5vWkSunACGUgktxVN5c5fF",
-            "name": "Threat Response v2 - Create Casebook",
-            "title": "Threat Response v2 - Create Casebook",
+            "unique_name": "definition_activity_021R0CUUQXBPQ774qVEaf27zoHLmQr3wLDI",
+            "name": "Threat Response - Create Casebook",
+            "title": "Threat Response - Create Casebook",
             "type": "workflow.atomic_workflow",
             "base_type": "subworkflow",
             "properties": {
               "continue_on_failure": false,
-              "display_name": "Threat Response v2 - Create Casebook",
+              "display_name": "Threat Response - Create Casebook",
               "input": {
-                "variable_workflow_01KVOGF4J481T6SCd7uh5fW7n47Q712nleJ": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
-                "variable_workflow_01KVOGF4J4FZC0jmaR42b1FbIzVZA19KbYL": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4$",
-                "variable_workflow_01KVOGF4J4IG81TQKFjqzLlnFJwiiNwXwSq": "$activity.01OL7OTNFMOUW6hMGT644W5nk3WTVMqN1N1.output.01LW0VXFFSJ030lLJ5iEtKg6fdcxKtnEOK9$",
-                "variable_workflow_01KVOGF4J4JL52xC9ZXdjYwHt2SvRYkArli": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd$",
-                "variable_workflow_01KVOMXV9ERSV0M9j1WarflgSG8r5SpZ8b5": "",
-                "variable_workflow_01LFBYQJV9FZA2THdEQrMftLyGiiHP65nUq": "amber"
+                "variable_workflow_01PP75X6NM0AY6YDlJckkMg6hCbMEMGO72O": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6$",
+                "variable_workflow_01PP75X6NM1M46Jjob8LUKg8R3yRRVOvu9q": "$activity.definition_activity_01SQYFO520I1N4z8in7V0A8ebpVbxS9mpXn.output.variable_workflow_01PP75S3G7CJY6WAQr2IJC7qga2SIoE09gQ$",
+                "variable_workflow_01PP75X6NM2V27Or3EssfIABNZiE45Ddziu": "amber",
+                "variable_workflow_01PP75X6NM4123PBwUedJ5QqeBr8G1sefjQ": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd$",
+                "variable_workflow_01PP75X6NM54W5qTbpCb1h6bTTrp7eFQjaq": "",
+                "variable_workflow_01PP75X6NM7FE4BmQ3AKIykyWFDSV9umy02": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.output.variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4$"
               },
               "runtime_user": {
                 "target_default": true
@@ -2134,7 +2139,8 @@
               "target": {
                 "use_workflow_target_group": true
               },
-              "workflow_id": "definition_workflow_01KVOGF574Y291CRwQLNB1TtzEHDNwyUx7O"
+              "workflow_id": "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML",
+              "workflow_name": "Threat Response - Create Casebook"
             },
             "object_type": "definition_activity"
           }
@@ -2249,7 +2255,7 @@
       "properties": {
         "display_name": "securex-orchestration@internetsinkhole.com",
         "password": "*****",
-        "sender": "*****"
+        "sender": "securex-orchestration@internetsinkhole.com"
       }
     },
     "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez": {
@@ -2262,7 +2268,7 @@
       "properties": {
         "display_name": "events_securex@internetsinkhole.com",
         "password": "*****",
-        "sender": "*****"
+        "sender": "events_securex@internetsinkhole.com"
       }
     }
   },
@@ -2362,12 +2368,6 @@
       "columns": [
         {
           "is_required": true,
-          "name": "Last-Message-Id",
-          "title": "Last-Message-Id",
-          "type": "string"
-        },
-        {
-          "is_required": true,
           "name": "User",
           "title": "User",
           "type": "string"
@@ -2377,6 +2377,12 @@
           "name": "Count",
           "title": "Count",
           "type": "integer"
+        },
+        {
+          "is_required": true,
+          "name": "Last-Message-Id",
+          "title": "Last-Message-Id",
+          "type": "string"
         }
       ],
       "base_type": "datatype",
@@ -2387,6 +2393,12 @@
     "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
     "definition_workflow_01PP7586MYQ913P0nWshTHMU7mQNNFG58Bv",
     "definition_workflow_01HQN7N57GLKN780LTDUabTblE3OpMPQVfx",
-    "definition_workflow_01KVOGF574Y291CRwQLNB1TtzEHDNwyUx7O"
+    "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+    "definition_workflow_01PP7586MYQ913P0nWshTHMU7mQNNFG58Bv",
+    "definition_workflow_01HQN7N57GLKN780LTDUabTblE3OpMPQVfx",
+    "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML"
   ]
 }
