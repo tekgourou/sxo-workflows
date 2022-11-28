@@ -2,7 +2,7 @@
 
 This workflow monitors a mailbox for incoming email with DLP breach detected by Cisco Secure Email. When an email is received, the workflow increase the number of occurrence for a single internal user from 1 to 3. At each occurrence the internal user is informed of the detection. At the second occurrence, is manager is also informed. At the third occurrence, the internal user Azure account is disable. 
 
-![](screenshots/final.png)
+![](img/final.png)
 
 ## Requirements
 *     The following system atomics are used by this workflow:
