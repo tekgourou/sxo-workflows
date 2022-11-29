@@ -17,3 +17,20 @@ This workflow monitors a SecureX mailbox for incoming email with Bitcoin Address
     * Threat Response - Create Casebook
     * IMAP inbox
     * The targets and account keys listed at the bottom of the page
+
+## Workflow Steps
+
+This workflow is designed to be triggered by an email arriving in a SecureX CES notification mailbox.
+
+1.  Get Threat Response Access Token and Timestamp
+2. For each email attach to the notification email:
+	- Create a table with email headers.
+3. For each headers:
+	- Update variables with observable from the email headers.
+4. If email matchl with Bitcoin Address regex
+    	- Get Bitcoinabuse report 
+5. If email match with URL regex 
+    	- Submit URL to Cisco Secure Malware Analytics
+6. Create observables json output.
+7. Create SecureX judgment for observables
+10. Casebook is created. 
