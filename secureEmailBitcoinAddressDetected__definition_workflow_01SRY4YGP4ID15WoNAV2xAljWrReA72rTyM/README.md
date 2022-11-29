@@ -16,6 +16,7 @@ This workflow monitors a SecureX mailbox for incoming email with Bitcoin Address
     * Secure Malware Analytics - Submit URL
     * Threat Response - Create Casebook
     * IMAP inbox
+    * Bitcoinabuse API key. https://www.bitcoinabuse.com/api-docs
     * The targets and account keys listed at the bottom of the page
 
 ## Workflow Steps
@@ -37,8 +38,11 @@ This workflow is designed to be triggered by an email arriving in a SecureX CES 
 
 ## Configuration
 
-Account Keys/Targets
-* 		You must create an account key with your mailbox’s credentials and then update the SecureX CES notification Mailbox target with that account key. While you’re editing the target, be sure to add your email server’s information
+Variable/Account Keys/Targets
+* Edit local variable "bitcoinabuse_api_token" to add your own api key.
+* Set local variable "Secure_Malware_Analytics" to "true" if you have a Cisco Secure Malware Analytics API subscription.
+* Edit local variable "Secure_Malware_Analytics_API_key" to add your own api key.
+* You must create an account key with your mailbox’s credentials and then update the SecureX CES notification Mailbox target with that account key. While you’re editing the target, be sure to add your email server’s information
 
 ## Targets
 Target Group: `Default TargetGroup`
