@@ -28,9 +28,9 @@ This workflow is designed to be triggered by an email arriving in a SecureX CES 
 3. For each headers:
 	- Update variables with observable from the email headers.
 4. If email matchl with Bitcoin Address regex
-    	- Get Bitcoinabuse report 
+ 	- Get Bitcoinabuse report.
 5. If email match with URL regex 
-    	- Submit URL to Cisco Secure Malware Analytics
+	- Submit URL to Cisco Secure Malware Analytics
 6. Create observables json output.
 7. Create SecureX judgment for observables
-10. Casebook is created. 
+8. Casebook is created. 
