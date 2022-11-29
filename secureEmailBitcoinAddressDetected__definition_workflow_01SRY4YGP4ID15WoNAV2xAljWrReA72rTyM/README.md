@@ -2,7 +2,7 @@
 
 This workflow monitors a SecureX mailbox for incoming email with Bitcoin Address detected by Cisco Secure Email. When an email is received, the workflow get report from Bitcoinabuse for Bitcoin Address reputation. URL will be parse from the email body and send to Cisco Malware Analytics. A suspicious judgment will be set for Observables from the email. SecureX Casebook will be create with all details.
 
-<span style="display:block;text-align:center">![](img/email.png)</span>
+![](img/email.png)
 
 ![](img/final.png)
 
@@ -34,3 +34,25 @@ This workflow is designed to be triggered by an email arriving in a SecureX CES 
 6. Create observables json output.
 7. Create SecureX judgment for observables
 8. Casebook is created. 
+
+## Configuration
+
+Account Keys/Targets
+* 		You must create an account key with your mailbox’s credentials and then update the SecureX CES notification Mailbox target with that account key. While you’re editing the target, be sure to add your email server’s information
+
+## Targets
+Target Group: `Default TargetGroup`
+
+By default, the `Default TargetGroup` may not include `SMTP Endpoint` targets. If this is the case, you will need to update the target group and add `SMTP Endpoint` to the target types included.
+
+| Target Name | Type | Details | Account Keys | Notes |
+|:------------|:-----|:--------|:-------------|:------|
+| CTR_API | HTTP Endpoint | _Protocol:_ `HTTPS`<br />_Host:_ `visibility.amp.cisco.com`<br />_Path:_ `/iroh` | CTR_Credentials | Created by default |
+| SecureX Trigger IMAP Mailbox | IMAP Endpoint | Configured for your IMAP server |SecureX Trigger IMAP Mailbox Credentials | |
+| Private_CTIA_Target | HTTP Endpoint | _Protocol:_ `HTTPS`<br />_Host:_ `private.intel.amp.cisco.com`<br />_Path:_ None | CTR_Credentials | Created by default |
+
+## Account Keys
+
+| Account Key Name | Type | Details | Notes |
+|:-----------------|:-----|:--------|:------|
+| SecureX Trigger IMAP Mailbox Credentials | Email Credentials | _Username:_ Mailbox Username<br />_Password:_ Mailbox Password | |
