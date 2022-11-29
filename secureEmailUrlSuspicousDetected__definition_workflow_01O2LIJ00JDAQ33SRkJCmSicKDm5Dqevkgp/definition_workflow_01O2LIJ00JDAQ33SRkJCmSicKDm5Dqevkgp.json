@@ -11,12 +11,38 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_body",
+          "name": "Secure_Malware_Analytics_notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O2LIIZS6NZH1QvPkNYvUBHxgQs1XuXWdq",
+        "unique_name": "variable_workflow_021RY7LGBJWRW3E1BDa0BbvwZMUS606cEic",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "from",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O2LIIZS6P3J0qSlAMAQw6Qb99BJR0jGLm",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "Secure Malware Analytics Enable ?",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021S2K2UA7PZ904BbCEHJznovTkQhmwTjR5",
         "object_type": "variable_workflow"
       },
       {
@@ -30,19 +56,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01O2LIIZS6UVL2DdFjP5HeHEPbFFg5CNpV7",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O2LIIZS6KKN0uAZi8cbXQJwfLQZMj0xHq",
         "object_type": "variable_workflow"
       },
       {
@@ -63,12 +76,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "file_notes",
+          "name": "email_body",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O2LIIZS6SM116RcroA3Se7BMKDYCRrSPD",
+        "unique_name": "variable_workflow_01O2LIIZS6NZH1QvPkNYvUBHxgQs1XuXWdq",
         "object_type": "variable_workflow"
       },
       {
@@ -102,25 +115,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_dates",
+          "name": "email_raw_message",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O2LIIZS6CPL7TVW6m2tmDPy3PRp1aecJW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O2LIIZS6HVP0U30XMTLk3yp7OIYLyQscp",
+        "unique_name": "variable_workflow_01O2LIIZS6VZ779O1tt1UCNytjJUsv3HU5V",
         "object_type": "variable_workflow"
       },
       {
@@ -141,38 +141,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_raw_message",
+          "name": "email_notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O2LIIZS6VZ779O1tt1UCNytjJUsv3HU5V",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "from",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O2LIIZS6P3J0qSlAMAQw6Qb99BJR0jGLm",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "observables",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O2LIIZS6RAX27UJytJwLp9BhpjtLWyAI4",
+        "unique_name": "variable_workflow_01O2LIIZS6KKN0uAZi8cbXQJwfLQZMj0xHq",
         "object_type": "variable_workflow"
       },
       {
@@ -192,13 +166,52 @@
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "local",
-          "name": "Secure_Malware_Analytics_notes",
+          "scope": "output",
+          "name": "notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_021RY7LGBJWRW3E1BDa0BbvwZMUS606cEic",
+        "unique_name": "variable_workflow_01O2LIIZS6HVP0U30XMTLk3yp7OIYLyQscp",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_dates",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O2LIIZS6CPL7TVW6m2tmDPy3PRp1aecJW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "file_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O2LIIZS6SM116RcroA3Se7BMKDYCRrSPD",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "observables",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O2LIIZS6RAX27UJytJwLp9BhpjtLWyAI4",
         "object_type": "variable_workflow"
       }
     ],
@@ -248,7 +261,7 @@
           "continue_on_failure": false,
           "display_name": "Read from each email in attachment from the event",
           "skip_execution": false,
-          "source_array": "$trigger.triggerevent_01O2LK8DVS6644G8NsCjUdz76HTLGipqxDb.output.attachments$"
+          "source_array": "$trigger.triggerevent_021S2DCWJGQTZ41aBkpRC97gDtxqYYvDusD.output.attachments$"
         },
         "object_type": "definition_activity",
         "actions": [
@@ -622,67 +635,102 @@
                         "object_type": "definition_activity"
                       },
                       {
-                        "unique_name": "definition_activity_021RXNLW7SE9D6SUBch3n9dDh4oJtEl5zLv",
-                        "name": "Secure Malware Analytics - Submit URL",
-                        "title": "Secure Malware Analytics - Submit URL",
-                        "type": "workflow.atomic_workflow",
-                        "base_type": "subworkflow",
-                        "properties": {
-                          "continue_on_failure": false,
-                          "display_name": "Secure Malware Analytics - Submit URL",
-                          "input": {
-                            "variable_workflow_01PP78YVQL5PH0SroKbcStsP8tTzMD4VVxO": "Email URL suspicious",
-                            "variable_workflow_01PP78YVQLACW627A2oTA7Br1nBYufQEtkY": false,
-                            "variable_workflow_01PP78YVQLC4K2DLxGE2PQLKh5QPubd4lhW": "",
-                            "variable_workflow_01PP78YVQLDRB0ldfcZbpgUj4Uhw0RdwWzq": 5,
-                            "variable_workflow_01PP78YVQLINT4UiRyREjj9EqUiD4v7n5fu": true,
-                            "variable_workflow_01PP78YVQLK1045YAHrQBaZWCQHmH1uwzwX": "$activity.definition_activity_01O2LIQ7GP3D85HKtt53Gx018vbhXpxoazp.input.source_array[@]$",
-                            "variable_workflow_01PP78YVQLL6W2OruzCBYvANFECP22jB7YD": "default",
-                            "variable_workflow_01PP78YVQLMCJ2cxzg6yVKC2i3ZMIsEHFeL": "$workflow.definition_workflow_01O2LIJ00JDAQ33SRkJCmSicKDm5Dqevkgp.local.variable_workflow_021RXLSLG78ZO7iVxTY7Oy6U2k6zyRj8JDj$"
-                          },
-                          "runtime_user": {
-                            "target_default": true
-                          },
-                          "skip_execution": false,
-                          "target": {
-                            "override_workflow_target_group_criteria": true,
-                            "target_group": {
-                              "run_on_all_targets": false,
-                              "use_criteria": {
-                                "choose_target_using_algorithm": "choose_first_with_matching_criteria",
-                                "conditions": [
-                                  {
-                                    "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
-                                    "operator": "eq",
-                                    "right_operand": "ThreatGrid_Target"
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          "workflow_id": "definition_workflow_01PP78YVWMXKI3jcrOGYocGMM3VaophGkkJ",
-                          "workflow_name": "Secure Malware Analytics - Submit URL"
-                        },
-                        "object_type": "definition_activity"
-                      },
-                      {
-                        "unique_name": "definition_activity_021RY7PI961DG5aahUIRjWMNsz9WursynWk",
-                        "name": "Set Variables",
-                        "title": "Set Variables",
-                        "type": "core.set_multiple_variables",
+                        "unique_name": "definition_activity_021S2K7E5RRXI52dA1wXi01tg9dzUZVHgzY",
+                        "name": "Condition Block",
+                        "title": "Condition Block",
+                        "type": "logic.if_else",
                         "base_type": "activity",
                         "properties": {
                           "continue_on_failure": false,
-                          "display_name": "Set Variables",
-                          "skip_execution": false,
-                          "variables_to_update": [
-                            {
-                              "variable_to_update": "$workflow.definition_workflow_01O2LIJ00JDAQ33SRkJCmSicKDm5Dqevkgp.local.variable_workflow_021RY7LGBJWRW3E1BDa0BbvwZMUS606cEic$",
-                              "variable_value_new": "$workflow.definition_workflow_01O2LIJ00JDAQ33SRkJCmSicKDm5Dqevkgp.local.variable_workflow_021RY7LGBJWRW3E1BDa0BbvwZMUS606cEic$\n- Cisco Secure Malware Analytics Sample ID : $activity.definition_activity_021RXNLW7SE9D6SUBch3n9dDh4oJtEl5zLv.output.variable_workflow_01PP78YVQLFJ76SQUG1BX8m7E14mpwMJ6du$"
-                            }
-                          ]
+                          "display_name": "Condition Block",
+                          "skip_execution": false
                         },
-                        "object_type": "definition_activity"
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_021S2K7EHI9L66zkTesV3Ygpq9fDNNxXDz8",
+                            "name": "Condition Branch",
+                            "title": "Condition Branch",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$workflow.definition_workflow_01O2LIJ00JDAQ33SRkJCmSicKDm5Dqevkgp.local.variable_workflow_021S2K2UA7PZ904BbCEHJznovTkQhmwTjR5$",
+                                "operator": "eq",
+                                "right_operand": true
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "Condition Branch",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_021RXNLW7SE9D6SUBch3n9dDh4oJtEl5zLv",
+                                "name": "Secure Malware Analytics - Submit URL",
+                                "title": "Secure Malware Analytics - Submit URL",
+                                "type": "workflow.atomic_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Secure Malware Analytics - Submit URL",
+                                  "input": {
+                                    "variable_workflow_01PP78YVQL5PH0SroKbcStsP8tTzMD4VVxO": "Email URL suspicious",
+                                    "variable_workflow_01PP78YVQLACW627A2oTA7Br1nBYufQEtkY": false,
+                                    "variable_workflow_01PP78YVQLC4K2DLxGE2PQLKh5QPubd4lhW": "",
+                                    "variable_workflow_01PP78YVQLDRB0ldfcZbpgUj4Uhw0RdwWzq": 5,
+                                    "variable_workflow_01PP78YVQLINT4UiRyREjj9EqUiD4v7n5fu": true,
+                                    "variable_workflow_01PP78YVQLK1045YAHrQBaZWCQHmH1uwzwX": "$activity.definition_activity_01O2LIQ7GP3D85HKtt53Gx018vbhXpxoazp.input.source_array[@]$",
+                                    "variable_workflow_01PP78YVQLL6W2OruzCBYvANFECP22jB7YD": "default",
+                                    "variable_workflow_01PP78YVQLMCJ2cxzg6yVKC2i3ZMIsEHFeL": "$workflow.definition_workflow_01O2LIJ00JDAQ33SRkJCmSicKDm5Dqevkgp.local.variable_workflow_021RXLSLG78ZO7iVxTY7Oy6U2k6zyRj8JDj$"
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "run_on_all_targets": false,
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "ThreatGrid_Target"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "workflow_id": "definition_workflow_01PP78YVWMXKI3jcrOGYocGMM3VaophGkkJ",
+                                  "workflow_name": "Secure Malware Analytics - Submit URL"
+                                },
+                                "object_type": "definition_activity"
+                              },
+                              {
+                                "unique_name": "definition_activity_021RY7PI961DG5aahUIRjWMNsz9WursynWk",
+                                "name": "Set Variables",
+                                "title": "Set Variables",
+                                "type": "core.set_multiple_variables",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Set Variables",
+                                  "skip_execution": false,
+                                  "variables_to_update": [
+                                    {
+                                      "variable_to_update": "$workflow.definition_workflow_01O2LIJ00JDAQ33SRkJCmSicKDm5Dqevkgp.local.variable_workflow_021RY7LGBJWRW3E1BDa0BbvwZMUS606cEic$",
+                                      "variable_value_new": "$workflow.definition_workflow_01O2LIJ00JDAQ33SRkJCmSicKDm5Dqevkgp.local.variable_workflow_021RY7LGBJWRW3E1BDa0BbvwZMUS606cEic$\n- Cisco Secure Malware Analytics Sample ID : $activity.definition_activity_021RXNLW7SE9D6SUBch3n9dDh4oJtEl5zLv.output.variable_workflow_01PP78YVQLFJ76SQUG1BX8m7E14mpwMJ6du$"
+                                    }
+                                  ]
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
                       }
                     ]
                   }
@@ -949,28 +997,28 @@
     ]
   },
   "triggers": {
-    "triggerevent_01O2LK8DVS6644G8NsCjUdz76HTLGipqxDb": {
+    "triggerevent_021S2DCWJGQTZ41aBkpRC97gDtxqYYvDusD": {
       "workflow_id": "definition_workflow_01O2LIJ00JDAQ33SRkJCmSicKDm5Dqevkgp",
-      "name": "CES suspicious URL in email",
+      "name": "Email events - url suspicious",
       "title": "",
-      "lowercase_name": "event.ces_suspicious_url_in_email",
+      "lowercase_name": "event.email_events_-_url_suspicious",
       "type": "event",
       "base_type": "trigger",
       "ref_id": "event_01O1QVMN5CCHQ45Y7lKy9fNEMaQqWRXUSs6",
-      "version": "",
+      "version": "1.0.0",
       "disabled": false,
-      "unique_name": "triggerevent_01O2LK8DVS6644G8NsCjUdz76HTLGipqxDb",
+      "unique_name": "triggerevent_021S2DCWJGQTZ41aBkpRC97gDtxqYYvDusD",
       "object_type": "triggerevent"
     }
   },
   "events": {
     "event_01O1QVMN5CCHQ45Y7lKy9fNEMaQqWRXUSs6": {
-      "name": "events_securex - CES suspicious URL in email",
-      "title": "events_securex - CES suspicious URL in email",
+      "name": "events_securex - CES URL suspicious",
+      "title": "events_securex - CES URL suspicious",
       "type": "email.event",
       "base_type": "event",
       "object_type": "event",
-      "target_id": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
+      "target_id": "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf",
       "webhook_id": "",
       "version": "1.0.0",
       "properties": {
@@ -983,44 +1031,41 @@
         "display_name": "CES suspicious URL in email",
         "download_attachments": true,
         "folder": "INBOX",
-        "target_id": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
-        "title": "events_securex - CES suspicious URL in email"
+        "target_id": "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf",
+        "title": "events_securex - CES URL suspicious"
       },
       "unique_name": "event_01O1QVMN5CCHQ45Y7lKy9fNEMaQqWRXUSs6"
     }
   },
   "targets": {
-    "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8": {
-      "unique_name": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
-      "name": "SecureX Trigger IMAP Mailbox",
-      "title": "SecureX Trigger IMAP Mailbox",
-      "type": "email.imap_endpoint",
+    "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf": {
+      "unique_name": "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf",
+      "name": "Microsoft Graph - OAuth events_securex@internetsinkhole.com",
+      "title": "Microsoft Graph - OAuth events_securex@internetsinkhole.com",
+      "type": "email.azure_graph_endpoint",
       "base_type": "target",
       "object_type": "definition_target",
       "properties": {
-        "default_runtime_user_id": "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez",
-        "display_name": "SecureX Trigger IMAP Mailbox",
-        "ignore_certificate_errors": true,
-        "polling_interval": 30,
-        "port": 993,
-        "protocol": "IMAP",
-        "server": "outlook.office365.com",
-        "tls_enabled": true
+        "default_runtime_user_id": "definition_runtime_user_021S1QDEOMR0U51XMZJ45nLo6WGZeff89hB",
+        "display_name": "Microsoft Graph - OAuth events_securex@internetsinkhole.com",
+        "host": "https://graph.microsoft.com/v1.0"
       }
     }
   },
   "runtime_users": {
-    "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez": {
-      "unique_name": "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez",
-      "name": "events_securex@internetsinkhole.com",
-      "title": "events_securex@internetsinkhole.com",
-      "type": "runtime_user.email_credentials",
+    "definition_runtime_user_021S1QDEOMR0U51XMZJ45nLo6WGZeff89hB": {
+      "unique_name": "definition_runtime_user_021S1QDEOMR0U51XMZJ45nLo6WGZeff89hB",
+      "name": "OAuth O365 - events_securex@internetsinkhole.com",
+      "title": "OAuth O365 - events_securex@internetsinkhole.com",
+      "type": "runtime_user.oauth2_azure_graph_credentials",
       "base_type": "runtime_user",
       "object_type": "definition_runtime_user",
       "properties": {
-        "display_name": "events_securex@internetsinkhole.com",
-        "password": "*****",
-        "sender": "events_securex@internetsinkhole.com"
+        "client_id": "36f4b7dc-aae7-415d-985f-4dffd1760b14",
+        "display_name": "OAuth O365 - events_securex@internetsinkhole.com",
+        "grant_type": "authorization_code",
+        "scope": "openid offline_access mail.readwrite mail.send user.read",
+        "tenant_id": "dfdbdc50-0ec5-45ce-b9c7-c54c9351e474"
       }
     }
   },
