@@ -11,19 +11,6 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_dates",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
           "name": "cisco_mid",
           "type": "datatype.string",
           "is_required": false,
@@ -37,51 +24,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "to",
+          "name": "DLP_violation_notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "internal_user",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "observables",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6",
+        "unique_name": "variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr",
         "object_type": "variable_workflow"
       },
       {
@@ -95,6 +43,58 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_raw_message",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXYCJ7NGKR40wgsnmng8wNVAjqTLzB9rM",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "Disable AD user in Azure ",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021SYO8L5E33P45cu3wxXXbVEM5lb2tuGo1",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_dates",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_subject",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq",
         "object_type": "variable_workflow"
       },
       {
@@ -115,38 +115,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_subject",
+          "name": "email_notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "bcc",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "Message-Id",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o",
+        "unique_name": "variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko",
         "object_type": "variable_workflow"
       },
       {
@@ -166,6 +140,32 @@
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
+          "scope": "local",
+          "name": "internal_user",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "to",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
           "scope": "output",
           "name": "notes",
           "type": "datatype.string",
@@ -173,6 +173,19 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "cc",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR",
         "object_type": "variable_workflow"
       },
       {
@@ -186,6 +199,19 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Message-Id",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o",
         "object_type": "variable_workflow"
       },
       {
@@ -219,38 +245,25 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_raw_message",
+          "name": "bcc",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01LXYCJ7NGKR40wgsnmng8wNVAjqTLzB9rM",
+        "unique_name": "variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "local",
-          "name": "cc",
+          "scope": "output",
+          "name": "observables",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "DLP_violation_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr",
+        "unique_name": "variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6",
         "object_type": "variable_workflow"
       }
     ],
@@ -1326,6 +1339,10 @@
                         {
                           "replaced_string": "}\n,\n]",
                           "replacement_string": "}]"
+                        },
+                        {
+                          "replaced_string": "},\n]",
+                          "replacement_string": "}]"
                         }
                       ],
                       "skip_execution": false
@@ -2048,51 +2065,86 @@
                                 "object_type": "definition_activity"
                               },
                               {
-                                "unique_name": "definition_activity_01LYTSVTPU2396esjWhe72i0KikHP286wzR",
-                                "name": "HTTP Request",
-                                "title": "Lock down Azure AD User",
-                                "type": "web-service.http_request",
+                                "unique_name": "definition_activity_021SYOHLJ7PA94vlekJCwCrBbNTR2lZnAAC",
+                                "name": "Condition Block",
+                                "title": "Disable AD user ?",
+                                "type": "logic.if_else",
                                 "base_type": "activity",
                                 "properties": {
-                                  "action_timeout": 180,
-                                  "allow_auto_redirect": true,
-                                  "allow_headers_redirect": false,
-                                  "body": "{\n  \"accountEnabled\": false\n}",
-                                  "content_type": "application/json",
-                                  "continue_on_error_status_code": false,
                                   "continue_on_failure": false,
-                                  "custom_headers": [
-                                    {
-                                      "name": "Authorization",
-                                      "value": "Bearer $activity.definition_activity_01LY8ETTQ4A4J162nVFdx97m6pXc5liuz5R.output.variable_workflow_01HQN7N4UOY2Q02vRhF0zXjAJoPNBVNKV9Q$"
-                                    }
-                                  ],
-                                  "display_name": "Lock down Azure AD User",
-                                  "method": "PATCH",
-                                  "relative_url": "/users/$activity.definition_activity_01LY8NMM4GSJ34nkevYSRjzbh9Bsjw7Z08D.output.matching_strings[0]$",
-                                  "runtime_user": {
-                                    "override_target_runtime_user": false,
-                                    "target_default": true
-                                  },
-                                  "skip_execution": false,
-                                  "target": {
-                                    "override_workflow_target_group_criteria": true,
-                                    "target_group": {
-                                      "run_on_all_targets": false,
-                                      "use_criteria": {
-                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
-                                        "conditions": [
-                                          {
-                                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
-                                            "operator": "eq",
-                                            "right_operand": "Azure_Graph_API"
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  }
+                                  "display_name": "Disable AD user ?",
+                                  "skip_execution": false
                                 },
-                                "object_type": "definition_activity"
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_021SYOHM11Q8X45yiK1BNElDHz9fL91GfoC",
+                                    "name": "Condition Branch",
+                                    "title": "Condition Branch",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_021SYO8L5E33P45cu3wxXXbVEM5lb2tuGo1$",
+                                        "operator": "eq",
+                                        "right_operand": true
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "Condition Branch",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01LYTSVTPU2396esjWhe72i0KikHP286wzR",
+                                        "name": "HTTP Request",
+                                        "title": "Lock down Azure AD User",
+                                        "type": "web-service.http_request",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "action_timeout": 180,
+                                          "allow_auto_redirect": true,
+                                          "allow_headers_redirect": false,
+                                          "body": "{\n  \"accountEnabled\": false\n}",
+                                          "content_type": "application/json",
+                                          "continue_on_error_status_code": false,
+                                          "continue_on_failure": false,
+                                          "custom_headers": [
+                                            {
+                                              "name": "Authorization",
+                                              "value": "Bearer $activity.definition_activity_01LY8ETTQ4A4J162nVFdx97m6pXc5liuz5R.output.variable_workflow_01HQN7N4UOY2Q02vRhF0zXjAJoPNBVNKV9Q$"
+                                            }
+                                          ],
+                                          "display_name": "Lock down Azure AD User",
+                                          "method": "PATCH",
+                                          "relative_url": "/users/$activity.definition_activity_01LY8NMM4GSJ34nkevYSRjzbh9Bsjw7Z08D.output.matching_strings[0]$",
+                                          "runtime_user": {
+                                            "override_target_runtime_user": false,
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "override_workflow_target_group_criteria": true,
+                                            "target_group": {
+                                              "run_on_all_targets": false,
+                                              "use_criteria": {
+                                                "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                                "conditions": [
+                                                  {
+                                                    "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                                    "operator": "eq",
+                                                    "right_operand": "Azure_Graph_API"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  }
+                                ]
                               }
                             ]
                           }
@@ -2387,12 +2439,6 @@
       "columns": [
         {
           "is_required": true,
-          "name": "User",
-          "title": "User",
-          "type": "string"
-        },
-        {
-          "is_required": true,
           "name": "Count",
           "title": "Count",
           "type": "integer"
@@ -2401,6 +2447,12 @@
           "is_required": true,
           "name": "Last-Message-Id",
           "title": "Last-Message-Id",
+          "type": "string"
+        },
+        {
+          "is_required": true,
+          "name": "User",
+          "title": "User",
           "type": "string"
         }
       ],
