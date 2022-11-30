@@ -9,14 +9,27 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": " ",
+          "value": "",
           "scope": "local",
-          "name": "threatgrid_notes",
+          "name": "Message-Id",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01STNRKNUSVGE5dzpPybtVnk1MTHuLmU2Z8",
+        "unique_name": "variable_workflow_01SRY4YGX23XR4lk6AdzbnxB6vsvEeKYn3S",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "*****",
+          "scope": "local",
+          "name": "Secure_Malware_Analytics_API_key",
+          "type": "datatype.secure_string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SUCGHQNHLMY3C9rnxBY9C9q4V7lEMlHfM",
         "object_type": "variable_workflow"
       },
       {
@@ -24,90 +37,12 @@
         "properties": {
           "value": "",
           "scope": "output",
-          "name": "observables",
+          "name": "notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01SRY4YGX0Y8I63gumaMP8JQmOWhmGTISMD",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "DLP_violation_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGX092Z5h3gJA7rtw8htAVnqqLGvr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "to",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGWZINO0jNK2UEkrEdLyAs9p5t0ok",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "casebook_title",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGX2SRI2g9cnmdb0qqlU4MbBeHOjd",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "bcc",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGWZ8K63GNYBDGJ2KZWZQSseN5z9m",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "\nCisco Secure Email",
-          "scope": "local",
-          "name": "Event_source",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01STP3QPPNYIK3JMZ8khoIsbIRxwagbQWEX",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "bitcoin_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01STNFPQF1MEK7JOh3KTvlDsaDHGa8ao8HZ",
+        "unique_name": "variable_workflow_01SRY4YGX2BXE74iZzbebwagiW5QWt13AxK",
         "object_type": "variable_workflow"
       },
       {
@@ -128,38 +63,12 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "file_notes",
+          "name": "bitcoin_notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01SRY4YGWYZ0Q2C9DJYQRgH4LmscGobEZfx",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_dates",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SRY4YGX0Q9C655j3aVij5P22ve5g50HCH",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "BitcoinAbuse_count",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A",
+        "unique_name": "variable_workflow_01STNFPQF1MEK7JOh3KTvlDsaDHGa8ao8HZ",
         "object_type": "variable_workflow"
       },
       {
@@ -180,12 +89,25 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "cisco_mid",
+          "name": "bcc",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01SRY4YGWYQG00C17zmzLDROGYp8OcadzXL",
+        "unique_name": "variable_workflow_01SRY4YGWZ8K63GNYBDGJ2KZWZQSseN5z9m",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": " ",
+          "scope": "local",
+          "name": "threatgrid_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01STNRKNUSVGE5dzpPybtVnk1MTHuLmU2Z8",
         "object_type": "variable_workflow"
       },
       {
@@ -199,6 +121,32 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01SRY4YGX1NJX0ohGwqOFMoPnhM2wyog1wz",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "to",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGWZINO0jNK2UEkrEdLyAs9p5t0ok",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "from",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGX1FQM0Ad5Hw6q0X9bagVccaaSkI",
         "object_type": "variable_workflow"
       },
       {
@@ -218,13 +166,52 @@
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "output",
-          "name": "notes",
+          "scope": "local",
+          "name": "casebook_title",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01SRY4YGX2BXE74iZzbebwagiW5QWt13AxK",
+        "unique_name": "variable_workflow_01SRY4YGX2SRI2g9cnmdb0qqlU4MbBeHOjd",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "DLP_violation_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGX092Z5h3gJA7rtw8htAVnqqLGvr",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "\nCisco Secure Email",
+          "scope": "local",
+          "name": "Event_source",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01STP3QPPNYIK3JMZ8khoIsbIRxwagbQWEX",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "cisco_mid",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGWYQG00C17zmzLDROGYp8OcadzXL",
         "object_type": "variable_workflow"
       },
       {
@@ -241,29 +228,16 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.secure_string",
-        "properties": {
-          "value": "*****",
-          "scope": "local",
-          "name": "Secure_Malware_Analytics_API_key",
-          "type": "datatype.secure_string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01SUCGHQNHLMY3C9rnxBY9C9q4V7lEMlHfM",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "Message-Id",
+          "name": "file_notes",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01SRY4YGX23XR4lk6AdzbnxB6vsvEeKYn3S",
+        "unique_name": "variable_workflow_01SRY4YGWYZ0Q2C9DJYQRgH4LmscGobEZfx",
         "object_type": "variable_workflow"
       },
       {
@@ -280,16 +254,42 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "BitcoinAbuse_count",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01STM2TYF2BDL6gwKk0C2ekwnkjc7hpfz1A",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "local",
-          "name": "from",
+          "scope": "output",
+          "name": "observables",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01SRY4YGX1FQM0Ad5Hw6q0X9bagVccaaSkI",
+        "unique_name": "variable_workflow_01SRY4YGX0Y8I63gumaMP8JQmOWhmGTISMD",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_dates",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SRY4YGX0Q9C655j3aVij5P22ve5g50HCH",
         "object_type": "variable_workflow"
       }
     ],
@@ -443,7 +443,7 @@
           "continue_on_failure": false,
           "display_name": "Read from each email in attachment from the event",
           "skip_execution": false,
-          "source_array": "$trigger.triggerevent_01SRY4YKT8MMQ2FmKOIBLnQaDUhGOIIs3f4.output.attachments$"
+          "source_array": "$trigger.triggerevent_021SUMIV4GNOJ0yDTx0cT01O3ebHC1KI1x4.output.attachments$"
         },
         "object_type": "definition_activity",
         "actions": [
@@ -2001,7 +2001,7 @@
     ]
   },
   "triggers": {
-    "triggerevent_01SRY4YKT8MMQ2FmKOIBLnQaDUhGOIIs3f4": {
+    "triggerevent_021SUMIV4GNOJ0yDTx0cT01O3ebHC1KI1x4": {
       "workflow_id": "definition_workflow_01SRY4YGP4ID15WoNAV2xAljWrReA72rTyM",
       "name": "events_securex - CES bitcoin address detected",
       "title": "",
@@ -2009,9 +2009,9 @@
       "type": "event",
       "base_type": "trigger",
       "ref_id": "event_01SRYPN5A8QGI2ACoDQ8hWkoOZTS4XeCNN0",
-      "version": "",
+      "version": "1.0.0",
       "disabled": false,
-      "unique_name": "triggerevent_01SRY4YKT8MMQ2FmKOIBLnQaDUhGOIIs3f4",
+      "unique_name": "triggerevent_021SUMIV4GNOJ0yDTx0cT01O3ebHC1KI1x4",
       "object_type": "triggerevent"
     }
   },
@@ -2022,7 +2022,7 @@
       "type": "email.event",
       "base_type": "event",
       "object_type": "event",
-      "target_id": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
+      "target_id": "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf",
       "webhook_id": "",
       "version": "1.0.0",
       "properties": {
@@ -2032,46 +2032,44 @@
           "operator": "eq",
           "right_operand": "CES bitcoin address detected"
         },
+        "display_name": "events_securex - CES bitcoin address",
         "download_attachments": true,
         "folder": "INBOX",
-        "target_id": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
+        "target_id": "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf",
         "title": "events_securex - CES bitcoin address"
       },
       "unique_name": "event_01SRYPN5A8QGI2ACoDQ8hWkoOZTS4XeCNN0"
     }
   },
   "targets": {
-    "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8": {
-      "unique_name": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
-      "name": "SecureX Trigger IMAP Mailbox",
-      "title": "SecureX Trigger IMAP Mailbox",
-      "type": "email.imap_endpoint",
+    "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf": {
+      "unique_name": "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf",
+      "name": "Microsoft Graph - OAuth events_securex@internetsinkhole.com",
+      "title": "Microsoft Graph - OAuth events_securex@internetsinkhole.com",
+      "type": "email.azure_graph_endpoint",
       "base_type": "target",
       "object_type": "definition_target",
       "properties": {
-        "default_runtime_user_id": "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez",
-        "display_name": "SecureX Trigger IMAP Mailbox",
-        "ignore_certificate_errors": true,
-        "polling_interval": 30,
-        "port": 993,
-        "protocol": "IMAP",
-        "server": "outlook.office365.com",
-        "tls_enabled": true
+        "default_runtime_user_id": "definition_runtime_user_021S1QDEOMR0U51XMZJ45nLo6WGZeff89hB",
+        "display_name": "Microsoft Graph - OAuth events_securex@internetsinkhole.com",
+        "host": "https://graph.microsoft.com/v1.0"
       }
     }
   },
   "runtime_users": {
-    "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez": {
-      "unique_name": "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez",
-      "name": "events_securex@internetsinkhole.com",
-      "title": "events_securex@internetsinkhole.com",
-      "type": "runtime_user.email_credentials",
+    "definition_runtime_user_021S1QDEOMR0U51XMZJ45nLo6WGZeff89hB": {
+      "unique_name": "definition_runtime_user_021S1QDEOMR0U51XMZJ45nLo6WGZeff89hB",
+      "name": "OAuth O365 - events_securex@internetsinkhole.com",
+      "title": "OAuth O365 - events_securex@internetsinkhole.com",
+      "type": "runtime_user.oauth2_azure_graph_credentials",
       "base_type": "runtime_user",
       "object_type": "definition_runtime_user",
       "properties": {
-        "display_name": "events_securex@internetsinkhole.com",
-        "password": "*****",
-        "sender": "events_securex@internetsinkhole.com"
+        "client_id": "36f4b7dc-aae7-415d-985f-4dffd1760b14",
+        "display_name": "OAuth O365 - events_securex@internetsinkhole.com",
+        "grant_type": "authorization_code",
+        "scope": "openid offline_access mail.readwrite mail.send user.read",
+        "tenant_id": "dfdbdc50-0ec5-45ce-b9c7-c54c9351e474"
       }
     }
   },
