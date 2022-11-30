@@ -9,6 +9,123 @@
       {
         "schema_id": "datatype.string",
         "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Message-Id",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "cisco_mid",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LYPYE65BDX32zfAjRx8idaptO77Su1cHb",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_subject",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "DLP_violation_count",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "observables",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_raw_message",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXYCJ7NGKR40wgsnmng8wNVAjqTLzB9rM",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "casebook_title",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_dates",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
           "value": "Email Endpoint",
           "scope": "local",
           "name": "SMTP Target Name",
@@ -33,110 +150,6 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "DLP_violation_count",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "internal_user",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "to",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "cisco_mid",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LYPYE65BDX32zfAjRx8idaptO77Su1cHb",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_dates",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LYPWW2SHK5L43PrcqZ8Rvr16k3j9KOk8l",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "file_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LXZGFRWNJ276aWgNN6VXCLeRWOsvyDVXk",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "casebook_title",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY6CNPFN8T33WyLqqm7TOS88Cc5suARrd",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
@@ -147,84 +160,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01LY7IVUJ3VVR0kP87AJc4pnbR8dChw4Mlr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "observables",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LY09RQ4THK1029qIEyXpqXBcJRLUo9ue6",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "Message-Id",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "cc",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_subject",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LYPVLDSOBDD6LMzeBkRZFHPofSdlypZuq",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_raw_message",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LXYCJ7NGKR40wgsnmng8wNVAjqTLzB9rM",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01LXZFPCHQ7D56lw6FITIl77w2vUWNRTaB4",
         "object_type": "variable_workflow"
       },
       {
@@ -245,12 +180,77 @@
         "properties": {
           "value": "",
           "scope": "local",
+          "name": "internal_user",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY6V4AWBKBU4ckKbAFDNyN7U8cfW6j7nW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "cc",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OL7WZENQAKP3BwdVcYSlAjuMWMflgf0aR",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "file_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXZGFRWNJ276aWgNN6VXCLeRWOsvyDVXk",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LXZGKMCQ7NW2DvFp2AQ5LfJJY8XmWesko",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
           "name": "bcc",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01OL7UN7SR7BI2EIFi9wxitZNWTfr5784R9",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "to",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01LY66I4U6SWY4h6B5FKJzoHdB66oXm7NKB",
         "object_type": "variable_workflow"
       }
     ],
@@ -1184,12 +1184,12 @@
               ],
               "continue_on_failure": false,
               "display_name": "Select from Table",
-              "input_table": "$env.variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md.env.variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md$",
+              "input_table": "$global.variable_021SQZMVQLXJP4V7yFbsObLMXNRttgkgt8P.global.variable_021SQZMVQLXJP4V7yFbsObLMXNRttgkgt8P$",
               "number_of_rows": {
                 "all_rows": true,
                 "at_most": false
               },
-              "persist_output": false,
+              "persist_output": true,
               "skip_execution": false,
               "sorting": {
                 "no_sort": true,
@@ -1665,6 +1665,38 @@
                                           ]
                                         },
                                         "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01LYPHHHFHTZT4qsVrMvYAj8dHN0reVX4PE",
+                                        "name": "Update Row in Table",
+                                        "title": "Update Row in Table",
+                                        "type": "core.updaterowintable",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "action_timeout": 180,
+                                          "columns": [
+                                            {
+                                              "column_name": "Count",
+                                              "column_type": "integer"
+                                            }
+                                          ],
+                                          "continue_on_failure": false,
+                                          "display_name": "Update Row in Table",
+                                          "input_table": "$global.variable_021SQZMVQLXJP4V7yFbsObLMXNRttgkgt8P.global.variable_021SQZMVQLXJP4V7yFbsObLMXNRttgkgt8P$",
+                                          "row": [
+                                            {
+                                              "key": "Count",
+                                              "type": "integer",
+                                              "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$"
+                                            }
+                                          ],
+                                          "rows": {
+                                            "rows_matching_criteria": true,
+                                            "where_clause": "User == '$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$'"
+                                          },
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
                                       }
                                     ]
                                   },
@@ -1704,60 +1736,42 @@
                                           ]
                                         },
                                         "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_021SRGNHWVE8T4lyN3ehWLqP4EIk0w2ZUCE",
+                                        "name": "Add Row to Table",
+                                        "title": "Add Row to Table",
+                                        "type": "core.addrowtotable",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "action_timeout": 180,
+                                          "continue_on_failure": false,
+                                          "display_name": "Add Row to Table",
+                                          "input_table": "$global.variable_021SQZMVQLXJP4V7yFbsObLMXNRttgkgt8P.global.variable_021SQZMVQLXJP4V7yFbsObLMXNRttgkgt8P$",
+                                          "row": [
+                                            {
+                                              "key": "User",
+                                              "type": "string",
+                                              "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$"
+                                            },
+                                            {
+                                              "key": "Count",
+                                              "type": "integer",
+                                              "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$"
+                                            },
+                                            {
+                                              "key": "Last-Message-Id",
+                                              "type": "string",
+                                              "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o$"
+                                            }
+                                          ],
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
                                       }
                                     ]
                                   }
                                 ]
-                              },
-                              {
-                                "unique_name": "definition_activity_01LYPHHHFHTZT4qsVrMvYAj8dHN0reVX4PE",
-                                "name": "Update Row in Table",
-                                "title": "Update Row in Table",
-                                "type": "core.updaterowintable",
-                                "base_type": "activity",
-                                "properties": {
-                                  "action_timeout": 180,
-                                  "columns": [
-                                    {
-                                      "column_name": "User",
-                                      "column_type": "string"
-                                    },
-                                    {
-                                      "column_name": "Count",
-                                      "column_type": "integer"
-                                    },
-                                    {
-                                      "column_name": "Last-Message-Id",
-                                      "column_type": "string"
-                                    }
-                                  ],
-                                  "continue_on_failure": false,
-                                  "display_name": "Update Row in Table",
-                                  "input_table": "$env.variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md.env.variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md$",
-                                  "row": [
-                                    {
-                                      "key": "User",
-                                      "type": "string",
-                                      "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$"
-                                    },
-                                    {
-                                      "key": "Count",
-                                      "type": "integer",
-                                      "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY6VL12EA8A6LsC3z9ZYZnd53TIdbjGCG$"
-                                    },
-                                    {
-                                      "key": "Last-Message-Id",
-                                      "type": "string",
-                                      "value": "$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01OL7Z32NVVYH7RYtwf9xbutiYhVAqxlQ2o$"
-                                    }
-                                  ],
-                                  "rows": {
-                                    "rows_matching_criteria": true,
-                                    "where_clause": "User == '$workflow.definition_workflow_01LXYAZWT5LIQ3XzdOm6JTAQaropNvHRbye.local.variable_workflow_01LY66O4U69T11zF6FbLaSNmItofEoh75QC$'"
-                                  },
-                                  "skip_execution": false
-                                },
-                                "object_type": "definition_activity"
                               }
                             ]
                           }
@@ -2012,6 +2026,7 @@
                                   "target": {
                                     "override_workflow_target_group_criteria": true,
                                     "target_group": {
+                                      "run_on_all_targets": false,
                                       "use_criteria": {
                                         "choose_target_using_algorithm": "choose_first_with_matching_criteria",
                                         "conditions": [
@@ -2164,7 +2179,7 @@
       "type": "event",
       "base_type": "trigger",
       "ref_id": "event_01LXVHA4OPNB93tU1KyoU4tsAHnOxOjo1eK",
-      "version": "1.0.0",
+      "version": "",
       "disabled": false,
       "unique_name": "triggerevent_01LXYC6086ATI6aMLPBoWAOKcuGUwEG42gc",
       "object_type": "triggerevent"
@@ -2177,7 +2192,7 @@
       "type": "email.event",
       "base_type": "event",
       "object_type": "event",
-      "target_id": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
+      "target_id": "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf",
       "webhook_id": "",
       "version": "1.0.0",
       "properties": {
@@ -2206,7 +2221,7 @@
         "display_name": "events_securex - CES DPL_Credit_Card",
         "download_attachments": true,
         "folder": "INBOX",
-        "target_id": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
+        "target_id": "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf",
         "title": "events_securex - CES DLP_Credit_Card"
       },
       "unique_name": "event_01LXVHA4OPNB93tU1KyoU4tsAHnOxOjo1eK"
@@ -2229,22 +2244,17 @@
         "server": "smtp.office365.com"
       }
     },
-    "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8": {
-      "unique_name": "definition_target_01LW9UG1G9PGO4jt5SfmT1tvbVGi4f7OcF8",
-      "name": "SecureX Trigger IMAP Mailbox",
-      "title": "SecureX Trigger IMAP Mailbox",
-      "type": "email.imap_endpoint",
+    "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf": {
+      "unique_name": "definition_target_021S1SY099PBX3j2bHP5kn3Kt8TqVJAdStf",
+      "name": "Microsoft Graph - OAuth events_securex@internetsinkhole.com",
+      "title": "Microsoft Graph - OAuth events_securex@internetsinkhole.com",
+      "type": "email.azure_graph_endpoint",
       "base_type": "target",
       "object_type": "definition_target",
       "properties": {
-        "default_runtime_user_id": "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez",
-        "display_name": "SecureX Trigger IMAP Mailbox",
-        "ignore_certificate_errors": true,
-        "polling_interval": 30,
-        "port": 993,
-        "protocol": "IMAP",
-        "server": "outlook.office365.com",
-        "tls_enabled": true
+        "default_runtime_user_id": "definition_runtime_user_021S1QDEOMR0U51XMZJ45nLo6WGZeff89hB",
+        "display_name": "Microsoft Graph - OAuth events_securex@internetsinkhole.com",
+        "host": "https://graph.microsoft.com/v1.0"
       }
     }
   },
@@ -2262,17 +2272,19 @@
         "sender": "securex-orchestration@internetsinkhole.com"
       }
     },
-    "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez": {
-      "unique_name": "definition_runtime_user_01LW9U3WLTO8M2RaIoj66Eu0PnlxBskn9Ez",
-      "name": "events_securex@internetsinkhole.com",
-      "title": "events_securex@internetsinkhole.com",
-      "type": "runtime_user.email_credentials",
+    "definition_runtime_user_021S1QDEOMR0U51XMZJ45nLo6WGZeff89hB": {
+      "unique_name": "definition_runtime_user_021S1QDEOMR0U51XMZJ45nLo6WGZeff89hB",
+      "name": "OAuth O365 - events_securex@internetsinkhole.com",
+      "title": "OAuth O365 - events_securex@internetsinkhole.com",
+      "type": "runtime_user.oauth2_azure_graph_credentials",
       "base_type": "runtime_user",
       "object_type": "definition_runtime_user",
       "properties": {
-        "display_name": "events_securex@internetsinkhole.com",
-        "password": "*****",
-        "sender": "events_securex@internetsinkhole.com"
+        "client_id": "36f4b7dc-aae7-415d-985f-4dffd1760b14",
+        "display_name": "OAuth O365 - events_securex@internetsinkhole.com",
+        "grant_type": "authorization_code",
+        "scope": "openid offline_access mail.readwrite mail.send user.read",
+        "tenant_id": "dfdbdc50-0ec5-45ce-b9c7-c54c9351e474"
       }
     }
   },
@@ -2341,22 +2353,21 @@
       },
       "object_type": "variable"
     },
-    "variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md": {
-      "unique_name": "variable_01OLB02SW1J150yXIU3QVoTnZoTC1Kpw7Md",
+    "variable_021SQZMVQLXJP4V7yFbsObLMXNRttgkgt8P": {
+      "unique_name": "variable_021SQZMVQLXJP4V7yFbsObLMXNRttgkgt8P",
       "schema_id": "tabletype_01OL8I6OT0976398aTlLsDFlUj0jaI0fUoR",
       "properties": {
         "value": [
           {
             "column_data": {
               "Count": 0,
-              "Last-Message-Id": "iuio",
-              "Message-Id": "",
-              "User": "flejkflk"
+              "Last-Message-Id": "0",
+              "User": "0"
             }
           }
         ],
-        "scope": "env",
-        "name": "Secure Email DLP violation",
+        "scope": "global",
+        "name": "Email DLP violation",
         "type": "datatype.table",
         "is_required": false,
         "is_invisible": false
@@ -2372,6 +2383,12 @@
       "columns": [
         {
           "is_required": true,
+          "name": "User",
+          "title": "User",
+          "type": "string"
+        },
+        {
+          "is_required": true,
           "name": "Count",
           "title": "Count",
           "type": "integer"
@@ -2380,12 +2397,6 @@
           "is_required": true,
           "name": "Last-Message-Id",
           "title": "Last-Message-Id",
-          "type": "string"
-        },
-        {
-          "is_required": true,
-          "name": "User",
-          "title": "User",
           "type": "string"
         }
       ],
