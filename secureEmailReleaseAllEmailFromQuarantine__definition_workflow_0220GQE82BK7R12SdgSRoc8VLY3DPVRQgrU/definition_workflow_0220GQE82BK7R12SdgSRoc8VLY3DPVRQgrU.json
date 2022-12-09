@@ -1,0 +1,326 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU",
+    "name": "Cisco Secure Email - release all email from quarantine",
+    "title": "Cisco Secure Email - release all email from quarantine",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 1,
+          "scope": "local",
+          "name": "count",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "quarantine_name",
+          "type": "datatype.string",
+          "description": "Provide the Cisco Secure Email quarantine name to release from.",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Cisco Secure Email - release all email from quarantine",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": true,
+        "target_group": {
+          "target_group_id": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+          "run_on_all_targets": false,
+          "selected_target_types": [
+            "web-service.endpoint",
+            "email.smtp_endpoint"
+          ],
+          "use_criteria": {
+            "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+            "conditions": [
+              {
+                "operator": "eq",
+                "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                "right_operand": "Cisco Secure Email - SMA"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_0220HJA2Z6IOI4kBExxMrCTIvdeyvfVfaHK",
+        "name": "Execute Python Script",
+        "title": "timestamp",
+        "type": "python3.script",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "timestamp",
+          "script": "import sys\nimport datetime\n\n\nend_time = '{}T23:59:00.000Z'.format(datetime.date.today())",
+          "script_queries": [
+            {
+              "script_query": "end_time",
+              "script_query_name": "end_time",
+              "script_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_0220L5ONGOR523s4jb8fLmkiAg6fcBrhNyd",
+        "name": "While Loop",
+        "title": "While Loop",
+        "type": "logic.while",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "While Loop",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_0220L5OO1HUUF1s0fbCF2tDGQj5T7ykVCSk",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx$",
+                "operator": "gt",
+                "right_operand": 0
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_0220GQVEPG25M41FAznj2n2ZacmE4hSO0Eb",
+                "name": "HTTP Request",
+                "title": "Get email in quarantine",
+                "type": "web-service.http_request",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "allow_auto_redirect": true,
+                  "allow_headers_redirect": false,
+                  "continue_on_error_status_code": false,
+                  "continue_on_failure": false,
+                  "display_name": "Get email in quarantine",
+                  "method": "GET",
+                  "relative_url": "/sma/api/v2.0/quarantine/messages?endDate=$activity.definition_activity_0220HJA2Z6IOI4kBExxMrCTIvdeyvfVfaHK.output.script_queries.end_time$\u0026limit=250\u0026offset=0\u0026quarantineType=pvo\u0026quarantines=$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.input.variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA$\u0026startDate=2019-11-22T00:00:00.000Z",
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "use_workflow_target_group": true
+                  }
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_0220LMDNMILU11WbC99EGtByBh2xrSeaCFj",
+                "name": "JSONPath Query",
+                "title": "JSONPath Query for count",
+                "type": "corejava.jsonpathquery",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "JSONPath Query for count",
+                  "input_json": "$activity.definition_activity_0220GQVEPG25M41FAznj2n2ZacmE4hSO0Eb.output.response_body$",
+                  "jsonpath_queries": [
+                    {
+                      "jsonpath_query": "$.meta.totalCount",
+                      "jsonpath_query_name": "count",
+                      "jsonpath_query_type": "integer",
+                      "zdate_type_format": "yyyy-MM-dd'T'HH:mm:ssZ"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_0220M0LLJLPMU514hMMgYjoioyRfiPzNhAQ",
+                "name": "Condition Block",
+                "title": "If count = 0 stop",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "If count = 0 stop",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_0220M0LMAEMU10YvNMEV9Uw6bqiKOzPerao",
+                    "name": "Condition Branch",
+                    "title": "YES",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_0220LMDNMILU11WbC99EGtByBh2xrSeaCFj.output.jsonpath_queries.count$",
+                        "operator": "eq",
+                        "right_operand": 0
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "YES",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_0220M1GQJYK1T3ZKtc0CS22zvbiiY58b0vf",
+                        "name": "Completed",
+                        "title": "Completed",
+                        "type": "logic.completed",
+                        "base_type": "activity",
+                        "properties": {
+                          "completion_type": "succeeded",
+                          "continue_on_failure": false,
+                          "display_name": "Completed",
+                          "result_message": "All email are release",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_0220L87NHXWA950O3NxMwh6HSMdrRyZv3Ur",
+                "name": "Set Variables",
+                "title": "Set Variables count",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Set Variables count",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx$",
+                      "variable_value_new": "$activity.definition_activity_0220LMDNMILU11WbC99EGtByBh2xrSeaCFj.output.jsonpath_queries.count$"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_0220LPN5B9AKM1NiBGqq9wxyVn8q0ljQzMx",
+                "name": "Execute Python Script",
+                "title": "Execute Python Script",
+                "type": "python3.script",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Execute Python Script",
+                  "script": "mids = []\nfor mid in $activity.definition_activity_0220GQVEPG25M41FAznj2n2ZacmE4hSO0Eb.output.response_body$['data']:\n    mids.append(mid['mid'])",
+                  "script_queries": [
+                    {
+                      "script_query": "mids",
+                      "script_query_name": "mids",
+                      "script_query_type": "string"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_0220H5RWX43RG6DRnXJZGdfNVFCBdANaFPV",
+                "name": "HTTP Request",
+                "title": "release email from quarantine",
+                "type": "web-service.http_request",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "allow_auto_redirect": true,
+                  "allow_headers_redirect": false,
+                  "body": "{\n\"action\":\"release\",\n\"mids\": $activity.definition_activity_0220LPN5B9AKM1NiBGqq9wxyVn8q0ljQzMx.output.script_queries.mids$,\n\"quarantineName\": \"$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.input.variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA$\",\n\"quarantineType\": \"pvo\"\n}",
+                  "continue_on_error_status_code": false,
+                  "continue_on_failure": false,
+                  "display_name": "release email from quarantine",
+                  "method": "POST",
+                  "relative_url": "/sma/api/v2.0/quarantine/messages",
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "use_workflow_target_group": true
+                  }
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "target_groups": {
+    "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH": {
+      "unique_name": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+      "name": "Default TargetGroup",
+      "title": "Default TargetGroup",
+      "type": "generic.target_group",
+      "base_type": "target_group",
+      "version": "1.0.0",
+      "targets": [
+        {
+          "data_target_type": "web-service.endpoint",
+          "view_target_type": "web-service.endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "email.smtp_endpoint",
+          "view_target_type": "email.smtp_endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "terminal.endpoint",
+          "view_target_type": "terminal.endpoint",
+          "include_all_targets": true
+        }
+      ],
+      "object_type": "target_group"
+    }
+  }
+}
