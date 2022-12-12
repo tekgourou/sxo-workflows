@@ -1,8 +1,8 @@
 {
   "workflow": {
     "unique_name": "definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU",
-    "name": "Cisco Secure Email - release all email from quarantine",
-    "title": "Cisco Secure Email - release all email from quarantine",
+    "name": "Cisco Secure Email - release all emails from quarantine",
+    "title": "Cisco Secure Email - release all emails from quarantine",
     "type": "generic.workflow",
     "base_type": "workflow",
     "variables": [
@@ -40,7 +40,8 @@
         "is_atomic": false
       },
       "delete_workflow_instance": false,
-      "display_name": "Cisco Secure Email - release all email from quarantine",
+      "description": "This workflow will fetch all cisco message id (mid) from a specific Cisco SMA quarantine and release them all. \n\nVariable 'quarantine_name' need to be set.\n\nTarget Group: Default TargetGroup \nTarget Type : HTTP Endpoint, SMTP Endpoint\n\nTargets: Cisco Secure Email - SMA\nFor more information : aargeris@cisco.com",
+      "display_name": "Cisco Secure Email - release all emails from quarantine",
       "runtime_user": {
         "target_default": true
       },
