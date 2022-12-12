@@ -9,7 +9,7 @@
       {
         "schema_id": "datatype.boolean",
         "properties": {
-          "value": true,
+          "value": false,
           "scope": "local",
           "name": "send_report",
           "type": "datatype.boolean",
@@ -24,28 +24,27 @@
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "input",
-          "name": "quarantine_name",
-          "type": "datatype.string",
-          "description": "Provide the Cisco Secure Email quarantine name to release from.",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Email Endpoint",
           "scope": "local",
-          "name": "SMTP Target Name",
+          "name": "Send_email_report_to",
           "type": "datatype.string",
-          "description": "The name of the SMTP target you want to use when sending outgoing mail",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_02230SQE3N4U96Kz5hwUggSzGaipxDs9SG0",
+        "unique_name": "variable_workflow_02232RY03OCEF53Ml7VaSEHHRq7yeJYgsfA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "output",
+          "name": "count_emails_release",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br",
         "object_type": "variable_workflow"
       },
       {
@@ -63,17 +62,31 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.integer",
+        "schema_id": "datatype.string",
         "properties": {
-          "value": 0,
-          "scope": "output",
-          "name": "count_emails_release",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
+          "value": "Email Endpoint",
+          "scope": "local",
+          "name": "SMTP Target Name",
+          "type": "datatype.string",
+          "description": "The name of the SMTP target you want to use when sending outgoing mail",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br",
+        "unique_name": "variable_workflow_02230SQE3N4U96Kz5hwUggSzGaipxDs9SG0",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "quarantine_name",
+          "type": "datatype.string",
+          "description": "Provide the Cisco Secure Email quarantine name to release from.",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA",
         "object_type": "variable_workflow"
       }
     ],
@@ -285,7 +298,7 @@
                                   "display_name": "Send HTML report by Email",
                                   "input": {
                                     "variable_workflow_01YV5HTY0RBVM420h66tgXEJigkQFqrWDH9": "",
-                                    "variable_workflow_01YV5I3H8PDWL2ervAGsqLcmJET5ygBYU6w": "alexandre@argeris.net",
+                                    "variable_workflow_01YV5I3H8PDWL2ervAGsqLcmJET5ygBYU6w": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02232RY03OCEF53Ml7VaSEHHRq7yeJYgsfA$",
                                     "variable_workflow_01YV5I6NILBSU0ThgznzP63KY2pa9MqnY77": "",
                                     "variable_workflow_01YV5I8NKEGGT3E5HXgPdslpACV7BodXgj3": "",
                                     "variable_workflow_01YV5LSETS8IV3eQBPMEkI1r8XmW8AJ1DMj": "Count of emails released from quarantine - $workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.input.variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA$",
