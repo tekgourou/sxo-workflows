@@ -7,47 +7,6 @@
     "base_type": "workflow",
     "variables": [
       {
-        "schema_id": "datatype.boolean",
-        "properties": {
-          "value": false,
-          "scope": "local",
-          "name": "send_report",
-          "type": "datatype.boolean",
-          "description": "True or False.",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0222Z7EUFBABS63jc5cSFTZYiKDj73CB594",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "Send_email_report_to",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_02232RY03OCEF53Ml7VaSEHHRq7yeJYgsfA",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "output",
-          "name": "count_emails_release",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.integer",
         "properties": {
           "value": 1,
@@ -59,6 +18,61 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "alexandre@internetsinkhole.com",
+          "scope": "local",
+          "name": "Send_email_report_to",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02232RY03OCEF53Ml7VaSEHHRq7yeJYgsfA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "quarantine_name",
+          "type": "datatype.string",
+          "description": "Provide the Cisco Secure Email quarantine name to release from.",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 10,
+          "scope": "local",
+          "name": "max_release_per_run",
+          "type": "datatype.integer",
+          "description": "Enter the number of release max per run",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02236D2CY3QNT5xnhgpurcGQHAI2ulhGYma",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "limit",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02236LXZ82VEL2ZpmR8GtwD4NaWZNLrvM82",
         "object_type": "variable_workflow"
       },
       {
@@ -76,17 +90,31 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.boolean",
         "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "quarantine_name",
-          "type": "datatype.string",
-          "description": "Provide the Cisco Secure Email quarantine name to release from.",
-          "is_required": true,
+          "value": true,
+          "scope": "local",
+          "name": "send_report",
+          "type": "datatype.boolean",
+          "description": "True or False.",
+          "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA",
+        "unique_name": "variable_workflow_0222Z7EUFBABS63jc5cSFTZYiKDj73CB594",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "output",
+          "name": "count_emails_release",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br",
         "object_type": "variable_workflow"
       }
     ],
@@ -147,6 +175,99 @@
         "object_type": "definition_activity"
       },
       {
+        "unique_name": "definition_activity_02236LFACFDAL5KpovA1Wy7pF6eqQQqXMub",
+        "name": "Condition Block",
+        "title": "Set limit per API request",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set limit per API request",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_02236LFAOR4CR3NSuTIfyuRbXQD117VURJy",
+            "name": "Condition Branch",
+            "title": "max 250",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02236D2CY3QNT5xnhgpurcGQHAI2ulhGYma$",
+                "operator": "gte",
+                "right_operand": 250
+              },
+              "continue_on_failure": false,
+              "display_name": "max 250",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_02236MVPW1N5X5yyob6R3BkvnKEon5TNQvJ",
+                "name": "Set Variables",
+                "title": "Set Variables",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Set Variables",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02236LXZ82VEL2ZpmR8GtwD4NaWZNLrvM82$",
+                      "variable_value_new": 250
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_02236LFB3NPN34rghcR4JYyeb8uxLjQPeSE",
+            "name": "Condition Branch",
+            "title": "lower 250 ",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02236D2CY3QNT5xnhgpurcGQHAI2ulhGYma$",
+                "operator": "lte",
+                "right_operand": 250
+              },
+              "continue_on_failure": false,
+              "display_name": "lower 250 ",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_02236N32HCZLQ0gRI79rPZToiFTKgV1e2j5",
+                "name": "Set Variables",
+                "title": "Set Variables",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Set Variables",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02236LXZ82VEL2ZpmR8GtwD4NaWZNLrvM82$",
+                      "variable_value_new": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02236D2CY3QNT5xnhgpurcGQHAI2ulhGYma$"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "unique_name": "definition_activity_0220L5ONGOR523s4jb8fLmkiAg6fcBrhNyd",
         "name": "While Loop",
         "title": "While Loop",
@@ -191,7 +312,7 @@
                   "continue_on_failure": false,
                   "display_name": "Get email in quarantine",
                   "method": "GET",
-                  "relative_url": "/sma/api/v2.0/quarantine/messages?endDate=$activity.definition_activity_0220HJA2Z6IOI4kBExxMrCTIvdeyvfVfaHK.output.script_queries.end_time$\u0026limit=250\u0026offset=0\u0026quarantineType=pvo\u0026quarantines=$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.input.variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA$\u0026startDate=2019-11-22T00:00:00.000Z",
+                  "relative_url": "/sma/api/v2.0/quarantine/messages?endDate=$activity.definition_activity_0220HJA2Z6IOI4kBExxMrCTIvdeyvfVfaHK.output.script_queries.end_time$\u0026limit=$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02236LXZ82VEL2ZpmR8GtwD4NaWZNLrvM82$\u0026offset=0\u0026quarantineType=pvo\u0026quarantines=$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.input.variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA$\u0026startDate=2019-11-22T00:00:00.000Z",
                   "runtime_user": {
                     "target_default": true
                   },
@@ -228,12 +349,12 @@
               {
                 "unique_name": "definition_activity_0220M0LLJLPMU514hMMgYjoioyRfiPzNhAQ",
                 "name": "Condition Block",
-                "title": "If count = 0 stop",
+                "title": "If quarantine count = 0  or max count ",
                 "type": "logic.if_else",
                 "base_type": "activity",
                 "properties": {
                   "continue_on_failure": false,
-                  "display_name": "If count = 0 stop",
+                  "display_name": "If quarantine count = 0  or max count ",
                   "skip_execution": false
                 },
                 "object_type": "definition_activity",
@@ -246,9 +367,17 @@
                     "base_type": "activity",
                     "properties": {
                       "condition": {
-                        "left_operand": "$activity.definition_activity_0220LMDNMILU11WbC99EGtByBh2xrSeaCFj.output.jsonpath_queries.count$",
-                        "operator": "eq",
-                        "right_operand": 0
+                        "left_operand": {
+                          "left_operand": "$activity.definition_activity_0220LMDNMILU11WbC99EGtByBh2xrSeaCFj.output.jsonpath_queries.count$",
+                          "operator": "eq",
+                          "right_operand": 0
+                        },
+                        "operator": "or",
+                        "right_operand": {
+                          "left_operand": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02236D2CY3QNT5xnhgpurcGQHAI2ulhGYma$",
+                          "operator": "eq",
+                          "right_operand": 0
+                        }
                       },
                       "continue_on_failure": false,
                       "display_name": "YES",
@@ -302,7 +431,7 @@
                                     "variable_workflow_01YV5I6NILBSU0ThgznzP63KY2pa9MqnY77": "",
                                     "variable_workflow_01YV5I8NKEGGT3E5HXgPdslpACV7BodXgj3": "",
                                     "variable_workflow_01YV5LSETS8IV3eQBPMEkI1r8XmW8AJ1DMj": "Count of emails released from quarantine - $workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.input.variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA$",
-                                    "variable_workflow_01YVA56YI8LJZ6u8yIxposWoae1iri6QZ2C": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx$",
+                                    "variable_workflow_01YVA56YI8LJZ6u8yIxposWoae1iri6QZ2C": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.output.variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br$",
                                     "variable_workflow_01ZBJQB8UNKS039pai7jiVXOHAgWwpSfty8": "",
                                     "variable_workflow_02230LAA1VSD569YP98scbxCrnIZzN8TEVM": "COUNT"
                                   },
@@ -414,6 +543,10 @@
                     {
                       "variable_to_update": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.output.variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br$",
                       "variable_value_new": "$activity.definition_activity_0220LPN5B9AKM1NiBGqq9wxyVn8q0ljQzMx.output.script_queries.count$ + $workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.output.variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br$"
+                    },
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02236D2CY3QNT5xnhgpurcGQHAI2ulhGYma$",
+                      "variable_value_new": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02236D2CY3QNT5xnhgpurcGQHAI2ulhGYma$ - $activity.definition_activity_0220LPN5B9AKM1NiBGqq9wxyVn8q0ljQzMx.output.script_queries.count$"
                     }
                   ]
                 },
