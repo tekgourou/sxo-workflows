@@ -10,6 +10,34 @@
         "schema_id": "datatype.integer",
         "properties": {
           "value": 0,
+          "scope": "local",
+          "name": "limit",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02236LXZ82VEL2ZpmR8GtwD4NaWZNLrvM82",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Email Endpoint",
+          "scope": "local",
+          "name": "SMTP Target Name",
+          "type": "datatype.string",
+          "description": "The name of the SMTP target you want to use when sending outgoing mail",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02230SQE3N4U96Kz5hwUggSzGaipxDs9SG0",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
           "scope": "output",
           "name": "count_emails_release",
           "type": "datatype.integer",
@@ -18,20 +46,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 1,
-          "scope": "local",
-          "name": "count",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx",
         "object_type": "variable_workflow"
       },
       {
@@ -48,17 +62,17 @@
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.integer",
         "properties": {
-          "value": "Email Endpoint",
+          "value": 1,
           "scope": "local",
-          "name": "SMTP Target Name",
-          "type": "datatype.string",
-          "description": "The name of the SMTP target you want to use when sending outgoing mail",
+          "name": "count",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_02230SQE3N4U96Kz5hwUggSzGaipxDs9SG0",
+        "unique_name": "variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx",
         "object_type": "variable_workflow"
       },
       {
@@ -101,20 +115,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "limit",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_02236LXZ82VEL2ZpmR8GtwD4NaWZNLrvM82",
         "object_type": "variable_workflow"
       }
     ],
