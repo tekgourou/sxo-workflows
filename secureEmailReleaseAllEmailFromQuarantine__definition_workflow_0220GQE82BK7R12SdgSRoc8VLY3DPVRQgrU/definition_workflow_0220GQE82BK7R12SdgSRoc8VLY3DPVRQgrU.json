@@ -7,17 +7,17 @@
     "base_type": "workflow",
     "variables": [
       {
-        "schema_id": "datatype.integer",
+        "schema_id": "datatype.boolean",
         "properties": {
-          "value": 1,
+          "value": true,
           "scope": "local",
-          "name": "count",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
+          "name": "send_report",
+          "type": "datatype.boolean",
+          "description": "True or False.",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx",
+        "unique_name": "variable_workflow_0222Z7EUFBABS63jc5cSFTZYiKDj73CB594",
         "object_type": "variable_workflow"
       },
       {
@@ -32,6 +32,48 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Email Endpoint",
+          "scope": "local",
+          "name": "SMTP Target Name",
+          "type": "datatype.string",
+          "description": "The name of the SMTP target you want to use when sending outgoing mail",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02230SQE3N4U96Kz5hwUggSzGaipxDs9SG0",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 1,
+          "scope": "local",
+          "name": "count",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "output",
+          "name": "count_emails_release",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br",
         "object_type": "variable_workflow"
       }
     ],
@@ -202,6 +244,85 @@
                     "object_type": "definition_activity",
                     "actions": [
                       {
+                        "unique_name": "definition_activity_02231QTV002642KMsihTDsSdKif6K1VBOO8",
+                        "name": "Condition Block",
+                        "title": "SEND REPORT",
+                        "type": "logic.if_else",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "SEND REPORT",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "blocks": [
+                          {
+                            "unique_name": "definition_activity_02231QTVGAXQW6zcxpjbyhdxe0kXATyzvwa",
+                            "name": "Condition Branch",
+                            "title": "YES",
+                            "type": "logic.condition_block",
+                            "base_type": "activity",
+                            "properties": {
+                              "condition": {
+                                "left_operand": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_0222Z7EUFBABS63jc5cSFTZYiKDj73CB594$",
+                                "operator": "eq",
+                                "right_operand": true
+                              },
+                              "continue_on_failure": false,
+                              "display_name": "YES",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_02230NFEDQN6J3XBfKQKUgXSShxiVJDdy5J",
+                                "name": "Send HTML report by Email",
+                                "title": "Send HTML report by Email",
+                                "type": "workflow.atomic_workflow",
+                                "base_type": "subworkflow",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Send HTML report by Email",
+                                  "input": {
+                                    "variable_workflow_01YV5HTY0RBVM420h66tgXEJigkQFqrWDH9": "",
+                                    "variable_workflow_01YV5I3H8PDWL2ervAGsqLcmJET5ygBYU6w": "alexandre@argeris.net",
+                                    "variable_workflow_01YV5I6NILBSU0ThgznzP63KY2pa9MqnY77": "",
+                                    "variable_workflow_01YV5I8NKEGGT3E5HXgPdslpACV7BodXgj3": "",
+                                    "variable_workflow_01YV5LSETS8IV3eQBPMEkI1r8XmW8AJ1DMj": "Count of emails released from quarantine - $workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.input.variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA$",
+                                    "variable_workflow_01YVA56YI8LJZ6u8yIxposWoae1iri6QZ2C": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx$",
+                                    "variable_workflow_01ZBJQB8UNKS039pai7jiVXOHAgWwpSfty8": "",
+                                    "variable_workflow_02230LAA1VSD569YP98scbxCrnIZzN8TEVM": "COUNT"
+                                  },
+                                  "runtime_user": {
+                                    "target_default": true
+                                  },
+                                  "skip_execution": false,
+                                  "target": {
+                                    "override_workflow_target_group_criteria": true,
+                                    "target_group": {
+                                      "run_on_all_targets": false,
+                                      "use_criteria": {
+                                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                        "conditions": [
+                                          {
+                                            "left_operand": "$targetgroup.email smtp_endpoint.input.display_name$",
+                                            "operator": "eq",
+                                            "right_operand": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.local.variable_workflow_02230SQE3N4U96Kz5hwUggSzGaipxDs9SG0$"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "workflow_id": "definition_workflow_01YV5GU54UJD11s1APVQ3F7ULHA8jTf3u6g",
+                                  "workflow_name": "Send HTML report by Email"
+                                },
+                                "object_type": "definition_activity"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
                         "unique_name": "definition_activity_0220M1GQJYK1T3ZKtc0CS22zvbiiY58b0vf",
                         "name": "Completed",
                         "title": "Completed",
@@ -249,15 +370,39 @@
                   "action_timeout": 180,
                   "continue_on_failure": false,
                   "display_name": "Execute Python Script",
-                  "script": "mids = []\nfor mid in $activity.definition_activity_0220GQVEPG25M41FAznj2n2ZacmE4hSO0Eb.output.response_body$['data']:\n    mids.append(mid['mid'])",
+                  "script": "mids = []\ncount = 0\nfor mid in $activity.definition_activity_0220GQVEPG25M41FAznj2n2ZacmE4hSO0Eb.output.response_body$['data']:\n    count = count + 1\n    mids.append(mid['mid'])",
                   "script_queries": [
                     {
                       "script_query": "mids",
                       "script_query_name": "mids",
                       "script_query_type": "string"
+                    },
+                    {
+                      "script_query": "count",
+                      "script_query_name": "count",
+                      "script_query_type": "integer"
                     }
                   ],
                   "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_0222Z56QOMW8L1pgC4m1GGdeX5aLfkrIx7d",
+                "name": "Set Variables",
+                "title": "Set Variables count_emails_release",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Set Variables count_emails_release",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.output.variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br$",
+                      "variable_value_new": "$activity.definition_activity_0220LPN5B9AKM1NiBGqq9wxyVn8q0ljQzMx.output.script_queries.count$ + $workflow.definition_workflow_0220GQE82BK7R12SdgSRoc8VLY3DPVRQgrU.output.variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br$"
+                    }
+                  ]
                 },
                 "object_type": "definition_activity"
               },
@@ -323,5 +468,11 @@
       ],
       "object_type": "target_group"
     }
-  }
+  },
+  "atomic_workflows": [
+    "definition_workflow_01YV5GU54UJD11s1APVQ3F7ULHA8jTf3u6g"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_01YV5GU54UJD11s1APVQ3F7ULHA8jTf3u6g"
+  ]
 }
