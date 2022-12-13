@@ -9,15 +9,15 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 0,
+          "value": 250,
           "scope": "local",
-          "name": "limit",
+          "name": "max_release_per_run",
           "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
+          "description": "Enter the number of release max per run",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_02236LXZ82VEL2ZpmR8GtwD4NaWZNLrvM82",
+        "unique_name": "variable_workflow_02236D2CY3QNT5xnhgpurcGQHAI2ulhGYma",
         "object_type": "variable_workflow"
       },
       {
@@ -32,20 +32,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_02230SQE3N4U96Kz5hwUggSzGaipxDs9SG0",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "output",
-          "name": "count_emails_release",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br",
         "object_type": "variable_workflow"
       },
       {
@@ -64,15 +50,29 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 1,
+          "value": 0,
           "scope": "local",
-          "name": "count",
+          "name": "limit",
           "type": "datatype.integer",
           "description": "DO NOT MODIFY",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx",
+        "unique_name": "variable_workflow_02236LXZ82VEL2ZpmR8GtwD4NaWZNLrvM82",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "quarantine_name",
+          "type": "datatype.string",
+          "description": "Provide the Cisco Secure Email quarantine name to release from.",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA",
         "object_type": "variable_workflow"
       },
       {
@@ -92,29 +92,29 @@
       {
         "schema_id": "datatype.integer",
         "properties": {
-          "value": 250,
+          "value": 1,
           "scope": "local",
-          "name": "max_release_per_run",
+          "name": "count",
           "type": "datatype.integer",
-          "description": "Enter the number of release max per run",
+          "description": "DO NOT MODIFY",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_02236D2CY3QNT5xnhgpurcGQHAI2ulhGYma",
+        "unique_name": "variable_workflow_0220L6QRT9FJF1llzQAAWi5Cf5bJiT9zyOx",
         "object_type": "variable_workflow"
       },
       {
-        "schema_id": "datatype.string",
+        "schema_id": "datatype.integer",
         "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "quarantine_name",
-          "type": "datatype.string",
-          "description": "Provide the Cisco Secure Email quarantine name to release from.",
-          "is_required": true,
+          "value": 0,
+          "scope": "output",
+          "name": "count_emails_release",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0220GSWN44YED4avhSWuuYaaT9Gn6DlNLkA",
+        "unique_name": "variable_workflow_0222Z6AAGNHLD01LTvl7LeVywMNGSvJy2br",
         "object_type": "variable_workflow"
       }
     ],
@@ -123,7 +123,7 @@
         "is_atomic": false
       },
       "delete_workflow_instance": false,
-      "description": "This workflow will fetch all cisco message id (mid) from a specific Cisco SMA quarantine and release them all. \n\nRequire Variables to be set :\n'quarantine_name' \n\nOptional varaible to be set:\n'max_release_per_run'\n\nVariables for report:\n'send_report' set to true\n'send_email_report_to' set with email address\n'SMTP Target Name'\n\n\nTarget Group: Default TargetGroup \nTarget Type : HTTP Endpoint, SMTP Endpoint\n\nTargets: Cisco Secure Email - SMA\nFor more information : aargeris@cisco.com",
+      "description": "This workflow will fetch all cisco message id (mid) from a specific Cisco SMA quarantine and release them all. \n\nRequire Variables to be set :\n'quarantine_name' \n\nOptional varaible to be set:\n'max_release_per_run'\n\nVariables for report:\n'send_report' set to true\n'send_email_report_to' set with email address\n'SMTP Target Name'\nEnable 'Send HTML report by EMAIL'\n\n\nTarget Group: Default TargetGroup \nTarget Type : HTTP Endpoint, SMTP Endpoint\n\nTargets: Cisco Secure Email - SMA\nFor more information : aargeris@cisco.com",
       "display_name": "Cisco Secure Email - release all emails from quarantine",
       "runtime_user": {
         "target_default": true
@@ -438,7 +438,7 @@
                                   "runtime_user": {
                                     "target_default": true
                                   },
-                                  "skip_execution": false,
+                                  "skip_execution": true,
                                   "target": {
                                     "override_workflow_target_group_criteria": true,
                                     "target_group": {
