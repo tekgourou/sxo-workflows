@@ -7,20 +7,6 @@
     "base_type": "workflow",
     "variables": [
       {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "65dfsdapnu3uee8dwsrssjdy",
-          "scope": "local",
-          "name": "client_id",
-          "type": "datatype.string",
-          "description": "https://apiconsole.cisco.com/",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01THBL5JM07K44bzU1Lp980e1RHnMzYxIJP",
-        "object_type": "variable_workflow"
-      },
-      {
         "schema_id": "datatype.secure_string",
         "properties": {
           "value": "*****",
@@ -32,6 +18,20 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01THBLG8C7H1E0bJFJaokALlHozwEYuG8sf",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "65dfsdapnu3uee8dwsrssjdy",
+          "scope": "local",
+          "name": "client_id",
+          "type": "datatype.string",
+          "description": "https://apiconsole.cisco.com/",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01THBL5JM07K44bzU1Lp980e1RHnMzYxIJP",
         "object_type": "variable_workflow"
       }
     ],
@@ -108,6 +108,7 @@
         "properties": {
           "action_timeout": 180,
           "allow_auto_redirect": true,
+          "allow_headers_redirect": false,
           "continue_on_error_status_code": false,
           "continue_on_failure": false,
           "display_name": "GET Token from Cisco Cloud SSO",
@@ -155,6 +156,7 @@
           "accept": "*/*",
           "action_timeout": 180,
           "allow_auto_redirect": true,
+          "allow_headers_redirect": false,
           "content_type": "application/json",
           "continue_on_error_status_code": false,
           "continue_on_failure": true,
@@ -166,7 +168,7 @@
           ],
           "display_name": "Get Critical IMPACT for the last week",
           "method": "GET",
-          "relative_url": "/security/advisories/severity/critical/firstpublished?startDate=$activity.definition_activity_01THFVIBDPFRM0coC7HU6YgVuajdClH2w1Z.output.result$\u0026endDate=$activity.definition_activity_01THCFD10NIN63noBNlvRDDDPLxpVAXGkGQ.output.result$",
+          "relative_url": "/security/advisories/v2/severity/critical/firstpublished?startDate=$activity.definition_activity_01THFVIBDPFRM0coC7HU6YgVuajdClH2w1Z.output.result$\u0026endDate=$activity.definition_activity_01THCFD10NIN63noBNlvRDDDPLxpVAXGkGQ.output.result$",
           "runtime_user": {
             "target_default": true
           },
@@ -174,6 +176,7 @@
           "target": {
             "override_workflow_target_group_criteria": true,
             "target_group": {
+              "run_on_all_targets": false,
               "use_criteria": {
                 "choose_target_using_algorithm": "choose_first_with_matching_criteria",
                 "conditions": [
@@ -757,7 +760,7 @@
       "type": "schedule",
       "base_type": "trigger",
       "ref_id": "schedule_01HW8M7A8CQK71LT9IHmr0kCTBJURhLdFDQ",
-      "version": "1.0.0",
+      "version": "",
       "disabled": false,
       "unique_name": "triggerschedule_01THG3R0IEO9A6P7LsTZvufbX4pmoq6k49b",
       "object_type": "triggerschedule"
@@ -821,7 +824,7 @@
             "column_data": {
               "advisoryId": "cisco-sa-apache-log4j-qRuKNEbd",
               "firstPublished": "2021-12-10T18:45:00",
-              "lastUpdated": "2022-05-04T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
               "sir": "Critical",
               "version": "1.11"
             }
@@ -830,7 +833,7 @@
             "column_data": {
               "advisoryId": "cisco-sa-ccmp-priv-esc-JzhTFLm4",
               "firstPublished": "2022-01-12T16:00:00",
-              "lastUpdated": "2022-05-04T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
               "sir": "Critical",
               "version": "1.0"
             }
@@ -839,7 +842,7 @@
             "column_data": {
               "advisoryId": "cisco-sa-rcm-vuls-7cS3Nuq",
               "firstPublished": "2022-01-19T16:00:00",
-              "lastUpdated": "2022-05-04T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
               "sir": "Critical",
               "version": "1.0"
             }
@@ -848,7 +851,7 @@
             "column_data": {
               "advisoryId": "cisco-sa-smb-mult-vuln-KA9PK6D",
               "firstPublished": "2022-02-02T16:00:00",
-              "lastUpdated": "2022-05-04T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
               "sir": "Critical",
               "version": "1.0"
             }
@@ -857,7 +860,7 @@
             "column_data": {
               "advisoryId": "cisco-sa-expressway-filewrite-87Q5YRk",
               "firstPublished": "2022-03-02T16:00:00",
-              "lastUpdated": "2022-05-04T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
               "sir": "Critical",
               "version": "1.0"
             }
@@ -866,7 +869,7 @@
             "column_data": {
               "advisoryId": "cisco-sa-java-spring-rce-Zx9GUc67",
               "firstPublished": "2022-04-02T06:45:00",
-              "lastUpdated": "2022-05-04T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
               "sir": "Critical",
               "version": "1.0"
             }
@@ -875,7 +878,7 @@
             "column_data": {
               "advisoryId": "cisco-sa-java-spring-scf-rce-DQrHhJxH",
               "firstPublished": "2022-04-02T06:45:00",
-              "lastUpdated": "2022-05-04T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
               "sir": "Critical",
               "version": "1.0"
             }
@@ -884,7 +887,7 @@
             "column_data": {
               "advisoryId": "cisco-sa-wlc-auth-bypass-JRNhV4fF",
               "firstPublished": "2022-04-13T23:00:00",
-              "lastUpdated": "2022-05-04T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
               "sir": "Critical",
               "version": "1.0"
             }
@@ -893,7 +896,52 @@
             "column_data": {
               "advisoryId": "cisco-sa-NFVIS-MUL-7DySRX9",
               "firstPublished": "2022-05-04T23:00:00",
-              "lastUpdated": "2022-05-04T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
+              "sir": "Critical",
+              "version": "1.0"
+            }
+          },
+          {
+            "column_data": {
+              "advisoryId": "cisco-sa-sma-esa-auth-bypass-66kEcxQD",
+              "firstPublished": "2022-06-15T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
+              "sir": "Critical",
+              "version": "1.0"
+            }
+          },
+          {
+            "column_data": {
+              "advisoryId": "cisco-sa-sb-rv-overflow-s2r82P9v",
+              "firstPublished": "2022-06-15T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
+              "sir": "Critical",
+              "version": "1.0"
+            }
+          },
+          {
+            "column_data": {
+              "advisoryId": "cisco-sa-expressway-overwrite-3buqW8LH",
+              "firstPublished": "2022-07-06T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
+              "sir": "Critical",
+              "version": "1.0"
+            }
+          },
+          {
+            "column_data": {
+              "advisoryId": "cisco-sa-ndb-mhcvuln-vpsBPJ9y",
+              "firstPublished": "2022-07-20T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
+              "sir": "Critical",
+              "version": "1.0"
+            }
+          },
+          {
+            "column_data": {
+              "advisoryId": "cisco-sa-sb-mult-vuln-CbVp4SUR",
+              "firstPublished": "2022-08-03T23:00:00",
+              "lastUpdated": "2022-08-03T23:00:00",
               "sir": "Critical",
               "version": "1.0"
             }
@@ -915,6 +963,11 @@
       "display_name": "Cisco Security Advisory",
       "columns": [
         {
+          "name": "version",
+          "title": "version",
+          "type": "string"
+        },
+        {
           "name": "sir",
           "title": "sir",
           "type": "string"
@@ -932,11 +985,6 @@
         {
           "name": "lastUpdated",
           "title": "lastUpdated",
-          "type": "string"
-        },
-        {
-          "name": "version",
-          "title": "version",
           "type": "string"
         }
       ],
