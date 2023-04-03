@@ -1,0 +1,515 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE",
+    "name": "Scan with nmap.online",
+    "title": "Scan with nmap.online",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_type",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024NVMRPGWT0M1iI4wa7rmGk5BYJwa6mpQ3",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Expert",
+          "scope": "local",
+          "name": "nmap.online membership",
+          "type": "datatype.string",
+          "description": "Free or Expert ?\nhttps://nmap.online/pricing",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024PI14US2BPV0ZDLTG8rZhflyASDnw2HBP",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "scan result",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024PHVS178DSX0AanRdBnjG7oya5Fbdb3aD",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "port",
+          "scope": "local",
+          "name": "scan_command",
+          "type": "datatype.string",
+          "description": "normal - Normal Scan (nmap host)\nfast - Fast Scan\nping - Ping scan\nport - Port scan\nosinfo - Scan OS information and Traceroute\nosdetect - OS Detection\nfcrdns - Forward-confirmed Reverse DNS (Paid users only)\nfirewall - Firewall Detection (Paid users only)\ntop5port - Scan top 5 ports (Paid users only)\ntop20port - Scan top 20 ports (Paid users only)\ntop20tcp - Scan top 20 TCP ports (Paid users only)\ntop20udp - Scan top 20 UDP ports (Paid users only)\nmalware - Detecting malware infections (Paid users only)",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024PIGCW3Y9QN0L26dqCflcGr1lT0pW0TMY",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "np",
+          "scope": "local",
+          "name": "scan options",
+          "type": "datatype.string",
+          "description": "pn: No ping (-Pn)\nsn: No port scan (host discovery only) (-sn)\nf: Fast scan (-F)\np: All ports (-p-)\nn: no DNS lookup (-n)\nr: reverse-DNS lookup for all hosts (-R)\nf8: Fragment IP data into 8 bytes (-f)\nff16: Fragment IP data into 16 bytes (-ff)\nv: Verbose output (-v)\nvv: More verbosity (-vv)\nd: Debugging details (-d)\ndd: More details (-dd)\npr: ARP Scan (-PR)\nss: TCP SYN scan (-sS)\nst: TCP connect scan (-sT)\nsu: UDP scan (-sU)\nsnn: Null Scan (-sN)\nsff: FIN Scan (-sF)\nsxx: Xmas Scan (-sX)\nsa: TCP ACK Scan (-sA)\no: OS Detection (-O)\nsc: Default scripts (-sC)\nt0: Slowest (paranoid) (-T0)\nt1: Sneaky (-T1)\nt2: Polite (-T2)\nt3: Normal (-T3)\nt4: Aggressive (-T4)\nt5: Fastest (insane) (-T5)\nsv: Service Detection (-sV)\nsv2: Service Detection (intensity of 2) (-sV --version-light)\nsv9: Service Detection (intensity of 9) (-sV --version-all)\nreason: Getting More Details (--reason)",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024PIHB9FOVLR0l9oJm4lLeY6CvGttGifpB",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "scan_status",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024PGTKXWPAQV1iDFK8pPrBnUF3K4Vi0wuo",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "nmap.online api key",
+          "type": "datatype.secure_string",
+          "description": "https://nmap.online/en/api-key",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_value",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024NVMYBPBA404g5PBimfn4p3Gmywa9E4hz",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "sinlge",
+          "scope": "local",
+          "name": "scan_type",
+          "type": "datatype.string",
+          "description": "single - One host or IP\nrange - IP range (Paid users only)",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024Q7KRR7SNVM2H5PVjF4LNO4dbhUzFfkFV",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "description": "Supported Observable : IP or domain only.\nWorkflow based on https://api.nmap.online/ documentation. ",
+      "display_name": "Scan with nmap.online",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": true,
+        "target_group": {
+          "target_group_id": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+          "run_on_all_targets": false,
+          "selected_target_types": [
+            "web-service.endpoint"
+          ],
+          "use_criteria": {
+            "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+            "conditions": [
+              {
+                "operator": "eq",
+                "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                "right_operand": "Private_CTIA_Target"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_024NVN5VL7IB01t4NO1pezf95yzHP8uPZOB",
+        "name": "Condition Block",
+        "title": "type ?",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "type ?",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_024NVN5W1CYUI4Rui34s6PkmcEzifT3d5uP",
+            "name": "Condition Branch",
+            "title": "ip or domain",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024NVMRPGWT0M1iI4wa7rmGk5BYJwa6mpQ3$",
+                  "operator": "eq",
+                  "right_operand": "domain"
+                },
+                "operator": "or",
+                "right_operand": {
+                  "left_operand": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024NVMRPGWT0M1iI4wa7rmGk5BYJwa6mpQ3$",
+                  "operator": "eq",
+                  "right_operand": "ip"
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "ip or domain",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_024Q99KQ2RLQF1u69qbHXPWdTuIElaTSlx9",
+                "name": "nmap.online - start scan",
+                "title": "nmap.online - start scan",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "nmap.online - start scan",
+                  "input": {
+                    "variable_workflow_024Q7FGMDXLB760xVMiw7EONfUU7VUmi9xX": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024NVMYBPBA404g5PBimfn4p3Gmywa9E4hz$",
+                    "variable_workflow_024Q7FGMDY7KV78ZelgyobBWTjnIZlPaOtA": "top20tcp",
+                    "variable_workflow_024Q7FGMDYF3C75Oj6sxWh1kZfEj1PLJyrQ": "np",
+                    "variable_workflow_024Q7LK0WLRCV1z8CDWKeug8pGZnFT7tnDV": "single",
+                    "variable_workflow_024Q95LYM5XHO375xdH6fua7S2jmWHgkFLP": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "override_workflow_target_group_criteria": true,
+                    "target_group": {
+                      "run_on_all_targets": false,
+                      "use_criteria": {
+                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                        "conditions": [
+                          {
+                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                            "operator": "eq",
+                            "right_operand": "nmap.online"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "workflow_id": "definition_workflow_024Q7FGLPR9SH3IiYT0psCwdtE1wxXSR8BL",
+                  "workflow_name": "nmap.online - start scan"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_024PGOO3HDU8G2YfESQVmF0yRopHygJeSSJ",
+                "name": "While Loop",
+                "title": "Loop until scan complete",
+                "type": "logic.while",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Loop until scan complete",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_024PGOO3UNPUW3lPB4zwPALt94UtbjAdGdL",
+                    "name": "Condition Branch",
+                    "title": "Get scan status",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.local.variable_workflow_024PGTKXWPAQV1iDFK8pPrBnUF3K4Vi0wuo$",
+                        "operator": "ne",
+                        "right_operand": "Finished"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Get scan status",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_024PH9FC1ABZR6seRTae40DvdYaofQlDAhL",
+                        "name": "Sleep",
+                        "title": "Sleep",
+                        "type": "core.sleep",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Sleep",
+                          "skip_execution": false,
+                          "sleep_interval": 5
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_024Q9KAT7VOBA2Dwq62xJP2tlwtHo5kr35l",
+                        "name": "nmap.online - scan status",
+                        "title": "nmap.online - scan status",
+                        "type": "workflow.atomic_workflow",
+                        "base_type": "subworkflow",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "nmap.online - scan status",
+                          "input": {
+                            "variable_workflow_024Q9DXM1Q3WV1sx7WU87vGJovewPBGoTCH": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn$",
+                            "variable_workflow_024Q9DXM1QZ5C6bIBvVTAUOB8U04rKYGNUl": "$activity.definition_activity_024Q99KQ2RLQF1u69qbHXPWdTuIElaTSlx9.output.variable_workflow_024Q7FGMDX22O7GXiMbwGseV7ByELq7d5he$"
+                          },
+                          "runtime_user": {
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "override_workflow_target_group_criteria": true,
+                            "target_group": {
+                              "run_on_all_targets": false,
+                              "use_criteria": {
+                                "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                "conditions": [
+                                  {
+                                    "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                                    "operator": "eq",
+                                    "right_operand": "nmap.online"
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          "workflow_id": "definition_workflow_024Q9DXL7GJ5B6cdevWRuEQPDV3SxKHdm6p",
+                          "workflow_name": "nmap.online - scan status"
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_024PGTUR9ZHUT4SFeB1xMdSw8w8MieJjO1W",
+                        "name": "Set Variables",
+                        "title": "Set Variables scan_status",
+                        "type": "core.set_multiple_variables",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Set Variables scan_status",
+                          "skip_execution": false,
+                          "variables_to_update": [
+                            {
+                              "variable_to_update": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.local.variable_workflow_024PGTKXWPAQV1iDFK8pPrBnUF3K4Vi0wuo$",
+                              "variable_value_new": "$activity.definition_activity_024Q9KAT7VOBA2Dwq62xJP2tlwtHo5kr35l.output.variable_workflow_024Q9DXM1QIRE4Ydheycw7uxPyq23bY8FqW$"
+                            }
+                          ]
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_024Q9YSW1E5M26sFW4UXUV0iij2p57HtPR7",
+                "name": "nmap.online - scan result",
+                "title": "nmap.online - scan result",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "nmap.online - scan result",
+                  "input": {
+                    "variable_workflow_024Q9N42TTT7A6fCwU18iSgw0hfGOszBf1Z": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn$",
+                    "variable_workflow_024Q9N42TU26O5ZjEwXgNhsq67WBr2tKwhN": "$activity.definition_activity_024Q99KQ2RLQF1u69qbHXPWdTuIElaTSlx9.output.variable_workflow_024Q7FGMDX22O7GXiMbwGseV7ByELq7d5he$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "override_workflow_target_group_criteria": true,
+                    "target_group": {
+                      "run_on_all_targets": false,
+                      "use_criteria": {
+                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                        "conditions": [
+                          {
+                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                            "operator": "eq",
+                            "right_operand": "nmap.online"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "workflow_id": "definition_workflow_024Q9N41VWO6K2bpYoMdlr70PuiHwOgslEd",
+                  "workflow_name": "nmap.online - scan result"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_024PHASK11E2V3remCsIhZ02OkfMSylDu0l",
+                "name": "Threat Response - Generate Access Token",
+                "title": "Threat Response - Generate Access Token",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Threat Response - Generate Access Token",
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "override_workflow_target_group_criteria": true,
+                    "target_group": {
+                      "run_on_all_targets": false,
+                      "use_criteria": {
+                        "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                        "conditions": [
+                          {
+                            "left_operand": "$targetgroup.web-service endpoint.input.display_name$",
+                            "operator": "eq",
+                            "right_operand": "CTR_For_Access_Token"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "workflow_id": "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+                  "workflow_name": "Threat Response - Generate Access Token"
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_024PHB39SK24T20BHPiAZxt3xRTdy5oN3Ys",
+                "name": "Threat Response - Create Casebook",
+                "title": "Threat Response - Create Casebook",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Threat Response - Create Casebook",
+                  "input": {
+                    "variable_workflow_01PP75X6NM0AY6YDlJckkMg6hCbMEMGO72O": "[{\"type\":\"$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024NVMRPGWT0M1iI4wa7rmGk5BYJwa6mpQ3$\",\"value\":\"$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024NVMYBPBA404g5PBimfn4p3Gmywa9E4hz$\"}]",
+                    "variable_workflow_01PP75X6NM1M46Jjob8LUKg8R3yRRVOvu9q": "$activity.definition_activity_024PHASK11E2V3remCsIhZ02OkfMSylDu0l.output.variable_workflow_01PP75S3G7CJY6WAQr2IJC7qga2SIoE09gQ$",
+                    "variable_workflow_01PP75X6NM2V27Or3EssfIABNZiE45Ddziu": "amber",
+                    "variable_workflow_01PP75X6NM4123PBwUedJ5QqeBr8G1sefjQ": "NMAP Scan Result for $workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024NVMYBPBA404g5PBimfn4p3Gmywa9E4hz$",
+                    "variable_workflow_01PP75X6NM54W5qTbpCb1h6bTTrp7eFQjaq": "$activity.definition_activity_024Q9YSW1E5M26sFW4UXUV0iij2p57HtPR7.output.variable_workflow_024Q9XMKX0A5C75EwlYoCEWz9OYDZOGEurT$",
+                    "variable_workflow_01PP75X6NM7FE4BmQ3AKIykyWFDSV9umy02": "$activity.definition_activity_024Q9YSW1E5M26sFW4UXUV0iij2p57HtPR7.output.variable_workflow_024Q9N42TTCMS1n2A0y6bGIc88dy7FSEb7e$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "use_workflow_target_group": true
+                  },
+                  "workflow_id": "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML",
+                  "workflow_name": "Threat Response - Create Casebook"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m"
+    ]
+  },
+  "categories": {
+    "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m": {
+      "unique_name": "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m",
+      "name": "response",
+      "title": "response",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    }
+  },
+  "target_groups": {
+    "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH": {
+      "unique_name": "target_group_01EJ0TQWPQWBD0qiWqClJKj9FOzwiZRfOFH",
+      "name": "Default TargetGroup",
+      "title": "Default TargetGroup",
+      "type": "generic.target_group",
+      "base_type": "target_group",
+      "version": "1.0.0",
+      "targets": [
+        {
+          "data_target_type": "web-service.endpoint",
+          "view_target_type": "web-service.endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "email.smtp_endpoint",
+          "view_target_type": "email.smtp_endpoint",
+          "include_all_targets": true
+        },
+        {
+          "data_target_type": "terminal.endpoint",
+          "view_target_type": "terminal.endpoint",
+          "include_all_targets": true
+        }
+      ],
+      "object_type": "target_group"
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_024Q7FGLPR9SH3IiYT0psCwdtE1wxXSR8BL",
+    "definition_workflow_024Q9DXL7GJ5B6cdevWRuEQPDV3SxKHdm6p",
+    "definition_workflow_024Q9N41VWO6K2bpYoMdlr70PuiHwOgslEd",
+    "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+    "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_024Q7FGLPR9SH3IiYT0psCwdtE1wxXSR8BL",
+    "definition_workflow_024Q9DXL7GJ5B6cdevWRuEQPDV3SxKHdm6p",
+    "definition_workflow_024Q9N41VWO6K2bpYoMdlr70PuiHwOgslEd",
+    "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+    "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML"
+  ]
+}
