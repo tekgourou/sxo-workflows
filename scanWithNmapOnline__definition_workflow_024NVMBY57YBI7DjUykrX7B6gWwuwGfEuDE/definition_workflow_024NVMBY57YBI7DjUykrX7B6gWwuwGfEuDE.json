@@ -10,33 +10,6 @@
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "input",
-          "name": "observable_type",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_024NVMRPGWT0M1iI4wa7rmGk5BYJwa6mpQ3",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Expert",
-          "scope": "local",
-          "name": "nmap.online membership",
-          "type": "datatype.string",
-          "description": "Free or Expert ?\nhttps://nmap.online/pricing",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_024PI14US2BPV0ZDLTG8rZhflyASDnw2HBP",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
           "scope": "output",
           "name": "scan result",
           "type": "datatype.string",
@@ -49,29 +22,14 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "port",
-          "scope": "local",
-          "name": "scan_command",
+          "value": "",
+          "scope": "input",
+          "name": "observable_type",
           "type": "datatype.string",
-          "description": "normal - Normal Scan (nmap host)\nfast - Fast Scan\nping - Ping scan\nport - Port scan\nosinfo - Scan OS information and Traceroute\nosdetect - OS Detection\nfcrdns - Forward-confirmed Reverse DNS (Paid users only)\nfirewall - Firewall Detection (Paid users only)\ntop5port - Scan top 5 ports (Paid users only)\ntop20port - Scan top 20 ports (Paid users only)\ntop20tcp - Scan top 20 TCP ports (Paid users only)\ntop20udp - Scan top 20 UDP ports (Paid users only)\nmalware - Detecting malware infections (Paid users only)",
-          "is_required": false,
+          "is_required": true,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_024PIGCW3Y9QN0L26dqCflcGr1lT0pW0TMY",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "np",
-          "scope": "local",
-          "name": "scan options",
-          "type": "datatype.string",
-          "description": "pn: No ping (-Pn)\nsn: No port scan (host discovery only) (-sn)\nf: Fast scan (-F)\np: All ports (-p-)\nn: no DNS lookup (-n)\nr: reverse-DNS lookup for all hosts (-R)\nf8: Fragment IP data into 8 bytes (-f)\nff16: Fragment IP data into 16 bytes (-ff)\nv: Verbose output (-v)\nvv: More verbosity (-vv)\nd: Debugging details (-d)\ndd: More details (-dd)\npr: ARP Scan (-PR)\nss: TCP SYN scan (-sS)\nst: TCP connect scan (-sT)\nsu: UDP scan (-sU)\nsnn: Null Scan (-sN)\nsff: FIN Scan (-sF)\nsxx: Xmas Scan (-sX)\nsa: TCP ACK Scan (-sA)\no: OS Detection (-O)\nsc: Default scripts (-sC)\nt0: Slowest (paranoid) (-T0)\nt1: Sneaky (-T1)\nt2: Polite (-T2)\nt3: Normal (-T3)\nt4: Aggressive (-T4)\nt5: Fastest (insane) (-T5)\nsv: Service Detection (-sV)\nsv2: Service Detection (intensity of 2) (-sV --version-light)\nsv9: Service Detection (intensity of 9) (-sV --version-all)\nreason: Getting More Details (--reason)",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_024PIHB9FOVLR0l9oJm4lLeY6CvGttGifpB",
+        "unique_name": "variable_workflow_024NVMRPGWT0M1iI4wa7rmGk5BYJwa6mpQ3",
         "object_type": "variable_workflow"
       },
       {
@@ -89,10 +47,52 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "sinlge",
+          "scope": "local",
+          "name": "scan_type",
+          "type": "datatype.string",
+          "description": "single - One host or IP\nrange - IP range (Paid users only)",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024Q7KRR7SNVM2H5PVjF4LNO4dbhUzFfkFV",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "fast",
+          "scope": "local",
+          "name": "scan_command",
+          "type": "datatype.string",
+          "description": "normal - Normal Scan (nmap host)\nfast - Fast Scan\nping - Ping scan\nport - Port scan\nosinfo - Scan OS information and Traceroute\nosdetect - OS Detection\nfcrdns - Forward-confirmed Reverse DNS (Paid users only)\nfirewall - Firewall Detection (Paid users only)\ntop5port - Scan top 5 ports (Paid users only)\ntop20port - Scan top 20 ports (Paid users only)\ntop20tcp - Scan top 20 TCP ports (Paid users only)\ntop20udp - Scan top 20 UDP ports (Paid users only)\nmalware - Detecting malware infections (Paid users only)",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024PIGCW3Y9QN0L26dqCflcGr1lT0pW0TMY",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Expert",
+          "scope": "local",
+          "name": "nmap.online membership",
+          "type": "datatype.string",
+          "description": "Free or Expert ?\nhttps://nmap.online/pricing",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024PI14US2BPV0ZDLTG8rZhflyASDnw2HBP",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.secure_string",
         "properties": {
           "value": "",
-          "scope": "input",
+          "scope": "local",
           "name": "nmap.online api key",
           "type": "datatype.secure_string",
           "description": "https://nmap.online/en/api-key",
@@ -118,15 +118,15 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "sinlge",
+          "value": "pn",
           "scope": "local",
-          "name": "scan_type",
+          "name": "scan options",
           "type": "datatype.string",
-          "description": "single - One host or IP\nrange - IP range (Paid users only)",
+          "description": "pn: No ping (-Pn)\nsn: No port scan (host discovery only) (-sn)\nf: Fast scan (-F)\np: All ports (-p-)\nn: no DNS lookup (-n)\nr: reverse-DNS lookup for all hosts (-R)\nf8: Fragment IP data into 8 bytes (-f)\nff16: Fragment IP data into 16 bytes (-ff)\nv: Verbose output (-v)\nvv: More verbosity (-vv)\nd: Debugging details (-d)\ndd: More details (-dd)\npr: ARP Scan (-PR)\nss: TCP SYN scan (-sS)\nst: TCP connect scan (-sT)\nsu: UDP scan (-sU)\nsnn: Null Scan (-sN)\nsff: FIN Scan (-sF)\nsxx: Xmas Scan (-sX)\nsa: TCP ACK Scan (-sA)\no: OS Detection (-O)\nsc: Default scripts (-sC)\nt0: Slowest (paranoid) (-T0)\nt1: Sneaky (-T1)\nt2: Polite (-T2)\nt3: Normal (-T3)\nt4: Aggressive (-T4)\nt5: Fastest (insane) (-T5)\nsv: Service Detection (-sV)\nsv2: Service Detection (intensity of 2) (-sV --version-light)\nsv9: Service Detection (intensity of 9) (-sV --version-all)\nreason: Getting More Details (--reason)",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_024Q7KRR7SNVM2H5PVjF4LNO4dbhUzFfkFV",
+        "unique_name": "variable_workflow_024PIHB9FOVLR0l9oJm4lLeY6CvGttGifpB",
         "object_type": "variable_workflow"
       }
     ],
@@ -212,11 +212,12 @@
                   "continue_on_failure": false,
                   "display_name": "nmap.online - start scan",
                   "input": {
+                    "variable_workflow_024Q7FGMDXD6Q30Kf0cozBSRF1cUI4dJCj8": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.local.variable_workflow_024PI14US2BPV0ZDLTG8rZhflyASDnw2HBP$",
                     "variable_workflow_024Q7FGMDXLB760xVMiw7EONfUU7VUmi9xX": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024NVMYBPBA404g5PBimfn4p3Gmywa9E4hz$",
-                    "variable_workflow_024Q7FGMDY7KV78ZelgyobBWTjnIZlPaOtA": "top20tcp",
-                    "variable_workflow_024Q7FGMDYF3C75Oj6sxWh1kZfEj1PLJyrQ": "np",
-                    "variable_workflow_024Q7LK0WLRCV1z8CDWKeug8pGZnFT7tnDV": "single",
-                    "variable_workflow_024Q95LYM5XHO375xdH6fua7S2jmWHgkFLP": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn$"
+                    "variable_workflow_024Q7FGMDY7KV78ZelgyobBWTjnIZlPaOtA": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.local.variable_workflow_024PIGCW3Y9QN0L26dqCflcGr1lT0pW0TMY$",
+                    "variable_workflow_024Q7FGMDYF3C75Oj6sxWh1kZfEj1PLJyrQ": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.local.variable_workflow_024PIHB9FOVLR0l9oJm4lLeY6CvGttGifpB$",
+                    "variable_workflow_024Q7LK0WLRCV1z8CDWKeug8pGZnFT7tnDV": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.local.variable_workflow_024Q7KRR7SNVM2H5PVjF4LNO4dbhUzFfkFV$",
+                    "variable_workflow_024Q95LYM5XHO375xdH6fua7S2jmWHgkFLP": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.local.variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn$"
                   },
                   "runtime_user": {
                     "target_default": true
@@ -298,7 +299,7 @@
                           "continue_on_failure": false,
                           "display_name": "nmap.online - scan status",
                           "input": {
-                            "variable_workflow_024Q9DXM1Q3WV1sx7WU87vGJovewPBGoTCH": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn$",
+                            "variable_workflow_024Q9DXM1Q3WV1sx7WU87vGJovewPBGoTCH": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.local.variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn$",
                             "variable_workflow_024Q9DXM1QZ5C6bIBvVTAUOB8U04rKYGNUl": "$activity.definition_activity_024Q99KQ2RLQF1u69qbHXPWdTuIElaTSlx9.output.variable_workflow_024Q7FGMDX22O7GXiMbwGseV7ByELq7d5he$"
                           },
                           "runtime_user": {
@@ -359,7 +360,7 @@
                   "continue_on_failure": false,
                   "display_name": "nmap.online - scan result",
                   "input": {
-                    "variable_workflow_024Q9N42TTT7A6fCwU18iSgw0hfGOszBf1Z": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.input.variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn$",
+                    "variable_workflow_024Q9N42TTT7A6fCwU18iSgw0hfGOszBf1Z": "$workflow.definition_workflow_024NVMBY57YBI7DjUykrX7B6gWwuwGfEuDE.local.variable_workflow_024Q96W1M90M12jMSQvX55Hp8TDvi3Uh0Mn$",
                     "variable_workflow_024Q9N42TU26O5ZjEwXgNhsq67WBr2tKwhN": "$activity.definition_activity_024Q99KQ2RLQF1u69qbHXPWdTuIElaTSlx9.output.variable_workflow_024Q7FGMDX22O7GXiMbwGseV7ByELq7d5he$"
                   },
                   "runtime_user": {
