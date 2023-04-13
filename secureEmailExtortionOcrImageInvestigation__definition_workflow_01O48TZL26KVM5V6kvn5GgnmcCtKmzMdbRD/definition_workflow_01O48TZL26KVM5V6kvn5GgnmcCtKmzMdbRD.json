@@ -10,13 +10,14 @@
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "output",
-          "name": "notes",
+          "scope": "local",
+          "name": "email_judgment",
           "type": "datatype.string",
+          "description": "DO NOT MODIFY",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O48TZKUC3XQ4WekBIYNntgbazt7kixlJr",
+        "unique_name": "variable_workflow_01OAANXSUKB2A57x2YfxY9SC0EZEY5FKtXh",
         "object_type": "variable_workflow"
       },
       {
@@ -38,12 +39,122 @@
         "properties": {
           "value": "",
           "scope": "local",
+          "name": "from",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUC1JL4owUll5WPRZzDz3WZSr0f7",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "password, paid, adult, porn, PORNO, payment, bitcoin, Bitcoin, Bitcoins, bitcoins, BitCoins, BTC, btc, police, Police, video, proff, masterbation, DDoS, DDOS, ddos",
+          "scope": "local",
+          "name": "dictionary",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OA9K0418N8K2qaYFoQiNj2BOYRg6xwyUq",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_dates",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUC6A33C2T2q55hBdwfsGyjE1NDz",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 60,
+          "scope": "local",
+          "name": "judgement_expiration_in_days",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OCO2Q9075QA5XuV2SV9rBDghAYhPdlS5h",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "count",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUC7EI1PN51lj18thGo4xwJgxo61",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "events_securex@internetsinkhole.com",
+          "scope": "local",
+          "name": "inbox_azure_account",
+          "type": "datatype.string",
+          "description": "O365 inbox for where you received your notification email from CES",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O7R3GSOYT1F2X2jWtl8hQdA1RUPK8TIUx",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "30fd40ebf6d84f47800eef086b22b313",
+          "scope": "local",
           "name": "azure_ocr_api_key",
           "type": "datatype.string",
           "is_required": false,
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01O49DKIFCYI32xwDyWqVoG7JXQibxl9mW3",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "file_notes",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUCAXK1Mhp8Cary4cOI6VCdChx9w",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "email_score",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OA9XT03FUCD405yQytqFjAy8BiYerMJ2O",
         "object_type": "variable_workflow"
       },
       {
@@ -65,6 +176,20 @@
         "properties": {
           "value": "",
           "scope": "local",
+          "name": "email_notes",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUCF6O1WFabPz4ZgiUr6mhr3BPeA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "alexandre@internetsinkhole.com",
+          "scope": "local",
           "name": "notification_email_address",
           "type": "datatype.string",
           "description": "SOC email address",
@@ -79,145 +204,6 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "cisco_mid",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUC8LC0nFsq9VLUGXFNqNq2phByp",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "email_score",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OA9XT03FUCD405yQytqFjAy8BiYerMJ2O",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 60,
-          "scope": "local",
-          "name": "judgement_expiration_in_days",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OCO2Q9075QA5XuV2SV9rBDghAYhPdlS5h",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_notes",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUCF6O1WFabPz4ZgiUr6mhr3BPeA",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_raw_message",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUC55C5qOcbCHT0H5CaqFfn9ifWD",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_judgment",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OAANXSUKB2A57x2YfxY9SC0EZEY5FKtXh",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_body",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUC0AM40aGBE0u8w6SKEZWXVzuF9",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "inbox_azure_account",
-          "type": "datatype.string",
-          "description": "O365 inbox for where you received your notification email from CES",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O7R3GSOYT1F2X2jWtl8hQdA1RUPK8TIUx",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "to_bcc_list",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_024XW9ESEC2JZ6Jn7RyOxK1bOIHmKf7iCSj",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "count",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUC7EI1PN51lj18thGo4xwJgxo61",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
           "name": "to",
           "type": "datatype.string",
           "description": "DO NOT MODIFY",
@@ -225,61 +211,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01O48TZKUCBZR36nrMWHmphJDoig8U524oW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "images_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OABX2GEXHK51qgXVyvHgRmIPzBLBKsP8F",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "from",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUC1JL4owUll5WPRZzDz3WZSr0f7",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "azure_ocr_api_url",
-          "type": "datatype.string",
-          "description": "Should be something like xxxxxxxxx.cognitiveservices.azure.com ",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O49FKNVYI9G0VCrU2wd5s8z3OvzFES9xx",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "file_notes",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUCAXK1Mhp8Cary4cOI6VCdChx9w",
         "object_type": "variable_workflow"
       },
       {
@@ -301,26 +232,55 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_dates",
+          "name": "email_body",
           "type": "datatype.string",
           "description": "DO NOT MODIFY",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O48TZKUC6A33C2T2q55hBdwfsGyjE1NDz",
+        "unique_name": "variable_workflow_01O48TZKUC0AM40aGBE0u8w6SKEZWXVzuF9",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "password, paid, adult, porn, PORNO, payment, bitcoin, Bitcoin, Bitcoins, bitcoins, BitCoins, BTC, btc, police, Police, video, proff, masterbation, DDoS, DDOS, ddos",
+          "value": "",
           "scope": "local",
-          "name": "dictionary",
+          "name": "email_raw_message",
           "type": "datatype.string",
+          "description": "DO NOT MODIFY",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01OA9K0418N8K2qaYFoQiNj2BOYRg6xwyUq",
+        "unique_name": "variable_workflow_01O48TZKUC55C5qOcbCHT0H5CaqFfn9ifWD",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "to_bcc_list",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024XW9ESEC2JZ6Jn7RyOxK1bOIHmKf7iCSj",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "tekgourou-ocr.cognitiveservices.azure.com",
+          "scope": "local",
+          "name": "azure_ocr_api_url",
+          "type": "datatype.string",
+          "description": "Should be something like xxxxxxxxx.cognitiveservices.azure.com ",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O49FKNVYI9G0VCrU2wd5s8z3OvzFES9xx",
         "object_type": "variable_workflow"
       },
       {
@@ -335,6 +295,46 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01O48TZKUC2T04tMtWhwb63VNeL88OsPq02",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "images_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OABX2GEXHK51qgXVyvHgRmIPzBLBKsP8F",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "cisco_mid",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUC8LC0nFsq9VLUGXFNqNq2phByp",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUC3XQ4WekBIYNntgbazt7kixlJr",
         "object_type": "variable_workflow"
       }
     ],
@@ -988,6 +988,26 @@
                                     "object_type": "definition_activity",
                                     "actions": [
                                       {
+                                        "unique_name": "definition_activity_024YTXHWJWRTZ6RMdcQwDqa2FdgqpmtQ7cr",
+                                        "name": "Replace String",
+                                        "title": "fix String",
+                                        "type": "core.replacestring",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "fix String",
+                                          "input_string": "$activity.definition_activity_01O48U3VS3GGN3wQBFEgsURt9r0DSnJgOjP.input.source_array[@].header_value$",
+                                          "replace_list": [
+                                            {
+                                              "replaced_string": "\\",
+                                              "replacement_string": ""
+                                            }
+                                          ],
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
                                         "unique_name": "definition_activity_024Y0HIUWO6QV4xY5DLHmqj3V4Z4yA8sdiL",
                                         "name": "Set Variables",
                                         "title": "Add to variables",
@@ -1000,7 +1020,7 @@
                                           "variables_to_update": [
                                             {
                                               "variable_to_update": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUC9UO55iiCV6qITkuN5rSRi4PdG$",
-                                              "variable_value_new": "$activity.definition_activity_01O48U3VS3GGN3wQBFEgsURt9r0DSnJgOjP.input.source_array[@].header_value$"
+                                              "variable_value_new": "$activity.definition_activity_024YTXHWJWRTZ6RMdcQwDqa2FdgqpmtQ7cr.output.result_string$"
                                             },
                                             {
                                               "variable_to_update": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUCF6O1WFabPz4ZgiUr6mhr3BPeA$",
@@ -2852,6 +2872,11 @@
           {
             "column_data": {
               "message_id": "\u003coy4D29d6gU4RubwjMKC8bRBOasth2JFn9kgvf0jVMRv3Q4qbbt5O3TCN1Hyf6uigYhuRY3H4-hDPss5twWdCRq3PlgQCFBTMLNtaxfwaf1U=@proton.me\u003e"
+            }
+          },
+          {
+            "column_data": {
+              "message_id": "\u003c0JYlcgh84WHuZ5mdmG783jMtGRHXjAi9R995kNG7PBz9LuTDAwGSnVmZZYk6XsEXDbvfM6dVaAS5r20zc3QhjSXrjKHbjYVyFQhLJGOyt6g=@proton.me\u003e"
             }
           }
         ],
