@@ -1,6 +1,6 @@
 # Cisco Secure Email Bitcoin Address Detected
 
-This workflow monitors a SecureX mailbox for incoming email with Bitcoin Address detected by Cisco Secure Email. When an email is received, the workflow get report from Bitcoinabuse for Bitcoin Address reputation. URL will be parse from the email body and send to Cisco Malware Analytics. A suspicious judgment will be set for Observables from the email. SecureX Casebook will be create with all details.
+This workflow monitors a Cisco XDR mailbox for incoming email with Bitcoin Address detected by Cisco Secure Email. When an email is received, the workflow get report from chainabuse for Bitcoin Address reputation. URL will be parse from the email body and send to Cisco Malware Analytics. A suspicious judgment will be set for Observables from the email. Cisco XDR Casebook will be create with all details.
 
 ![](img/email.png)
 
@@ -15,8 +15,8 @@ This workflow monitors a SecureX mailbox for incoming email with Bitcoin Address
     * Threat Response - Inspect for Observables
     * Secure Malware Analytics - Submit URL
     * Threat Response - Create Casebook
-    * IMAP inbox
-    * Bitcoinabuse API key. https://www.bitcoinabuse.com/api-docs
+    * O365 inbox
+    * Chainabuse API key.
     * The targets and account keys listed at the bottom of the page
 
 ## Workflow Steps
@@ -29,17 +29,16 @@ This workflow is designed to be triggered by an email arriving in a SecureX CES 
 3. For each headers:
 	- Update variables with observable from the email headers.
 4. If email matchl with Bitcoin Address regex
- 	- Get Bitcoinabuse report.
+ 	- Get Chainabuse report.
 5. If email match with URL regex 
 	- Submit URL to Cisco Secure Malware Analytics
 6. Create observables json output.
-7. Create SecureX judgment for observables
+7. Create Cisco XDR judgment for observables
 8. Casebook is created. 
 
 ## Configuration
 
 Variable/Account Keys/Targets
-* Edit local variable "bitcoinabuse_api_token" to add your own api key.
 * Set local variable "Secure_Malware_Analytics" to "true" if you have a Cisco Secure Malware Analytics API subscription.
 * Edit local variable "Secure_Malware_Analytics_API_key" to add your own api key.
 * You must create an account key with your mailbox’s credentials and then update the SecureX CES notification Mailbox target with that account key. While you’re editing the target, be sure to add your email server’s information
