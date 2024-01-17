@@ -9,35 +9,6 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "password, paid, adult, porn, PORNO, payment, bitcoin, Bitcoin, Bitcoins, bitcoins, BitCoins, BTC, btc, police, Police, video, proff, masterbation, DDoS, DDOS, ddos",
-          "scope": "local",
-          "name": "dictionary",
-          "type": "datatype.string",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OA9K0418N8K2qaYFoQiNj2BOYRg6xwyUq",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_notes",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUCF6O1WFabPz4ZgiUr6mhr3BPeA",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
           "value": "",
           "scope": "local",
           "name": "email_body",
@@ -48,65 +19,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01O48TZKUC0AM40aGBE0u8w6SKEZWXVzuF9",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUC3XQ4WekBIYNntgbazt7kixlJr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_judgment",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OAANXSUKB2A57x2YfxY9SC0EZEY5FKtXh",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "file_notes",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUCAXK1Mhp8Cary4cOI6VCdChx9w",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "events_securex@internetsinkhole.com",
-          "scope": "local",
-          "name": "inbox_azure_account",
-          "type": "datatype.string",
-          "description": "O365 inbox for where you received your notification email from CES",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O7R3GSOYT1F2X2jWtl8hQdA1RUPK8TIUx",
         "object_type": "variable_workflow"
       },
       {
@@ -127,16 +39,15 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "tekgourou-ocr.cognitiveservices.azure.com",
+          "value": "30fd40ebf6d84f47800eef086b22b313",
           "scope": "local",
-          "name": "azure_ocr_api_url",
+          "name": "azure_ocr_api_key",
           "type": "datatype.string",
-          "description": "Should be something like xxxxxxxxx.cognitiveservices.azure.com ",
           "is_required": false,
           "display_on_wizard": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O49FKNVYI9G0VCrU2wd5s8z3OvzFES9xx",
+        "unique_name": "variable_workflow_01O49DKIFCYI32xwDyWqVoG7JXQibxl9mW3",
         "object_type": "variable_workflow"
       },
       {
@@ -144,88 +55,13 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "email_raw_message",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUC55C5qOcbCHT0H5CaqFfn9ifWD",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "email_score",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OA9XT03FUCD405yQytqFjAy8BiYerMJ2O",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "count",
-          "type": "datatype.integer",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUC7EI1PN51lj18thGo4xwJgxo61",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_message_id",
+          "name": "file_name",
           "type": "datatype.string",
           "is_required": false,
           "display_on_wizard": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_02BIQ98OUMK1479hEZzUMpa2QBKGMWwYXdC",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "email_subject",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUCE4G2zwLfi2RVm3L21kIqNxzTG",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "Email Endpoint",
-          "scope": "local",
-          "name": "SMTP Target Name",
-          "type": "datatype.string",
-          "description": "Name of your STMP target in Orchestration",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUC2T04tMtWhwb63VNeL88OsPq02",
+        "unique_name": "variable_workflow_02BIKPMNWZPKZ5pDLYj5aYBqJ4l0hKj02Ip",
         "object_type": "variable_workflow"
       },
       {
@@ -263,13 +99,43 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "file_name",
+          "name": "to",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUCBZR36nrMWHmphJDoig8U524oW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "notes",
           "type": "datatype.string",
           "is_required": false,
           "display_on_wizard": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_02BIKPMNWZPKZ5pDLYj5aYBqJ4l0hKj02Ip",
+        "unique_name": "variable_workflow_01O48TZKUC3XQ4WekBIYNntgbazt7kixlJr",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "count",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUC7EI1PN51lj18thGo4xwJgxo61",
         "object_type": "variable_workflow"
       },
       {
@@ -277,14 +143,131 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "casebook_title",
+          "name": "to_array",
+          "type": "datatype.string",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02BIJQ3RCFEHU4ItzDT3fyWNLGHQnEU6eI7",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_message_id",
+          "type": "datatype.string",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02BIQ98OUMK1479hEZzUMpa2QBKGMWwYXdC",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "to_bcc_list",
           "type": "datatype.string",
           "description": "DO NOT MODIFY",
           "is_required": false,
           "display_on_wizard": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_01O48TZKUC9UO55iiCV6qITkuN5rSRi4PdG",
+        "unique_name": "variable_workflow_024XW9ESEC2JZ6Jn7RyOxK1bOIHmKf7iCSj",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "email_score",
+          "type": "datatype.integer",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OA9XT03FUCD405yQytqFjAy8BiYerMJ2O",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "file_notes",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUCAXK1Mhp8Cary4cOI6VCdChx9w",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_raw_message",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUC55C5qOcbCHT0H5CaqFfn9ifWD",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "quarantine email",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02BK3RFRVOIS723E3cUBA1jlaKBh8j3hjVo",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Email Endpoint",
+          "scope": "local",
+          "name": "SMTP Target Name",
+          "type": "datatype.string",
+          "description": "Name of your STMP target in Orchestration",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUC2T04tMtWhwb63VNeL88OsPq02",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_judgment",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OAANXSUKB2A57x2YfxY9SC0EZEY5FKtXh",
         "object_type": "variable_workflow"
       },
       {
@@ -305,15 +288,117 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "",
+          "value": "password, paid, adult, porn, PORNO, payment, bitcoin, Bitcoin, Bitcoins, bitcoins, BitCoins, BTC, btc, police, Police, video, proff, masterbation, DDoS, DDOS, ddos",
           "scope": "local",
-          "name": "to_array",
+          "name": "dictionary",
           "type": "datatype.string",
           "is_required": false,
           "display_on_wizard": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_02BIJQ3RCFEHU4ItzDT3fyWNLGHQnEU6eI7",
+        "unique_name": "variable_workflow_01OA9K0418N8K2qaYFoQiNj2BOYRg6xwyUq",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "tekgourou-ocr.cognitiveservices.azure.com",
+          "scope": "local",
+          "name": "azure_ocr_api_url",
+          "type": "datatype.string",
+          "description": "Should be something like xxxxxxxxx.cognitiveservices.azure.com ",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O49FKNVYI9G0VCrU2wd5s8z3OvzFES9xx",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "events_securex@internetsinkhole.com",
+          "scope": "local",
+          "name": "inbox_azure_account",
+          "type": "datatype.string",
+          "description": "O365 inbox for where you received your notification email from CES",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O7R3GSOYT1F2X2jWtl8hQdA1RUPK8TIUx",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 60,
+          "scope": "local",
+          "name": "judgement_expiration_in_days",
+          "type": "datatype.integer",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OCO2Q9075QA5XuV2SV9rBDghAYhPdlS5h",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "images_notes",
+          "type": "datatype.string",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01OABX2GEXHK51qgXVyvHgRmIPzBLBKsP8F",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "email_notes",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUCF6O1WFabPz4ZgiUr6mhr3BPeA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "casebook_title",
+          "type": "datatype.string",
+          "description": "DO NOT MODIFY",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01O48TZKUC9UO55iiCV6qITkuN5rSRi4PdG",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": true,
+          "scope": "local",
+          "name": "send notification email",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02BK8JOQ5A1BV4gI8knA5LmybvJPvm2ZIYE",
         "object_type": "variable_workflow"
       },
       {
@@ -336,71 +421,14 @@
         "properties": {
           "value": "",
           "scope": "local",
-          "name": "images_notes",
-          "type": "datatype.string",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OABX2GEXHK51qgXVyvHgRmIPzBLBKsP8F",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "to_bcc_list",
+          "name": "email_subject",
           "type": "datatype.string",
           "description": "DO NOT MODIFY",
           "is_required": false,
           "display_on_wizard": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_024XW9ESEC2JZ6Jn7RyOxK1bOIHmKf7iCSj",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 60,
-          "scope": "local",
-          "name": "judgement_expiration_in_days",
-          "type": "datatype.integer",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01OCO2Q9075QA5XuV2SV9rBDghAYhPdlS5h",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "local",
-          "name": "to",
-          "type": "datatype.string",
-          "description": "DO NOT MODIFY",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O48TZKUCBZR36nrMWHmphJDoig8U524oW",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "30fd40ebf6d84f47800eef086b22b313",
-          "scope": "local",
-          "name": "azure_ocr_api_key",
-          "type": "datatype.string",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01O49DKIFCYI32xwDyWqVoG7JXQibxl9mW3",
+        "unique_name": "variable_workflow_01O48TZKUCE4G2zwLfi2RVm3L21kIqNxzTG",
         "object_type": "variable_workflow"
       }
     ],
@@ -2458,12 +2486,12 @@
               {
                 "unique_name": "definition_activity_01OCNU6E8MMLG1DVznYrCptkLYCgwcQfmtT",
                 "name": "Group",
-                "title": "Output",
+                "title": "Response",
                 "type": "logic.group",
                 "base_type": "activity",
                 "properties": {
                   "continue_on_failure": false,
-                  "display_name": "Output",
+                  "display_name": "Response",
                   "skip_execution": false
                 },
                 "object_type": "definition_activity",
@@ -2802,6 +2830,189 @@
                     "object_type": "definition_activity"
                   },
                   {
+                    "unique_name": "definition_activity_02BK8EGWQ85HX46V2zSRz5WGXJEufvm6Lu1",
+                    "name": "Condition Block",
+                    "title": "Quarantine Email ?",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Quarantine Email ?",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_02BK8EGX3XN623Y8VZz06MwadkVwqjnCaB2",
+                        "name": "Condition Branch",
+                        "title": "Yes",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_02BK3RFRVOIS723E3cUBA1jlaKBh8j3hjVo$",
+                            "operator": "eq",
+                            "right_operand": true
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Yes",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_02BJI7MYVZ4ES3OCMguH2LmbRpkmizmT7b7",
+                            "name": "XDR - Respond - List Response Actions",
+                            "title": "XDR - Respond - List Response Actions",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "XDR - Respond - List Response Actions",
+                              "input": {
+                                "variable_workflow_02982SD4SH7EN62cSGFgrsvwZt9zPXrL8vx": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_02BIQ98OUMK1479hEZzUMpa2QBKGMWwYXdC$",
+                                "variable_workflow_02982SD4SI0FU708FmQlMAqRo18RD1tky3E": "email_messageid"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target": true,
+                                "target_id": "$module_target;Cisco XDR;securex:ao:iroh_api$",
+                                "target_type": "web-service.endpoint"
+                              },
+                              "workflow_id": "definition_workflow_02982SD4ESZ490JzE3VMckLQFDPIjVKtWzn",
+                              "workflow_name": "XDR - Respond - List Response Actions"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_02BK8PPJX531I49sXNDVGrhrN2OPaXGmaN1",
+                            "name": "Read Table from JSON",
+                            "title": "Create table of action",
+                            "type": "corejava.read_table_from_json",
+                            "base_type": "activity",
+                            "properties": {
+                              "action_timeout": 180,
+                              "continue_on_failure": false,
+                              "display_name": "Create table of action",
+                              "input_json": "$activity.definition_activity_02BJI7MYVZ4ES3OCMguH2LmbRpkmizmT7b7.output.variable_workflow_02982SD4SHRN23vs3KO2ey3m7brAzvucBjS$",
+                              "jsonpath_query": "$.",
+                              "persist_output": false,
+                              "populate_columns": false,
+                              "skip_execution": false,
+                              "table_columns": [
+                                {
+                                  "column_name": "module_type_id",
+                                  "column_type": "string"
+                                },
+                                {
+                                  "column_name": "title",
+                                  "column_type": "string"
+                                },
+                                {
+                                  "column_name": "module",
+                                  "column_type": "string"
+                                },
+                                {
+                                  "column_name": "id",
+                                  "column_type": "string"
+                                },
+                                {
+                                  "column_name": "module_instance_id",
+                                  "column_type": "string"
+                                },
+                                {
+                                  "column_name": "url",
+                                  "column_type": "string"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_02BK99N8FFME51jHUNYctrTZ3GwkJSJTq9M",
+                            "name": "For Each",
+                            "title": "Finding quarantine action ?",
+                            "type": "logic.for_each",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Finding quarantine action ?",
+                              "skip_execution": false,
+                              "source_array": "$activity.definition_activity_02BK8PPJX531I49sXNDVGrhrN2OPaXGmaN1.output.read_table_from_json$"
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_02BK9A1Y0TGEW4uWWkfrxD8GzWoUJkoc0Ew",
+                                "name": "Condition Block",
+                                "title": "Found ?",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Found ?",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_02BK9A1YI5S0T7gEmD2fRCDumur9iJTk9Wi",
+                                    "name": "Condition Branch",
+                                    "title": "Yes",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$activity.definition_activity_02BK99N8FFME51jHUNYctrTZ3GwkJSJTq9M.input.source_array[@].title$",
+                                        "operator": "eq",
+                                        "right_operand": "Quarantine messages"
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "Yes",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_02BK9AN0R58BP2IClg3yh1Qqu3tIbiW89Ba",
+                                        "name": "HTTP Request",
+                                        "title": "XDR action - Email quarantine",
+                                        "type": "web-service.http_request",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "action_timeout": 180,
+                                          "allow_auto_redirect": true,
+                                          "allow_headers_redirect": false,
+                                          "continue_on_error_status_code": false,
+                                          "continue_on_failure": false,
+                                          "display_name": "XDR action - Email quarantine",
+                                          "method": "POST",
+                                          "relative_url": "/iroh-response$activity.definition_activity_02BK99N8FFME51jHUNYctrTZ3GwkJSJTq9M.input.source_array[@].url$",
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "override_workflow_target": true,
+                                            "target_id": "$module_target;Cisco XDR;securex:ao:iroh_api$"
+                                          }
+                                        },
+                                        "object_type": "definition_activity"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
                     "unique_name": "definition_activity_01ODMO0RSPTD16oVDbO0Nfce2VE2m1jkmki",
                     "name": "Parallel Block",
                     "title": "Notifications",
@@ -2817,106 +3028,127 @@
                       {
                         "unique_name": "definition_activity_01ODMO1OKJFI84oXck7EWBDEt3Pj5dPIc7m",
                         "name": "Parallel Branch",
-                        "title": "Email End user(s)",
+                        "title": "Email Notification",
                         "type": "logic.parallel_block",
                         "base_type": "activity",
                         "properties": {
                           "continue_on_failure": false,
-                          "display_name": "Email End user(s)",
+                          "display_name": "Email Notification",
                           "skip_execution": false
                         },
                         "object_type": "definition_activity",
                         "actions": [
                           {
-                            "unique_name": "definition_activity_01ODMLF8PC5ML4teT3RBtuA42O5l96GS6v4",
-                            "name": "Send Email",
-                            "title": "Send Email",
-                            "type": "email.smtp_send_email",
+                            "unique_name": "definition_activity_02BK8KOOKF70O6mLEmdP4KfldnZqzpeNCye",
+                            "name": "Condition Block",
+                            "title": "Send notification email ?",
+                            "type": "logic.if_else",
                             "base_type": "activity",
                             "properties": {
-                              "action_timeout": 180,
-                              "bcc": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_024XW9ESEC2JZ6Jn7RyOxK1bOIHmKf7iCSj$",
-                              "body": "Hello!\n\nEmail with the subject \"$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUCE4G2zwLfi2RVm3L21kIqNxzTG$\" was found to be DANGEROUS! \n\nPlease do not open the message and delete it immediately!\n\nReference ID: $workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.output.instance_id$",
-                              "continue_if_one_address_valid": false,
                               "continue_on_failure": false,
-                              "display_name": "Send Email",
-                              "runtime_user": {
-                                "override_target_runtime_user": false,
-                                "target_default": true
-                              },
-                              "skip_execution": false,
-                              "subject": "[ALERT] EMAIL investigation result for ID $workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.output.instance_id$",
-                              "target": {
-                                "override_workflow_target_group_criteria": true,
-                                "target_group": {
-                                  "run_on_all_targets": false,
-                                  "use_criteria": {
-                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
-                                    "conditions": [
-                                      {
-                                        "left_operand": "$targetgroup.email smtp_endpoint.input.display_name$",
-                                        "operator": "eq",
-                                        "right_operand": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUC2T04tMtWhwb63VNeL88OsPq02$"
-                                      }
-                                    ]
-                                  }
-                                }
-                              },
-                              "to": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01ODMPMZRDYEB2NxYY8Lq7BFoBNsJuRnpXj$"
+                              "display_name": "Send notification email ?",
+                              "skip_execution": false
                             },
-                            "object_type": "definition_activity"
-                          }
-                        ]
-                      },
-                      {
-                        "unique_name": "definition_activity_01ODMO1PA3N9L5ViyJVkDcAxmlLJyD1RSl4",
-                        "name": "Parallel Branch",
-                        "title": "Email SOC",
-                        "type": "logic.parallel_block",
-                        "base_type": "activity",
-                        "properties": {
-                          "continue_on_failure": false,
-                          "display_name": "Email SOC",
-                          "skip_execution": false
-                        },
-                        "object_type": "definition_activity",
-                        "actions": [
-                          {
-                            "unique_name": "definition_activity_01ODMNY7T9KLV08OSFkVbtZxRAyIwXyYL9a",
-                            "name": "Send Email",
-                            "title": "Send Email ",
-                            "type": "email.smtp_send_email",
-                            "base_type": "activity",
-                            "properties": {
-                              "action_timeout": 180,
-                              "body": "Hello!\n\nEmail with the subject \"$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUCE4G2zwLfi2RVm3L21kIqNxzTG$\" was found to be DANGEROUS! \n\nAll details all available in casebook [$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUC9UO55iiCV6qITkuN5rSRi4PdG$]\n\nReference ID: $workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.output.instance_id$",
-                              "continue_if_one_address_valid": false,
-                              "continue_on_failure": false,
-                              "display_name": "Send Email ",
-                              "runtime_user": {
-                                "override_target_runtime_user": false,
-                                "target_default": true
-                              },
-                              "skip_execution": false,
-                              "subject": "[ALERT] EMAIL investigation result for ID $workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.output.instance_id$",
-                              "target": {
-                                "override_workflow_target_group_criteria": true,
-                                "target_group": {
-                                  "use_criteria": {
-                                    "choose_target_using_algorithm": "choose_first_with_matching_criteria",
-                                    "conditions": [
-                                      {
-                                        "left_operand": "$targetgroup.email smtp_endpoint.input.display_name$",
-                                        "operator": "eq",
-                                        "right_operand": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUC2T04tMtWhwb63VNeL88OsPq02$"
-                                      }
-                                    ]
+                            "object_type": "definition_activity",
+                            "blocks": [
+                              {
+                                "unique_name": "definition_activity_02BK8KOOX5OS86z47lfZo7GS8rxXpR2iD8K",
+                                "name": "Condition Branch",
+                                "title": "Yes",
+                                "type": "logic.condition_block",
+                                "base_type": "activity",
+                                "properties": {
+                                  "condition": {
+                                    "left_operand": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_02BK8JOQ5A1BV4gI8knA5LmybvJPvm2ZIYE$",
+                                    "operator": "eq",
+                                    "right_operand": true
+                                  },
+                                  "continue_on_failure": false,
+                                  "display_name": "Yes",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "actions": [
+                                  {
+                                    "unique_name": "definition_activity_01ODMLF8PC5ML4teT3RBtuA42O5l96GS6v4",
+                                    "name": "Send Email",
+                                    "title": "Send Email to end user(s)",
+                                    "type": "email.smtp_send_email",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "action_timeout": 180,
+                                      "bcc": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_024XW9ESEC2JZ6Jn7RyOxK1bOIHmKf7iCSj$",
+                                      "body": "Hello!\n\nEmail with the subject \"$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUCE4G2zwLfi2RVm3L21kIqNxzTG$\" was found to be DANGEROUS! \n\nPlease do not open the message and delete it immediately!\n\nReference ID: $workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.output.instance_id$",
+                                      "continue_if_one_address_valid": false,
+                                      "continue_on_failure": false,
+                                      "display_name": "Send Email to end user(s)",
+                                      "runtime_user": {
+                                        "override_target_runtime_user": false,
+                                        "target_default": true
+                                      },
+                                      "skip_execution": false,
+                                      "subject": "[ALERT] EMAIL investigation result for ID $workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.output.instance_id$",
+                                      "target": {
+                                        "override_workflow_target_group_criteria": true,
+                                        "target_group": {
+                                          "run_on_all_targets": false,
+                                          "use_criteria": {
+                                            "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                            "conditions": [
+                                              {
+                                                "left_operand": "$targetgroup.email smtp_endpoint.input.display_name$",
+                                                "operator": "eq",
+                                                "right_operand": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUC2T04tMtWhwb63VNeL88OsPq02$"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "to": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01ODMPMZRDYEB2NxYY8Lq7BFoBNsJuRnpXj$"
+                                    },
+                                    "object_type": "definition_activity"
+                                  },
+                                  {
+                                    "unique_name": "definition_activity_01ODMNY7T9KLV08OSFkVbtZxRAyIwXyYL9a",
+                                    "name": "Send Email",
+                                    "title": "Send Email to SOC",
+                                    "type": "email.smtp_send_email",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "action_timeout": 180,
+                                      "body": "Hello!\n\nEmail with the subject \"$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUCE4G2zwLfi2RVm3L21kIqNxzTG$\" was found to be DANGEROUS! \n\nAll details all available in casebook [$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUC9UO55iiCV6qITkuN5rSRi4PdG$]\n\nReference ID: $workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.output.instance_id$",
+                                      "continue_if_one_address_valid": false,
+                                      "continue_on_failure": false,
+                                      "display_name": "Send Email to SOC",
+                                      "runtime_user": {
+                                        "override_target_runtime_user": false,
+                                        "target_default": true
+                                      },
+                                      "skip_execution": false,
+                                      "subject": "[ALERT] EMAIL investigation result for ID $workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.output.instance_id$",
+                                      "target": {
+                                        "override_workflow_target_group_criteria": true,
+                                        "target_group": {
+                                          "run_on_all_targets": false,
+                                          "use_criteria": {
+                                            "choose_target_using_algorithm": "choose_first_with_matching_criteria",
+                                            "conditions": [
+                                              {
+                                                "left_operand": "$targetgroup.email smtp_endpoint.input.display_name$",
+                                                "operator": "eq",
+                                                "right_operand": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01O48TZKUC2T04tMtWhwb63VNeL88OsPq02$"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "to": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01ODMPMZRDYEB2NxYY8Lq7BFoBNsJuRnpXj$"
+                                    },
+                                    "object_type": "definition_activity"
                                   }
-                                }
-                              },
-                              "to": "$workflow.definition_workflow_01O48TZL26KVM5V6kvn5GgnmcCtKmzMdbRD.local.variable_workflow_01ODMPMZRDYEB2NxYY8Lq7BFoBNsJuRnpXj$"
-                            },
-                            "object_type": "definition_activity"
+                                ]
+                              }
+                            ]
                           }
                         ]
                       },
@@ -3320,6 +3552,41 @@
             "column_data": {
               "message_id": "\u003chEzkRaZlueEyQR2Zh86OD7UE63cd7Unq4nqLDQkmCuzgT5D6P5xyK4WPIw837Lv8n4NpewIUJ8l2F2UyzFVYzr2OsWmZo_CztC3uwNLJEjs=@proton.me\u003e"
             }
+          },
+          {
+            "column_data": {
+              "message_id": "\u003c926KGM-e_SYnK6Fq6yPHmmLH7QLO07FSNEvFU0Ia9xcyX2qlDOa_1p5LHiGFwqRVYfeoR0dZheuQn6PVou58d4pccqrR0GVsJH_TIYEIA80=@proton.me\u003e"
+            }
+          },
+          {
+            "column_data": {
+              "message_id": "\u003ckTNS9S9GzUJKPh-nAamqt7kMDPZJU2kUdwCJFW_mPkFzozl7DkA3ksYox7qd4-vZl5qS1WWFx9jq-d4y2zvi_xG_rfiehTjPjPSdDcVJEi4=@proton.me\u003e"
+            }
+          },
+          {
+            "column_data": {
+              "message_id": "\u003c2Nq94UktWJeYZhhs4k2O_iORN95X032k462SoGZMD0TzA3J8wB_qgsQBe3fm8KtbZNvu21EDajYMWsROTKY_Sf7KOuemVxV9MhWOU0AOvXM=@proton.me\u003e"
+            }
+          },
+          {
+            "column_data": {
+              "message_id": "\u003cqK1L3dYsu178_Xc-PTwWq5kUcZlZ-bO4TUdGsdAm4FFOvkqun9X_5EJAkDaElvUg0YcMAGK1SocxqruIuDr3ekZB88Bz1oGsTYarK-cCS9U=@proton.me\u003e"
+            }
+          },
+          {
+            "column_data": {
+              "message_id": "\u003cFBHBGlOhUBJiZcOerbhVH4zEfjYVYU0X5nKjyPD0BT7ZpaxUQ-EecwosE46ToYSM7aYjWTAlWkk4FYxCApgFgCL1LhqlpzmLeN9X2_GaTMQ=@proton.me\u003e"
+            }
+          },
+          {
+            "column_data": {
+              "message_id": "\u003cHEr8isQU4e2qawG126Qv8QP0ah35jOrnZwLatzO6sXfJQrkj3qNINxL4L0tNiWxwZdSipdy83G5PveThDZa0LDmuqshICX3bTtb6PWKNIM8=@proton.me\u003e"
+            }
+          },
+          {
+            "column_data": {
+              "message_id": "\u003ck5AQdjWudxx8YV09sbOqJDlVQe1TodN3gpaOWa1P_EpjfiIgWNjVsiRW5nOGzyK5AwClbs4Y6F54myLdxWnkcO64JLZ7itf5YQh4dYqy1Zw=@proton.me\u003e"
+            }
           }
         ],
         "scope": "global",
@@ -3359,6 +3626,7 @@
     "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML",
     "definition_workflow_01O0VVGVQO55J612xLJQlOkIOitXf0baNBk",
     "definition_workflow_01NV3VHIGNT8C28VO0PMOJf5nvqzJzMRrsf",
+    "definition_workflow_02982SD4ESZ490JzE3VMckLQFDPIjVKtWzn",
     "definition_workflow_02AS76ZVVPEV03LKIalCbdBExs3ctc4nd6S"
   ],
   "dependent_workflows": [
@@ -3371,6 +3639,13 @@
     "definition_workflow_01PP75X6VPQNK4hKE1XQXIMeIcHrE1khIML",
     "definition_workflow_01O0VVGVQO55J612xLJQlOkIOitXf0baNBk",
     "definition_workflow_01NV3VHIGNT8C28VO0PMOJf5nvqzJzMRrsf",
+    "definition_workflow_02982SD4ESZ490JzE3VMckLQFDPIjVKtWzn",
     "definition_workflow_02AS76ZVVPEV03LKIalCbdBExs3ctc4nd6S"
+  ],
+  "module_targets": [
+    {
+      "module_type": "Cisco XDR",
+      "external_id": "securex:ao:iroh_api"
+    }
   ]
 }
